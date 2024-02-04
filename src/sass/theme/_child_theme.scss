@@ -1,0 +1,81 @@
+@import "typography";
+@import "colours";
+@import "header";
+@import "footer";
+@import "buttons";
+// @import "blog";
+@import "product";
+@import "blocks/blocks";
+
+a,
+a.noline {
+    text-decoration: none;
+}
+a.anchor {
+    display: block;
+    position: relative;
+    visibility: hidden;
+}
+
+@media (min-width:992px) {
+    .cols-lg-2 {
+        columns: 2;
+    }
+    .cols-lg-3 {
+        columns: 3;
+    }
+}
+
+a {
+    color: var(--col-highlight);
+    &:hover {
+        color: var(--col-highlight);
+    }
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    background-color: var(--col-primary-400);
+}
+
+main {
+    position: relative;
+    // overflow-x: hidden;
+    // padding-inline: 2rem;
+}
+
+.breakout {
+    width: 100vw;
+    position: relative;
+    left: calc(-1 * (100vw - 100%) / 2);
+}
+
+.container-xl .container-xl {
+    padding-inline: 0;
+}
+
+
+// show stuff that overflows horizontally
+// * {
+//     outline: 1px solid #f00 !important;
+// }
+// show stuff that overflows horizontally via console JS
+/*
+var all = document.getElementsByTagName("*"), i = 0, rect, docWidth = document.documentElement.offsetWidth;
+for (; i < all.length; i++) {
+    rect = all[i].getBoundingClientRect();
+    if (rect.right > docWidth || rect.left < 0){
+        console.log(all[i]);
+        all[i].style.borderTop = '1px solid red';
+    }
+}
+*/
+
+// @mixin fluid-type($min-vw, $max-vw, $min-value, $max-value) {
+// 	$factor: 1 / ($max-vw - $min-vw) * ($max-value - $min-value);
+// 	$calc-value: unquote('#{ $min-value - ($min-vw * $factor) } + #{ 100vw * $factor }');
+
+// 	font-size: $min-value; // Fallback for older browsers
+// 	font-size: clamp(#{if($min-value > $max-value, $max-value, $min-value)}, #{$calc-value}, #{if($min-value > $max-value, $min-value, $max-value)});
+// }

@@ -1,0 +1,24 @@
+.split {
+    min-height: 550px;
+    &__image {
+        min-height: 550px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    &__inner {
+        max-width: calc(1320px / 2);
+        padding: 1rem;
+        &--left {
+            margin-right: auto;
+        }
+        &--right {
+            margin-left: auto;
+        }
+        
+        text-align: center;
+        @media (min-width:992px) {
+            text-align: start;
+        }
+    }
+}

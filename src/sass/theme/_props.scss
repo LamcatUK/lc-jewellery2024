@@ -1,0 +1,51 @@
+$col-primary: #000000;
+$col-secondary: #0661ff;
+$col-highlight: #ff0000;
+
+:root {
+
+    --hsl-primary: 0 0% 0%;
+    --hsl-green-400: 159 35% 90%;
+    --hsl-green-900: 159 45% 9%;
+
+    --col-primary: hsl( var(--hsl-primary) );
+    --col-green-400: hsl( var(--hsl-green-400) );
+    --col-green-900: hsl( var(--hsl-green-900) );
+
+    --col-grey-200: #f9f7f8;
+    --col-grey-300: #c9c7c8;
+    --col-grey-400: #767676;
+    --col-grey-800: #444444;
+    --col-light: rgb(255 255 255);
+
+    --fs-100: 0.64rem;
+    --fs-200: 0.8rem;
+    --fs-300: 0.90rem;
+    --fs-400: 1.00rem;
+    // --fs-450: clamp(1.13rem, calc(1.08rem + 0.22vw), 1.25rem);
+    // --fs-500: 1.2rem;
+    --fs-500: clamp(1.1rem, 0.975rem + 0.4vw, 1.2rem);
+    // --fs-600: clamp(1.56rem, calc(1.49rem + 0.34vw), 1.76rem);
+    --fs-600: 24px; //1.56rem;
+    --fs-700: 1.95rem;
+    // --fs-800: clamp(2.44rem, calc(2.33rem + 0.53vw), 2.75rem);
+    // --fs-900: clamp(2.5rem, calc(2.44rem + 0.62vw), 5rem);
+    // --fs-900: clamp(2.5rem, 0rem + 6.667vw, 6rem);
+    --fs-900: 48px; // clamp(2.2rem, -2.55rem + 15.2vw, 6rem);
+
+    --fw-400: 300;
+    --fw-600: 400;
+    --fw-900: 700;
+
+    --ls-400: 0.025rem;
+    --ls-900: 0.2rem;
+
+    --ff-headings: 'URWClassico Regular', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    --ff-body: 'Cormorant Garamond', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+    --transition: 300ms ease-in-out;
+
+    --shadow-1: rgba(0,0,0,.12) 0 1px 3px, rgba(0,0,0,.24) 0 1px 2px;
+    --filter-shadow-1: drop-shadow(0 1px 3px rgba(0,0,0,.12)) drop-shadow(0 1px 2px rgba(0,0,0,.24));
+
+}

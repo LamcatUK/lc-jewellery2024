@@ -1,0 +1,108 @@
+@font-face {
+    font-family: 'URWClassico Regular';
+    font-display: swap;
+    font-style: normal;
+    font-weight: normal;
+    src: url('../fonts/URWClassico-Regular.woff') format('woff');
+}
+/* cormorant-garamond-regular - latin */
+@font-face {
+    font-display: swap;
+    font-family: 'Cormorant Garamond';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/cormorant-garamond-v16-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+
+html {
+    // font-size: var(--fs-400);
+    font-size: 18px;
+}
+
+body {
+    font-family: var(--ff-body);
+    font-weight: var(--fw-400);
+    font-style: normal;
+    font-size: 1rem;
+    letter-spacing: 0.02em;
+    color: var(--col-dark);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+.headline {
+    font-family: var(--ff-headings);
+    font-weight: var(--fw-900);
+    font-style: normal;
+}
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, .h99 {
+    font-family: var(--ff-headings);
+    font-weight: var(--fw-400);
+    font-style: normal;
+    margin-bottom: 1rem;
+    font-size: var(--fs-400);
+    span {
+        color: var(--col-primary);
+    }
+}
+
+
+.h1 {
+    font-size: var(--fs-900); //2.2rem;
+}
+
+.h2 {
+    font-size: var(--fs-700); //1.4rem;
+    letter-spacing: var(--ls-400);
+}
+.h3 {
+    font-size: var(--fs-600); //1.4rem;
+}
+
+.h4 {
+    font-size: var(--fs-500);
+}
+
+.font-size-base {
+    font-size: 1rem;
+}
+
+.fw-600 {
+    font-weight: var(--fw-600) !important;
+}
+
+strong {
+    font-weight: bold;
+}
+
+sup {
+    font-size: 60%;
+}
+.larger {
+    font-size: 1.25em;
+}
+.smaller {
+    font-size: 0.75em;
+}
+
+.max-ch {
+    max-width: 88ch;
+    margin-right: auto;
+}
+
+.lined {
+    border-bottom: 1px solid hsl(0 0% 0% / 0.1);
+}
+
+.pretitle {
+    font-weight: var(--fw-600);
+    letter-spacing: calc( var(--fs-400) / 3 );
+    text-transform: uppercase;
+}
+
+::selection {
+    background-color: var(--col-highlight);
+    color: var(--col-primary-900);
+}
