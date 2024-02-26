@@ -16,7 +16,8 @@
 
 html {
     // font-size: var(--fs-400);
-    font-size: 18px;
+    // font-size: 18px;
+    font-size: 21px;
 }
 
 body {
@@ -28,6 +29,7 @@ body {
     color: var(--col-dark);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    line-height: 1.7;
 }
 
 
@@ -92,14 +94,20 @@ sup {
     margin-right: auto;
 }
 
+.has-medium-font-size {
+    font-size: var(--fs-500);
+}
+
 .lined {
     border-bottom: 1px solid hsl(0 0% 0% / 0.1);
 }
 
 .pretitle {
-    font-weight: var(--fw-600);
-    letter-spacing: calc( var(--fs-400) / 3 );
+    font-family: var(--ff-headings);
+    font-size: var(--fs-200);
+    letter-spacing: var(--ls-900);
     text-transform: uppercase;
+    margin-bottom: .5rem;
 }
 
 ::selection {

@@ -11,22 +11,15 @@ $blocks = parse_blocks($content);
 $sidebar = array();
 $after;
 ?>
-    <section class="breadcrumbs container-xl">
-        <?php
-if (function_exists('yoast_breadcrumb')) {
-    yoast_breadcrumb('<div id="breadcrumbs" class="mb-2">', '</div>');
-}
-?>
-    </section>
     <div class="container-xl">
         <div class="row g-2">
-            <div class="col-lg-9 order-1">
-                <img src="<?=$img?>" alt="" class="blog__image">
-                <div class="blog__content bg-white p-4 mb-2">
+            <div class="col-lg-9 order-1 order-lg-2">
+                <img src="<?=$img?>" alt="" class="blog__image mb-4">
+                <div class="blog__content bg-white mb-2">
                     <h1 class="blog__title"><?=get_the_title()?></h1>
-                    <div class="news_index__meta mb-4">
-                        <?php
-
+                    <?php
+/*
+<div class="news_index__meta mb-4">
 $categories = get_the_category();
 
 if ($categories) {
@@ -37,23 +30,12 @@ if ($categories) {
                         <?php
     }
 }
-
-
-if (get_field('related_fighters')) {
-    foreach (get_field('related_fighters') as $fighter) {
-        ?>
-                        <a href="<?=get_the_permalink($fighter)?>"
-                            class="news_index__category"><?=get_the_title($fighter)?></a>
-                        <?php
-    }
-}
-
 ?>
-                        <div class="fs-300"><?=get_the_date()?></div>
                     </div>
                     <?php
-// $count = estimate_reading_time_in_minutes(get_the_content(), 200, true, true);
-// echo $count;
+*/
+$count = estimate_reading_time_in_minutes(get_the_content(), 200, true, true);
+echo '<div class="blog__read">' . $count . '</div>';
 
 foreach ($blocks as $block) {
     if ($block['blockName'] == 'core/heading') {
@@ -69,12 +51,15 @@ foreach ($blocks as $block) {
 ?>
                 </div>
             </div>
-            <div class="col-lg-3 order-2">
+            <div class="col-lg-3 order-2 order-lg-1">
                 <div class="sidebar pb-2">
                     <?php
-echo sidebar_latest_news(get_the_ID());
-echo sidebar_upcoming_events();
-echo sidebar_vote_cta();
+                    foreach ($sidebar as $s => $l) {
+                        ?>
+                    <a
+                        href="#<?=$l?>"><?=$s?></a>
+                    <?php
+                    }
 ?>
                 </div>
             </div>
@@ -92,8 +77,8 @@ if ($r->have_posts()) {
     ?>
     <section class="related_news pb-2">
         <div class="container-xl">
-            <div class="bg-white p-4 mb-2">
-                <h2>Related News</h2>
+            <div class="bg-white py-4 mb-2">
+                <h2>Related Articles</h2>
                 <div class="related_news__grid">
                     <?php
 while ($r->have_posts()) {
@@ -115,6 +100,14 @@ while ($r->have_posts()) {
     <?php
 }
 ?>
+    <section class="breadcrumbs container-xl">
+        <?php
+if (function_exists('yoast_breadcrumb')) {
+    yoast_breadcrumb('<div id="breadcrumbs" class="my-2">', '</div>');
+}
+?>
+    </section>
+
 </main>
 <?php
 get_footer();

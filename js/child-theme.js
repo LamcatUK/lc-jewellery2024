@@ -6776,7 +6776,8 @@
 	  // hide beyond height of navbar (--h-top)
 	  let lastScrollPosition = 0;
 	  // const navbar = document.getElementById('wrapper-navbar');
-	  const navbarHeight = navbar.clientHeight; // Get the height of the navbar
+	  // const navbarHeight = navbar.clientHeight; // Get the height of the navbar
+	  const navbarHeight = 0; // Get the height of the navbar
 
 	  window.addEventListener('scroll', function () {
 	    const currentScroll = window.scrollY || document.documentElement.scrollTop;

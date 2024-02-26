@@ -3,7 +3,7 @@
 @import "header";
 @import "footer";
 @import "buttons";
-// @import "blog";
+@import "blog";
 @import "product";
 @import "blocks/blocks";
 
@@ -55,6 +55,15 @@ main {
     padding-inline: 0;
 }
 
+.breadcrumbs {
+    font-size: var(--fs-100);
+    text-transform: uppercase;
+    font-family: var(--ff-headings);
+    color: var(--col-grey-400);
+    letter-spacing: 1.4px;
+    text-align: center;
+    border-top: 1px solid hsl(0 0% 0% / 0.1);
+}
 
 // show stuff that overflows horizontally
 // * {

@@ -5,7 +5,7 @@ defined('ABSPATH') || exit;
 
 require_once LC_THEME_DIR . '/inc/lc-utility.php';
 require_once LC_THEME_DIR . '/inc/lc-blocks.php';
-// require_once LC_THEME_DIR . '/inc/lc-news.php';
+require_once LC_THEME_DIR . '/inc/lc-news.php';
 // require_once LC_THEME_DIR . '/inc/lc-careers.php';
 
 
