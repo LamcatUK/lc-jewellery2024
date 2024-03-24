@@ -1,36 +1,41 @@
 <?php
-$classes = $block['className'] ?? 'pb-5';
+$classes = $block['className'] ?? null;
+$bg = get_field('colour') ?? '';
 
-$orderImg = get_field('order') == 'Image Text' ? "order-2 order-md-1" : "order-2";
-$orderText = get_field('order') == 'Image Text' ? "order-1 order-md-2" : "order-1";
-$inner = get_field('order') == 'Image Text' ? 'split__inner--left' : 'split__inner--right';
+$image_order = get_field('order') == 'Image/Text' ? '' : 'order-md-2';
+$text_order = get_field('order') == 'Image/Text' ? '' : 'order-md-1';
+$text_alignment = get_field('order') == 'Image/Text' ? 'text--right ps-4' : 'text--left pe-4';
+
+$img = wp_get_attachment_image_url(get_field('image'), 'full') ?: get_stylesheet_directory_uri() . '/img/placeholder-800x450.png';
 ?>
-<section class="split container-fluid <?=$classes?>">
-    <div class="row">
-        <div class="col-md-6 split__image <?=$orderImg?>"
-            style="background-image:url(<?=wp_get_attachment_image_url(get_field('image'), 'full')?>)"
-            data-aos="fade">
+<section
+    class="split <?=$bg?> <?=$classes?>">
+    <div class="container-fluid">
+        <div class="h2 d-md-none pt-3">
+            <?=get_field('title')?>
         </div>
-        <div
-            class="col-md-6 split__text d-flex align-items-end bg--grey-200 <?=$orderText?>">
-            <div class="split__inner <?=$inner?> py-5"
+        <div class="row">
+            <div class="col-md-6 split__image <?=$image_order?>"
+                style="background-image:url(<?=$img?>)"
                 data-aos="fade">
-                <h2 class="h2">
-                    <?=get_field('title')?>
-                </h2>
-                <div class="split__content">
-                    <?=get_field('content')?>
-                </div>
-                <?php
-                if (get_field('link') ?? null) {
-                    $l = get_field('link');
-                    ?>
-                <a href="<?=$l['url']?>"
-                    target="<?=$l['target']?>"
-                    class="btn btn-primary mt-4"><?=$l['title']?></a>
-                <?php
-                }
+            </div>
+            <div class="col-md-6 <?=$text_order?>" data-aos="fade">
+                <div class="ps-xl-3 py-3 <?=$text_alignment?>">
+                    <h2 class="h2 d-none d-md-block">
+                        <?=get_field('title')?>
+                        </h3>
+                        <?=get_field('content')?>
+                        <?php
+                        if (get_field('link') ?? null) {
+                            $l = get_field('link');
+                            ?>
+                        <a href="<?=$l['url']?>"
+                            class="btn btn-primary"
+                            target="<?=$l['target']?>"><?=$l['title']?></a>
+                        <?php
+                        }
 ?>
+                </div>
             </div>
         </div>
     </div>

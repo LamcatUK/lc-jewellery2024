@@ -1,10 +1,10 @@
 {
     "key": "group_65a3e0a6266af",
-    "title": "LC Text/Image",
+    "title": "LC Text\/Image",
     "fields": [
         {
             "key": "field_65a3e0a6b4d4f",
-            "label": "LC Text/Image",
+            "label": "LC Text\/Image",
             "name": "",
             "aria-label": "",
             "type": "message",
@@ -35,10 +35,10 @@
                 "id": ""
             },
             "choices": {
-                "text": "Text \/ Image",
-                "image": "Image \/ Text"
+                "Image\/Text": "Image\/Text",
+                "Text\/Image": "Text\/Image"
             },
-            "default_value": "text : Text \/ Image",
+            "default_value": "Image\/Text",
             "return_format": "value",
             "allow_null": 0,
             "other_choice": 0,
@@ -145,5 +145,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1705327898
+    "modified": 1711281655
 }

@@ -15,6 +15,7 @@ a.anchor {
     display: block;
     position: relative;
     visibility: hidden;
+    top: -135px;
 }
 
 @media (min-width:992px) {
@@ -26,10 +27,12 @@ a.anchor {
     }
 }
 
-a {
-    color: var(--col-highlight);
+main a:not([class]) {
+    color: var(--col-green-600);
+    font-weight: var(--fw-900);
+    transition: color var(--transition);
     &:hover {
-        color: var(--col-highlight);
+        color: var(--col-green-400);
     }
 }
 
@@ -63,6 +66,15 @@ main {
     letter-spacing: 1.4px;
     text-align: center;
     border-top: 1px solid hsl(0 0% 0% / 0.1);
+}
+
+.form-label {
+    font-family: var(--ff-headings);
+}
+
+.flag {
+    aspect-ratio: 4 / 3;
+    width: 40px;
 }
 
 // show stuff that overflows horizontally

@@ -44,8 +44,10 @@ while (have_posts()) {
     ?>
                 <a href="<?=get_the_permalink()?>"
                     class="news_index__card <?=$style?>">
-                    <img src="<?=get_the_post_thumbnail_url(get_the_ID(), 'large')?>"
-                        alt="">
+                    <div class="news_index__image">
+                        <img src="<?=get_the_post_thumbnail_url(get_the_ID(), 'large')?>"
+                            alt="">
+                    </div>
                     <div class="news_index__inner">
                         <h2><?=get_the_title()?></h2>
                         <?php

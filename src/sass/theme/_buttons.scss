@@ -13,6 +13,7 @@
     padding-top: 10px;
     text-transform: uppercase;
     transition: background-color var(--transition);
+    align-self: flex-start;
     &:hover {
         background-color: var(--col-green-400);
         color: var(--col-dark);

@@ -11,6 +11,7 @@
   --col-grey-400: #767676;
   --col-grey-800: #444444;
   --col-light: rgb(255 255 255);
+  --col-dark: rgb(12, 12, 12);
   --fs-100: 0.64rem;
   --fs-200: 0.8rem;
   --fs-300: 0.90rem;
@@ -27,6 +28,7 @@
   --ff-headings: "URWClassico Regular", "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   --ff-body: "Cormorant Garamond", Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   --transition: 300ms ease-in-out;
+  --grid-gap: 1.5rem;
   --shadow-1: rgba(0,0,0,.12) 0 1px 3px, rgba(0,0,0,.24) 0 1px 2px;
   --filter-shadow-1: drop-shadow(0 1px 3px rgba(0,0,0,.12)) drop-shadow(0 1px 2px rgba(0,0,0,.24));
 }

@@ -15,9 +15,12 @@
 
 
 AOS.init({
+    duration: 800,
     once: true,
     easing: 'ease-in',
 });
+
+const lightbox = GLightbox();
 
 document.addEventListener('DOMContentLoaded', function() {
     const navLinks = document.querySelectorAll('.nav-link');

@@ -7,8 +7,8 @@ get_header();
     <?php
     the_post();
 the_content();
-get_footer();
 ?>
 </main>
 <?php
+get_footer();
 ?>

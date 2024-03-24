@@ -1,0 +1,19 @@
+.latest {
+    &_grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: var(--grid-gap);
+        @media (min-width:992px) {
+            grid-template-columns: repeat(3,1fr);
+        }
+
+        .card__inner {
+            grid-template-rows: 40px 1fr auto !important;
+        }
+
+        .card__category {
+            width: max-content !important;
+            min-width: 60px !important;
+        }
+    }
+}

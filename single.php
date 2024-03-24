@@ -4,6 +4,7 @@ defined('ABSPATH') || exit;
 get_header();
 $img = get_the_post_thumbnail_url(get_the_ID(), 'full');
 ?>
+<div class="blog-overlay"></div>
 <main id="main" class="blog">
     <?php
     $content = get_the_content();
@@ -12,8 +13,8 @@ $sidebar = array();
 $after;
 ?>
     <div class="container-xl">
-        <div class="row g-2">
-            <div class="col-lg-9 order-1 order-lg-2">
+        <div class="row g-3">
+            <div class="col-lg-9 order-2 pt-2 pt-lg-3 content_col">
                 <img src="<?=$img?>" alt="" class="blog__image mb-4">
                 <div class="blog__content bg-white mb-2">
                     <h1 class="blog__title"><?=get_the_title()?></h1>
@@ -51,16 +52,26 @@ foreach ($blocks as $block) {
 ?>
                 </div>
             </div>
-            <div class="col-lg-3 order-2 order-lg-1">
+            <div class="col-lg-3 order-1 sidebar_col">
                 <div class="sidebar pb-2">
-                    <?php
+                    <div class="h6 d-lg-none headline mb-0 collapsed" data-bs-toggle="collapse" href="#links"
+                        role="button">Quick
+                        Links
+                    </div>
+                    <div class="h6 d-none d-lg-block headline">Quick Links</div>
+                    <div class="collapse d-lg-block" id="links">
+                        <ul class="pt-3 pt-lg-0">
+                            <?php
                     foreach ($sidebar as $s => $l) {
                         ?>
-                    <a
-                        href="#<?=$l?>"><?=$s?></a>
-                    <?php
+                            <li><a
+                                    href="#<?=$l?>"><?=$s?></a>
+                            </li>
+                            <?php
                     }
 ?>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -79,19 +90,27 @@ if ($r->have_posts()) {
         <div class="container-xl">
             <div class="bg-white py-4 mb-2">
                 <h2>Related Articles</h2>
-                <div class="related_news__grid">
+                <div class="news_index__grid">
                     <?php
-while ($r->have_posts()) {
-    $r->the_post();
-    ?>
-                    <a class="related_news__card"
-                        href="<?=get_the_permalink()?>">
-                        <img src="<?=get_the_post_thumbnail_url(get_the_ID(), 'large')?>"
-                            alt="">
-                        <h3><?=get_the_title()?></h3>
+                    $d = 0;
+    while ($r->have_posts()) {
+        $r->the_post();
+        $ph = get_the_post_thumbnail_url(get_the_ID(), 'large') ?: get_stylesheet_directory_uri() . '/img/missing-hero.png';
+        ?>
+                    <a href="<?=get_the_permalink()?>"
+                        class="news_index__card" data-aos="fade"
+                        data-aos-delay="<?=$d?>">
+                        <div class="news_index__image">
+                            <img src="<?=$ph?>"
+                                alt="<?=get_the_title()?>">
+                        </div>
+                        <div class="news_index__inner">
+                            <h3><?=get_the_title()?></h3>
+                        </div>
                     </a>
                     <?php
-}
+    $d += 100;
+    }
     ?>
                 </div>
             </div>
@@ -110,5 +129,22 @@ if (function_exists('yoast_breadcrumb')) {
 
 </main>
 <?php
+add_action('wp_footer', function () {
+    ?>
+<script>
+    const links = document.querySelectorAll('div#links > ul > li a');
+
+    function removeShowClass() {
+        const divLinks = document.querySelector('div#links');
+        if (divLinks.classList.contains('show')) {
+            divLinks.classList.remove('show');
+        }
+    }
+    links.forEach(link => {
+        link.addEventListener('click', removeShowClass);
+    });
+</script>
+<?php
+});
 get_footer();
 ?>

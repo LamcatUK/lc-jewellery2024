@@ -84,7 +84,7 @@ wp_head();
     <?php
 do_action('wp_body_open');
 ?>
-    <div class="navholder" id="navholder">
+    <header class="navholder" id="navholder">
         <div class="pre_nav">
             <div class="container-xl">
                 <div class="pre_nav__container">
@@ -111,7 +111,7 @@ do_action('wp_body_open');
 'theme_location'  => 'primary_nav',
 'container_class' => 'collapse navbar-collapse',
 'container_id' => 'navbar',
-'menu_class'      => 'navbar-nav mx-auto w-100 d-flex justify-content-center',
+'menu_class'      => 'navbar-nav mx-auto w-100 d-flex justify-content-around',
 'fallback_cb'     => '',
 'menu_id'     => 'main-menu',
 'depth'           => 2,
@@ -121,4 +121,4 @@ do_action('wp_body_open');
 ?>
             </div>
         </nav>
-    </div>
+    </header>

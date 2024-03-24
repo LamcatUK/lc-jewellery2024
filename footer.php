@@ -26,19 +26,15 @@ defined('ABSPATH') || exit;
                     alt="" width=310 height=50>
             </div>
             <div class="col-md-4 col-lg-2 mb-2 text-center text-md-start">
-                <div class="menu-title">High Jewellery</div>
                 <?php wp_nav_menu(array('theme_location' => 'footer_menu1')); ?>
             </div>
             <div class="col-md-4 col-lg-2 text-center text-md-start">
-                <div class="menu-title">Maison</div>
                 <?php wp_nav_menu(array('theme_location' => 'footer_menu2')); ?>
             </div>
-            <div class="col-md-4 col-lg-2 text-center text-md-start">
-                <div class="menu-title">Contact Us</div>
+            <div class="col-md-4 col-lg-3 text-center text-md-start">
                 <?php wp_nav_menu(array('theme_location' => 'footer_menu3')); ?>
             </div>
-            <div class="col-12 col-lg-3 text-center text-lg-start">
-                <div class="menu-title">Community</div>
+            <div class="col-12 col-lg-2 text-center text-lg-start">
                 <div class="social-icons">
                     <?=do_shortcode('[social_icons]')?>
                 </div>

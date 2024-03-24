@@ -12,7 +12,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "25",
+                "width": "",
                 "class": "",
                 "id": ""
             },
@@ -30,20 +30,39 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "75",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
             "choices": {
-                "Image Text": "Image Text",
-                "Text Image": "Text Image"
+                "Image\/Text": "Image\/Text",
+                "Text\/Image": "Text\/Image"
             },
-            "default_value": "Image Text",
+            "default_value": "Image\/Text",
             "return_format": "value",
             "allow_null": 0,
             "other_choice": 0,
             "layout": "vertical",
             "save_other_choice": 0
+        },
+        {
+            "key": "field_660018ae177fc",
+            "label": "Colour",
+            "name": "colour",
+            "aria-label": "",
+            "type": "editor_palette",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "allowed_colors": "",
+            "exclude_colors": "",
+            "return_format": "slug"
         },
         {
             "key": "field_65b7cc3ea792a",
@@ -145,5 +164,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1706819219
+    "modified": 1711282364
 }

@@ -75,6 +75,9 @@ footer {
     .container-xl {
         border-top: 1px solid hsl(0 0% 0% / 0.1);
         color: var(--col-grey-400);
+        a {
+            display: block;
+        }
         div {
             font-size: var(--fs-300);
             text-transform: uppercase;
