@@ -19,8 +19,10 @@ if ($q->have_posts()) {
             <a href="<?=get_the_permalink()?>"
                 class="news_index__card" data-aos="fade"
                 data-aos-delay="<?=$d?>">
-                <img src="<?=$ph?>"
-                    alt="<?=get_the_title()?>">
+                <div class="news_index__image">
+                    <img src="<?=$ph?>"
+                        alt="<?=get_the_title()?>">
+                </div>
                 <div class="news_index__inner">
                     <h3 class="h2"><?=get_the_title()?></h3>
                 </div>
