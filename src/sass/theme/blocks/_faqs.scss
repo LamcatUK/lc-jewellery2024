@@ -1,13 +1,14 @@
 .faq_block {
-    .faq_intro {
-        max-width: 80ch;
-    }
-
     .faq__question {
         font-family: var(--ff-headings);
         font-size: var(--fs-500);
+        margin-bottom: 0.5rem;
     }
-    // .faq__answer {
-    // }
-
+    .faq__answer {
+        margin-bottom: 1rem;
+        border-bottom: 1px solid hsla(0deg,0%,0%,.1);
+    }
+    .faq_item:last-child .faq__answer {
+        border-bottom: none;
+    }
 }
