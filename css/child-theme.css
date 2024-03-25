@@ -23335,6 +23335,7 @@ footer .current_page_item a {
 .sidebar ul li a {
   text-decoration: none;
   font-size: var(--fs-300);
+  font-weight: var(--fw-400);
   color: var(--col-dark);
   transition: color var(--transition);
   display: block;
