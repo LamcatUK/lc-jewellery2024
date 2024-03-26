@@ -25,10 +25,11 @@ $img = get_the_post_thumbnail_url($page_for_posts, 'full') ?? null;
                 Insights
             </h1>
             <div class="max-ch text-center mx-auto">
-                Here, we share expert knowledge and fascinating stories designed to guide and inspire. From the secrets
-                behind selecting the perfect diamond to understanding the intricacies of jewellery craftsmanship, our
-                articles illuminate every corner of the gemstone universe. Dive into our insights and enrich your
-                journey through the captivating realm of gems.
+                Here, we share expert knowledge and fascinating stories designed to guide and inspire. From uncovering
+                the history and artistry behind precision timekeeping to revealing the secrets of choosing the ideal
+                diamond, our collection of articles shines a light on the intricate dance between horology and jewellery
+                craftsmanship, illuminating every corner of the gemstone universe. Dive into our insights and enrich
+                your journey through the captivating realm of gems and watches.
             </div>
         </div>
     </section>
