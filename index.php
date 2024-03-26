@@ -25,17 +25,12 @@ $img = get_the_post_thumbnail_url($page_for_posts, 'full') ?? null;
                 Insights
             </h1>
             <div class="max-ch text-center mx-auto">
-                Here, we share expert knowledge and fascinating stories designed to guide and inspire. From uncovering
-                the history and artistry behind precision timekeeping to revealing the secrets of choosing the ideal
-                diamond, our collection of articles shines a light on the intricate dance between horology and jewellery
-                craftsmanship, illuminating every corner of the gemstone universe. Dive into our insights and enrich
-                your journey through the captivating realm of gems and watches.
+                <?=get_the_content(null, false, $page_for_posts)?>
             </div>
         </div>
     </section>
     <section class="news_index pb-4">
         <div class="container-xl bg-white py-4 px-0">
-            <?=get_the_content(null, false, $page_for_posts)?>
             <div class="news_index__grid">
                 <?php
     $style = 'news_index__card--first';
