@@ -23375,6 +23375,20 @@ footer .current_page_item a {
     z-index: 1;
   }
 }
+.navbuttons {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+}
+.navbuttons a {
+  text-transform: uppercase;
+  font-family: var(--ff-headings);
+  font-weight: normal;
+}
+.navbuttons a.active {
+  font-weight: var(--fw-900);
+}
+
 .product__image {
   max-width: 660px;
   margin-inline: auto;

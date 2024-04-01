@@ -223,3 +223,17 @@
         z-index: 1;
     }
 }
+
+.navbuttons {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    a {
+        text-transform: uppercase;
+        font-family: var(--ff-headings);
+        font-weight: normal;
+        &.active {
+            font-weight: var(--fw-900);
+        }
+    }
+}

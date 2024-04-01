@@ -22,26 +22,29 @@ $img = get_the_post_thumbnail_url($page_for_posts, 'full') ?? null;
                 From the jeweller's bench
             </div>
             <h1 class="full_text__title">
-                Insights
+                <?=single_cat_title()?>
             </h1>
             <div class="max-ch text-center mx-auto">
-                <?=get_the_content(null, false, $page_for_posts)?>
+                <?=category_description()?>
             </div>
         </div>
     </section>
     <section class="news_index pb-4">
         <div class="container-xl bg-white py-4 px-0">
             <div class="navbuttons">
-                <a href="/insights/" class="active">All</a>
+                <a href="/insights/" class="">All</a>
                 <?php
-            $allcats = get_categories();
+                $current_category = get_queried_object();
+$category_slug = $current_category->slug;
+$allcats = get_categories();
 foreach ($allcats as $cat) {
     if ($cat->slug == 'uncategorized') {
         continue;
     }
+    $active = $cat->slug == $current_category->slug ? 'active' : '';
     ?>
                 <a href="<?=get_category_link($cat->term_id)?>"
-                    class=""><?=$cat->name?></a>
+                    class="<?=$active?>"><?=$cat->name?></a>
                 <?php
 }
 ?>
