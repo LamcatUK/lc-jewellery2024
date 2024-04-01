@@ -13,10 +13,11 @@ $classes = $block['className'] ?? 'py-5';
         <?php
         }
 if (get_field('title') ?? null) {
+    $level = get_field('level');
     ?>
-        <h1 class="full_text__title">
+        <<?=$level?> class="full_text__title">
             <?=get_field('title')?>
-        </h1>
+        </<?=$level?>>
         <?php
 }
 ?>
