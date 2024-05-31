@@ -1,8 +1,8 @@
 @charset "UTF-8";
 :root {
   --hsl-primary: 0 0% 0%;
-  --hsl-green-400: 159 35% 90%;
-  --hsl-green-900: 159 45% 9%;
+  --hsl-green-400: 96 15% 87%;
+  --hsl-green-900: 96 45% 9%;
   --col-primary: hsl( var(--hsl-primary) );
   --col-green-400: hsl( var(--hsl-green-400) );
   --col-green-900: hsl( var(--hsl-green-900) );

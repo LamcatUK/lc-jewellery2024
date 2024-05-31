@@ -39,6 +39,7 @@ foreach (get_field('images') as $i) {
                         <?php
     $c++;
 }
+
 ?>
                     </div>
                     <div class="carousel-inner">
@@ -50,8 +51,8 @@ foreach (get_field('images') as $i) {
                             </a>
                         </div>
                         <?php
-foreach (get_field('images') as $i) {
-    ?>
+                            foreach (get_field('images') as $i) {
+                                ?>
                         <div class="carousel-item">
                             <a href="<?=wp_get_attachment_image_url($i, 'full')?>"
                                 class="glightbox" data-gallery="gallery1">
@@ -60,7 +61,7 @@ foreach (get_field('images') as $i) {
                             </a>
                         </div>
                         <?php
-}
+                            }
 ?>
                     </div>
                 </div>
@@ -129,7 +130,7 @@ foreach ($blocks as $block) {
         ?>
     <section class="related bg--grey-200 py-5">
         <div class="container-xl">
-            <h2>In the same collection</h2>
+            <h2>You may also like</h2>
             <div class="four_cols__grid">
                 <?php
             foreach (get_field('related_products') as $p) {
