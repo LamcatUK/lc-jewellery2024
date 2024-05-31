@@ -23706,6 +23706,17 @@ main a:not([class]):hover {
   color: var(--col-green-400);
 }
 
+.todo {
+  background-color: gold;
+  color: black;
+  font-family: "Courier New", Courier, monospace;
+  padding: 1rem;
+  margin-block: 1rem;
+  font-size: 0.8rem;
+  border: 3px dashed black;
+  outline: 4px solid gold;
+}
+
 nav {
   position: sticky;
   top: 0;
