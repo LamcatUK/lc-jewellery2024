@@ -22,3 +22,17 @@
         object-position: center;
     }
 }
+
+.glightbox-clean {
+    .gslide-description {
+        background-color: var(--col-dark);
+    }
+    .gdesc-inner {
+        padding: 0.5rem;
+    }
+    .gslide-title {
+        margin-bottom: 0;
+        font-size: var(--fs-100);
+        color: var(--col-grey-400);
+    }
+}

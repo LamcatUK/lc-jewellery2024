@@ -23675,6 +23675,33 @@ footer .current_page_item a {
   object-position: center;
 }
 
+.glightbox-clean .gslide-description {
+  background-color: var(--col-dark);
+}
+.glightbox-clean .gdesc-inner {
+  padding: 0.5rem;
+}
+.glightbox-clean .gslide-title {
+  margin-bottom: 0;
+  font-size: var(--fs-100);
+  color: var(--col-grey-400);
+}
+
+.banner {
+  position: relative;
+  height: 450px;
+  isolation: isolate;
+}
+.banner__bg {
+  position: absolute;
+  inset: 0;
+  -o-object-fit: cover;
+  object-fit: cover;
+  margin-inline: auto;
+  width: auto;
+  z-index: -1;
+}
+
 a,
 a.noline {
   text-decoration: none;
