@@ -1,9 +1,9 @@
 <?php
-$txtcol = get_field('order') == 'text' ? 'order-2 order-md-1' : 'order-2 order-md-2';
-$imgcol = get_field('order') == 'text' ? 'order-1 order-md-2' : 'order-1 order-md-1';
+$txtcol = get_field('order') == 'Text/Image' ? 'order-2 order-md-1' : 'order-2 order-md-2';
+$imgcol = get_field('order') == 'Text/Image' ? 'order-1 order-md-2' : 'order-1 order-md-1';
 
-$txtanim = get_field('order') == 'text' ? 'fade-right' : 'fade-left';
-$imganim = get_field('order') == 'text' ? 'fade-left' : 'fade-right';
+$txtanim = get_field('order') == 'Text/Image' ? 'fade-right' : 'fade-left';
+$imganim = get_field('order') == 'Text/Image' ? 'fade-left' : 'fade-right';
 
 $txtanim = 'fade';
 $imganim = 'fade';
