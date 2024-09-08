@@ -93,7 +93,7 @@ do_action('wp_body_open');
                         <img src="<?=get_stylesheet_directory_uri()?>/img/logo.svg"
                             alt="" width=310 height=50>
                     </a>
-                    <a class="d-none d-lg-grid pre_nav__link" href="#">Call us</a>
+                    <a class="d-none d-lg-grid pre_nav__link" href="tel:+447746333400">Call us</a>
                     <button class="d-lg-none navbar-toggler" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false"
                         aria-label="Toggle navigation">
