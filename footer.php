@@ -23,7 +23,7 @@ defined('ABSPATH') || exit;
         <div class="row pb-2 pb-lg-4 mx-0 g-4">
             <div class="col-12 col-lg-3 mb-2 text-center text-lg-start">
                 <a href="/"><img src="<?=get_stylesheet_directory_uri()?>/img/logo.svg"
-                    alt="" width=310 height=50></a>
+                    alt="Griffin & Sloane" width=310 height=50></a>
             </div>
             <div class="col-md-4 col-lg-2 mb-2 text-center text-md-start">
                 <?php wp_nav_menu(array('theme_location' => 'footer_menu1')); ?>
