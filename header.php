@@ -25,6 +25,7 @@ defined('ABSPATH') || exit;
         href="<?=get_stylesheet_directory_uri()?>/fonts/URWClassico-Regular.woff "
         as="font" type="font/woff" crossorigin="anonymous">
     <?php
+if (!is_user_logged_in()) {
     if (get_field('ga_property', 'options')) {
         ?>
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -42,10 +43,10 @@ defined('ABSPATH') || exit;
             '<?=get_field('ga_property', 'options')?>'
         );
     </script>
-    <?php
-    }
-if (get_field('gtm_property', 'options')) {
-    ?>
+        <?php
+        }
+    if (get_field('gtm_property', 'options')) {
+        ?>
     <!-- Google Tag Manager -->
     <script>
         (function(w, d, s, l, i) {
@@ -66,7 +67,8 @@ if (get_field('gtm_property', 'options')) {
         );
     </script>
     <!-- End Google Tag Manager -->
-    <?php
+        <?php
+    }
 }
 if (get_field('google_site_verification', 'options')) {
     echo '<meta name="google-site-verification" content="' . get_field('google_site_verification', 'options') . '" />';
