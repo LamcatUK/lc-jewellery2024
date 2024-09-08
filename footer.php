@@ -47,7 +47,6 @@ defined('ABSPATH') || exit;
                 <a href="/terms/">Terms of Use</a>
                 <a href="/privacy-policy/">Privacy Policy</a>
                 <a href="/cookie-policy/">Cookies Policy</a>
-                <a href="/conditions/">Conditions of Sale</a>
                 <a href="/modern-slavery/">Modern Slavery Statement</a>
                 <div>&copy; <?=date('Y')?>
                     Griffin &amp; Sloane</div>
