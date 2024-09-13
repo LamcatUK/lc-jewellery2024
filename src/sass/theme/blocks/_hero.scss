@@ -1,14 +1,20 @@
 .hero {
-    .container-xl {
+    // .container-xl {
+        
+
+    //     background-size: cover;
+    //     background-position: center;
+    //     background-repeat: no-repeat;
+
+    //     display: grid;
+    //     place-content: center;
+    //     padding-block: 4rem;
+    // }
+
+    &__bg {
         height: 450px;
-        padding-block: 4rem;
-
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-
-        display: grid;
-        place-content: center;
+        width: 100%;
+        object-fit: cover;
     }
 
     // &::before {

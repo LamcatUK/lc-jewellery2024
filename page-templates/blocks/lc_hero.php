@@ -1,8 +1,6 @@
-<?php
-$bg = wp_get_attachment_image_url(get_field('background'), 'full');
-?>
+
 <section class="hero">
-    <div class="container-xl"
-        style="background-image: url(<?=$bg?>)">
+    <div class="container-xl">
+        <?=wp_get_attachment_image(get_field('background'), 'full', false, array('class' => 'hero__bg'))?>
     </div>
 </section>

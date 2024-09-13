@@ -23463,14 +23463,11 @@ footer .current_page_item a {
   opacity: 1;
 }
 
-.hero .container-xl {
+.hero__bg {
   height: 450px;
-  padding-block: 4rem;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  display: grid;
-  place-content: center;
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 .hero__inner {
   max-width: 90vw;
