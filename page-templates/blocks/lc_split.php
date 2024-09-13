@@ -11,7 +11,7 @@ $img = wp_get_attachment_image_url(get_field('image'), 'full') ?: get_stylesheet
 <section
     class="split <?=$bg?> <?=$classes?>">
     <div class="container-fluid">
-        <div class="h2 d-md-none pt-3">
+        <div class="h2 d-md-none text-center pt-3">
             <?=get_field('title')?>
         </div>
         <div class="row">
