@@ -26,7 +26,7 @@ $imganim = 'fade';
                 <?php
         if (get_field('title') ?? null) {
             ?>
-                <h2 class="d-none d-md-block h2">
+                <h2 class="d-none d-md-block text-center h2">
                     <?=get_field('title')?>
                 </h2>
                 <?php
