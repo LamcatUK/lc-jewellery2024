@@ -22,8 +22,8 @@
         },
         {
             "key": "field_65baa7b1ff25c",
-            "label": "Gender",
-            "name": "gender",
+            "label": "Type",
+            "name": "type",
             "aria-label": "",
             "type": "taxonomy",
             "instructions": "",
@@ -34,14 +34,17 @@
                 "class": "",
                 "id": ""
             },
-            "taxonomy": "gender",
+            "taxonomy": "ptype",
             "add_term": 0,
             "save_terms": 0,
             "load_terms": 0,
             "return_format": "id",
             "field_type": "radio",
             "allow_null": 0,
-            "multiple": 0
+            "allow_in_bindings": 1,
+            "bidirectional": 0,
+            "multiple": 0,
+            "bidirectional_target": []
         }
     ],
     "location": [
@@ -62,5 +65,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1706731462
+    "modified": 1729021447
 }

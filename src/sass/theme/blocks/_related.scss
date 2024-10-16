@@ -1,0 +1,11 @@
+.related {
+    &__card {
+        h3 {
+            margin-bottom: 0.25rem;
+        }
+    }
+    &__meta {
+        font-family: var(--ff-headings);
+        font-size: var(--fs-200);
+    }
+}

@@ -1,0 +1,16 @@
+.accordion {
+    &-item {
+        border: none;
+        border-bottom: 1px solid hsla(0deg,0%,0%,.1);
+    }
+    &-button {
+        border-radius: 0 !important;
+        &:not(.collapsed) {
+            background-color: unset;
+        }
+    }
+    h2 {
+        font-size: var(--fs-500);
+        padding-block: 0.5rem;
+    }
+}
