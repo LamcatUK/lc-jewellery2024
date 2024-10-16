@@ -17,10 +17,19 @@ if (get_field('related')) {
                 <?php
                 $d = 0;
                 foreach (get_field('related') as $o) {
+                    $front = get_the_post_thumbnail($o, 'large', array('class' => 'related__front'));
+                    $back = '';
+                    if (get_field('images', $o)) {
+                        $back = get_field('images', $o)[0];
+                        $back = wp_get_attachment_image($back, 'large', false, array('class' => 'related__back'));
+                    }
                 ?>
                     <div class="col-md-6 col-lg-3 text-center" data-aos="fade" data-aos-delay="<?= $d ?>">
                         <a href="<?= get_the_permalink($o) ?>" class="related__card">
-                            <?= get_the_post_thumbnail($o, 'large', array('class' => 'mb-3')) ?>
+                            <div class="related__images">
+                                <?= $front ?>
+                                <?= $back ?>
+                            </div>
                             <h3><?= get_the_title($o) ?> - <?= get_field('material', $o) ?></h3>
                             <div class="related__meta"><?= get_field('variant', $o) ?></div>
                         </a>
