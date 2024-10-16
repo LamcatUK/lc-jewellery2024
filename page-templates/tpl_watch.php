@@ -12,7 +12,7 @@ $blocks = parse_blocks($content);
         <div class="container-xl">
             <?php
             if (function_exists('yoast_breadcrumb')) {
-                yoast_breadcrumb('<div id="breadcrumbs" class="mt-2">', '</div>');
+                yoast_breadcrumb('<div id="breadcrumbs" class="my-2">', '</div>');
             }
             ?>
         </div>
