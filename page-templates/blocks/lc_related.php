@@ -18,7 +18,7 @@ if (get_field('related')) {
                 $d = 0;
                 foreach (get_field('related') as $o) {
                 ?>
-                    <div class="col-md-3 text-center" data-aos="fade" data-aos-delay="<?= $d ?>">
+                    <div class="col-md-6 col-lg-3 text-center" data-aos="fade" data-aos-delay="<?= $d ?>">
                         <a href="<?= get_the_permalink($o) ?>" class="related__card">
                             <?= get_the_post_thumbnail($o, 'large', array('class' => 'mb-3')) ?>
                             <h3><?= get_the_title($o) ?> - <?= get_field('material', $o) ?></h3>
