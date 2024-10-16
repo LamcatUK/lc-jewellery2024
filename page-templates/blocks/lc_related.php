@@ -1,5 +1,5 @@
 <?php
-if (get_field('related') ?? null) {
+if (get_field('related')) {
 
     $has_bg = get_field('has_bg');
     $bg = is_array($has_bg) && isset($has_bg[0]) && $has_bg[0] == 'Yes' ? 'bg--grey-200 my-5' : '';
