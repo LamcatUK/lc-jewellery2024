@@ -1,6 +1,6 @@
 <?php
-$txtcol = get_field('order') == 'Text/Image' ? 'order-2 order-md-1' : 'order-2 order-md-2';
-$imgcol = get_field('order') == 'Text/Image' ? 'order-1 order-md-2' : 'order-1 order-md-1';
+$txtcol = get_field('order') == 'Text/Image' ? 'order-2 order-lg-1' : 'order-2 order-lg-2';
+$imgcol = get_field('order') == 'Text/Image' ? 'order-1 order-lg-2' : 'order-1 order-lg-1';
 
 $txtanim = get_field('order') == 'Text/Image' ? 'fade-right' : 'fade-left';
 $imganim = get_field('order') == 'Text/Image' ? 'fade-left' : 'fade-right';
