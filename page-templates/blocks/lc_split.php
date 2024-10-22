@@ -9,32 +9,32 @@ $text_alignment = get_field('order') == 'Image/Text' ? 'text--right' : 'text--le
 $img = wp_get_attachment_image_url(get_field('image'), 'full') ?: get_stylesheet_directory_uri() . '/img/placeholder-800x450.png';
 ?>
 <section
-    class="split <?=$bg?> <?=$classes?>">
+    class="split <?= $bg ?> <?= $classes ?>">
     <div class="container-fluid">
         <div class="h2 d-md-none text-center pt-3">
-            <?=get_field('title')?>
+            <?= get_field('title') ?>
         </div>
         <div class="row">
-            <div class="col-md-6 split__image <?=$image_order?>"
-                style="background-image:url(<?=$img?>)"
+            <div class="col-md-6 split__image <?= $image_order ?>"
+                style="background-image:url(<?= $img ?>)"
                 data-aos="fade">
             </div>
-            <div class="col-md-6 <?=$text_order?>" data-aos="fade">
-                <div class="ps-xl-3 py-3 <?=$text_alignment?>">
+            <div class="col-md-6 <?= $text_order ?>" data-aos="fade">
+                <div class="ps-xl-3 py-5 <?= $text_alignment ?>">
                     <h2 class="h2 d-none d-md-block">
-                        <?=get_field('title')?>
+                        <?= get_field('title') ?>
                         </h3>
-                        <?=get_field('content')?>
+                        <?= get_field('content') ?>
                         <?php
                         if (get_field('link') ?? null) {
                             $l = get_field('link');
-                            ?>
-                        <a href="<?=$l['url']?>"
-                            class="btn btn-primary mx-auto ms-md-0"
-                            target="<?=$l['target']?>"><?=$l['title']?></a>
+                        ?>
+                            <a href="<?= $l['url'] ?>"
+                                class="btn btn-primary mx-auto ms-md-0"
+                                target="<?= $l['target'] ?>"><?= $l['title'] ?></a>
                         <?php
                         }
-?>
+                        ?>
                 </div>
             </div>
         </div>
