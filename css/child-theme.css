@@ -23545,11 +23545,14 @@ footer .current_page_item a {
   font-weight: var(--fw-400);
   text-transform: uppercase;
 }
-.watch .glightbox {
+
+.glightbox {
   cursor: zoom-in;
   position: relative;
+  display: block;
+  height: 100%;
 }
-.watch .glightbox::after {
+.glightbox::after {
   transition: opacity var(--transition);
   position: absolute;
   top: 10px;
@@ -23564,7 +23567,7 @@ footer .current_page_item a {
   background-repeat: no-repeat;
   opacity: 0;
 }
-.watch .glightbox:hover::after {
+.glightbox:hover::after {
   opacity: 1;
 }
 
@@ -23855,6 +23858,15 @@ footer .current_page_item a {
 .related__meta {
   font-family: var(--ff-headings);
   font-size: var(--fs-200);
+}
+
+.showcase__image {
+  aspect-ratio: 3/4;
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
 }
 
 a,
