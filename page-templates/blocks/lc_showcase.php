@@ -14,7 +14,7 @@ $imganim = 'fade';
             <?= get_field('title') ?>
         </div>
         <div class="row g-5">
-            <div class="col-md-8 <?= $imgcol ?> d-flex align-items-center">
+            <div class="col-lg-8 <?= $imgcol ?> d-flex align-items-center">
                 <div class="row g-2">
                     <?php
                     $r = random_str(4);
@@ -33,7 +33,7 @@ $imganim = 'fade';
                     ?>
                 </div>
             </div>
-            <div class="col-md-4 <?= $txtcol ?> d-flex flex-column justify-content-center"
+            <div class="col-lg-4 <?= $txtcol ?> d-flex flex-column justify-content-center"
                 data-aos="<?= $txtanim ?>">
                 <h2 class="d-none d-md-block text-start h2">
                     <?= get_field('title') ?>
