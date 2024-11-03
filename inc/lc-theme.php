@@ -6,6 +6,7 @@ defined('ABSPATH') || exit;
 require_once LC_THEME_DIR . '/inc/lc-utility.php';
 require_once LC_THEME_DIR . '/inc/lc-blocks.php';
 require_once LC_THEME_DIR . '/inc/lc-news.php';
+require_once LC_THEME_DIR . '/inc/lc-woocommerce.php';
 // require_once LC_THEME_DIR . '/inc/lc-careers.php';
 
 
@@ -33,22 +34,22 @@ add_filter('theme_page_templates', 'child_theme_remove_page_template');
 function child_theme_remove_page_template($page_templates)
 {
     // unset($page_templates['page-templates/blank.php'],$page_templates['page-templates/empty.php'], $page_templates['page-templates/fullwidthpage.php'], $page_templates['page-templates/left-sidebarpage.php'], $page_templates['page-templates/right-sidebarpage.php'], $page_templates['page-templates/both-sidebarspage.php']);
-    unset($page_templates['page-templates/blank.php'],$page_templates['page-templates/empty.php'], $page_templates['page-templates/left-sidebarpage.php'], $page_templates['page-templates/right-sidebarpage.php'], $page_templates['page-templates/both-sidebarspage.php']);
+    unset($page_templates['page-templates/blank.php'], $page_templates['page-templates/empty.php'], $page_templates['page-templates/left-sidebarpage.php'], $page_templates['page-templates/right-sidebarpage.php'], $page_templates['page-templates/both-sidebarspage.php']);
     return $page_templates;
 }
 add_action('after_setup_theme', 'remove_understrap_post_formats', 11);
 function remove_understrap_post_formats()
 {
-    remove_theme_support('post-formats', array( 'aside', 'image', 'video' , 'quote' , 'link' ));
+    remove_theme_support('post-formats', array('aside', 'image', 'video', 'quote', 'link'));
 }
 
 if (function_exists('acf_add_options_page')) {
     acf_add_options_page(
         array(
-            'page_title' 	=> 'Site-Wide Settings',
-            'menu_title'	=> 'Site-Wide Settings',
-            'menu_slug' 	=> 'theme-general-settings',
-            'capability'	=> 'edit_posts',
+            'page_title'     => 'Site-Wide Settings',
+            'menu_title'    => 'Site-Wide Settings',
+            'menu_slug'     => 'theme-general-settings',
+            'capability'    => 'edit_posts',
         )
     );
 }
@@ -106,7 +107,6 @@ function widgets_init()
             ),
         )
     );
-
 }
 add_action('widgets_init', 'widgets_init', 11);
 
@@ -127,19 +127,19 @@ function register_LC_dashboard_widget()
 
 function lc_dashboard_widget_display()
 {
-    ?>
-<div style="display: flex; align-items: center; justify-content: space-around;">
-    <img style="width: 50%;"
-        src="<?= get_stylesheet_directory_uri().'/img/lc-full.jpg'; ?>">
-    <a class="button button-primary" target="_blank" rel="noopener nofollow noreferrer"
-        href="mailto:hello@lamcat.co.uk/">Contact</a>
-</div>
-<div>
-    <p><strong>Thanks for choosing Lamcat!</strong></p>
-    <hr>
-    <p>Got a problem with your site, or want to make some changes & need us to take a look for you?</p>
-    <p>Use the link above to get in touch and we'll get back to you ASAP.</p>
-</div>
+?>
+    <div style="display: flex; align-items: center; justify-content: space-around;">
+        <img style="width: 50%;"
+            src="<?= get_stylesheet_directory_uri() . '/img/lc-full.jpg'; ?>">
+        <a class="button button-primary" target="_blank" rel="noopener nofollow noreferrer"
+            href="mailto:hello@lamcat.co.uk/">Contact</a>
+    </div>
+    <div>
+        <p><strong>Thanks for choosing Lamcat!</strong></p>
+        <hr>
+        <p>Got a problem with your site, or want to make some changes & need us to take a look for you?</p>
+        <p>Use the link above to get in touch and we'll get back to you ASAP.</p>
+    </div>
 <?php
 }
 
@@ -234,7 +234,7 @@ function LC_theme_enqueue()
     // // Grab asset urls.
     $theme_styles  = "/css/child-theme{$suffix}.css";
     $theme_scripts = "/js/child-theme{$suffix}.js";
-    
+
     $css_version = $theme_version; // . '.' . filemtime(get_stylesheet_directory() . $theme_styles);
 
     // wp_enqueue_style('lightbox-stylesheet', get_stylesheet_directory_uri() . '/css/lightbox.min.css', array(), $the_theme->get('Version'));
@@ -253,9 +253,9 @@ function LC_theme_enqueue()
     wp_enqueue_script('child-understrap-scripts', get_stylesheet_directory_uri() . $theme_scripts, array(), $css_version, true);
     wp_enqueue_style('child-understrap-styles', get_stylesheet_directory_uri() . $theme_styles, array(), $css_version);
     // wp_enqueue_script( 'jquery' );
-    
+
     $js_version = $theme_version . '.' . filemtime(get_stylesheet_directory() . $theme_scripts);
-    
+
     if (is_singular() && comments_open() && get_option('thread_comments')) {
         wp_enqueue_script('comment-reply');
     }
@@ -357,7 +357,7 @@ function add_current_nav_class($classes, $item)
     if (! ($post_type_object instanceof WP_Post_Type) || ! $post_type_object->has_archive) {
         return $classes;
     }
-        
+
     $post_type_slug = $post_type_object->rewrite['slug'];
     $menu_slug      = strtolower(trim($item->url));
 
@@ -367,7 +367,7 @@ function add_current_nav_class($classes, $item)
     if (strpos($menu_slug, $post_type_slug) === false) {
         return $classes;
     }
-        
+
     $classes[] = 'current-menu-item';
 
     return $classes;

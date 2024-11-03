@@ -34,7 +34,7 @@
                 "class": "",
                 "id": ""
             },
-            "taxonomy": "ptype",
+            "taxonomy": "product_cat",
             "add_term": 0,
             "save_terms": 0,
             "load_terms": 0,
@@ -65,5 +65,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1729021447
+    "modified": 1730390242
 }

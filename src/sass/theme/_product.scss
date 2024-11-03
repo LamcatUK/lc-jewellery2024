@@ -154,3 +154,62 @@
         opacity: 1;
     }
 }
+
+
+form.cart {
+    display: flex;
+    gap: 0.5rem;
+
+    .input-text {
+        border-radius: 0;
+    }
+}
+
+.wc-block-cart__submit-button,
+button[name="add-to-cart"] {
+    @extend .btn;
+    @extend .btn-primary;
+}
+
+.wc-block-cart-items__header,
+.wc-block-cart__totals-title {
+    font-family: var(--ff-headings) !important;
+    font-size: var(--fs-400) !important;
+}
+
+.cart-popout {
+    position: fixed;
+    top: 25vh;
+    right: 0;
+    background-color: var(--col-green-400);
+    padding: 0.5rem 1rem;
+    z-index: 9999;
+
+    .cart-link {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    .cart-icon {
+        position: relative;
+        width: 25px;
+        height: 25px;
+        &::after {
+            content:"";
+            background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg id='Layer_1' data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 23.82 27.22'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: %23444; stroke-width: 0px; %7D %3C/style%3E%3C/defs%3E%3Cpath class='cls-1' d='m6.8,6.8v-1.7c0-2.82,2.29-5.1,5.1-5.1s5.1,2.29,5.1,5.1v1.7h6.8v20.41H0V6.8h6.8Zm0,1.7H1.7v17.01h20.41V8.51h-5.1v5.1h-1.7v-5.1h-6.8v5.1h-1.7v-5.1Zm1.7-3.4v1.7h6.8v-1.7c0-1.88-1.53-3.4-3.4-3.4s-3.4,1.53-3.4,3.4Z'/%3E%3C/svg%3E");;
+            width: 25px;
+            height: 25px;
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: absolute;
+        }
+    }
+    .cart-count {
+        font-family: var(--ff-headings);
+    }
+}
+
+.woocommerce-message {
+    margin-bottom: 0;
+}
