@@ -1,13 +1,13 @@
 {
-    "key": "group_67238cdc919b3",
-    "title": "DLOKE Product Attributes",
+    "key": "group_6727b048cf868",
+    "title": "Artur Akmaev Product Attributes",
     "fields": [
         {
-            "key": "field_67239003a4d67",
-            "label": "Product Name",
-            "name": "product_name",
+            "key": "field_6727b049fa169",
+            "label": "Artur Akmaev Product Attributes",
+            "name": "",
             "aria-label": "",
-            "type": "text",
+            "type": "message",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -16,57 +16,12 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "maxlength": "",
-            "allow_in_bindings": 0,
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
+            "message": "",
+            "new_lines": "wpautop",
+            "esc_html": 0
         },
         {
-            "key": "field_67238ff3a4d66",
-            "label": "Variant",
-            "name": "variant",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "maxlength": "",
-            "allow_in_bindings": 0,
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_67238fb0117ce",
-            "label": "Materials",
-            "name": "material",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "maxlength": "",
-            "allow_in_bindings": 0,
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_67238cdcb67db",
+            "key": "field_6727b0816ff71",
             "label": "Product Attributes",
             "name": "product_attributes",
             "aria-label": "",
@@ -88,7 +43,7 @@
             "rows_per_page": 20,
             "sub_fields": [
                 {
-                    "key": "field_67238d42fa92e",
+                    "key": "field_6727b0816ff72",
                     "label": "Title",
                     "name": "title",
                     "aria-label": "",
@@ -107,10 +62,10 @@
                     "placeholder": "",
                     "prepend": "",
                     "append": "",
-                    "parent_repeater": "field_67238cdcb67db"
+                    "parent_repeater": "field_6727b0816ff71"
                 },
                 {
-                    "key": "field_67238d61fa92f",
+                    "key": "field_6727b0816ff73",
                     "label": "Detail",
                     "name": "detail",
                     "aria-label": "",
@@ -129,7 +84,7 @@
                     "rows": 2,
                     "placeholder": "",
                     "new_lines": "",
-                    "parent_repeater": "field_67238cdcb67db"
+                    "parent_repeater": "field_6727b0816ff71"
                 }
             ]
         }
@@ -144,7 +99,7 @@
             {
                 "param": "post_taxonomy",
                 "operator": "==",
-                "value": "product_tag:dloke"
+                "value": "product_tag:artur-akmaev"
             }
         ]
     ],
@@ -157,5 +112,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1730654346
+    "modified": 1730654356
 }
