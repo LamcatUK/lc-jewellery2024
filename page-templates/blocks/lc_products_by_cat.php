@@ -41,6 +41,17 @@ $classes = $block['classList'] ?? 'py-5';
                     global $post;
                     $post = get_post($o);
                     setup_postdata($post);
+
+                    if (has_term(array('dloke'), 'product_tag', $o)) {
+                        $title = get_the_title($o) . ' - ' . get_field('material', $o);
+                        $meta = get_field('variant', $o);
+                    } elseif (has_term(array('artur-akmaev'), 'product_tag', $o)) {
+                        $title = get_the_title($o);
+                        $meta = $related_product->get_short_description();
+                    } else {
+                        $title = get_the_title($o);
+                        $meta = get_the_title($o);
+                    }
             ?>
                     <div class="col-md-6 col-lg-3 text-center" data-aos="fade" data-aos-delay="<?= $d ?>">
                         <a class="related__card"
@@ -49,9 +60,9 @@ $classes = $block['classList'] ?? 'py-5';
                                 <?= $front ?>
                                 <?= $back ?>
                             </div>
-                            <h3><?= get_the_title($o) ?> - <?= get_field('material', $o) ?></h3>
+                            <h3><?= $title ?></h3>
                             <div class="related__meta">
-                                <?= get_field('variant', $o) ?>
+                                <?= $meta ?>
                             </div>
                         </a>
                     </div>
