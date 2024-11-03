@@ -50,7 +50,7 @@ $classes = $block['classList'] ?? 'py-5';
                         $meta = $related_product->get_short_description();
                     } else {
                         $title = get_the_title($o);
-                        $meta = get_the_title($o);
+                        $meta = null; // get_the_title($o);
                     }
             ?>
                     <div class="col-md-6 col-lg-3 text-center" data-aos="fade" data-aos-delay="<?= $d ?>">
