@@ -24095,8 +24095,7 @@ main {
 }
 
 .carousel-indicators [data-bs-target] {
-  background-color: var(--col-green-900);
-  filter: contrast(0.5);
+  background-color: white;
 }
 
 /*
