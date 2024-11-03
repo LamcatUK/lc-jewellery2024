@@ -3,7 +3,7 @@ $classes = $block['classList'] ?? 'py-5';
 ?>
 <section class="three_cols <?= $classes ?>">
     <div class="container-xl">
-        <div class="row g-2 justify-content-center">
+        <div class="row gx-2 gy-4 justify-content-center">
             <?php
             $tax = get_field('type') ?? null;
             $q = new WP_Query(array(
