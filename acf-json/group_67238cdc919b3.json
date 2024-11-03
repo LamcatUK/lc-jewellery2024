@@ -144,7 +144,7 @@
             {
                 "param": "post_taxonomy",
                 "operator": "==",
-                "value": "product_cat:dloke-watches"
+                "value": "product_tag:dloke"
             }
         ]
     ],
@@ -157,5 +157,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1730383890
+    "modified": 1730646969
 }

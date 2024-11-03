@@ -661,6 +661,7 @@ progress {
 .container-fluid,
 .container-xxl,
 .container-xl,
+.woocommerce,
 .container-lg,
 .container-md,
 .container-sm {
@@ -689,12 +690,12 @@ progress {
   }
 }
 @media (min-width: 1200px) {
-  .container-xl, .container-lg, .container-md, .container-sm, .container {
+  .container-xl, .woocommerce, .container-lg, .container-md, .container-sm, .container {
     max-width: 1140px;
   }
 }
 @media (min-width: 1400px) {
-  .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
+  .container-xxl, .container-xl, .woocommerce, .container-lg, .container-md, .container-sm, .container {
     max-width: 1320px;
   }
 }
@@ -4642,6 +4643,7 @@ button[name=add-to-cart] {
 .navbar > .container-md,
 .navbar > .container-lg,
 .navbar > .container-xl,
+.navbar > .woocommerce,
 .navbar > .container-xxl {
   display: flex;
   flex-wrap: inherit;
@@ -8435,7 +8437,7 @@ button.placeholder[name=add-to-cart]::before, .wpcf7 input.placeholder[type=subm
   margin-left: 3rem !important;
 }
 
-.mx-auto, .aligncenter {
+.mx-auto, .woocommerce, .aligncenter {
   margin-right: auto !important;
   margin-left: auto !important;
 }
@@ -23243,14 +23245,14 @@ footer .current_page_item a {
   content: "" !important;
 }
 
-.totop .container-xl {
+.totop .container-xl, .totop .woocommerce {
   border-top: 1px solid hsla(0deg, 0%, 0%, 0.1);
   color: var(--col-grey-400);
 }
-.totop .container-xl a {
+.totop .container-xl a, .totop .woocommerce a {
   display: block;
 }
-.totop .container-xl div {
+.totop .container-xl div, .totop .woocommerce div {
   font-size: var(--fs-300);
   text-transform: uppercase;
   letter-spacing: var(--ls-400);
@@ -23514,7 +23516,7 @@ button[name=add-to-cart]:hover {
   margin-right: auto;
   padding: 1rem;
 }
-.product__inner .container-xl {
+.product__inner .container-xl, .product__inner .woocommerce {
   padding-inline: 0;
 }
 .product__title {
@@ -23571,7 +23573,7 @@ button[name=add-to-cart]:hover {
   margin-right: auto;
   padding: 1rem;
 }
-.watch__inner .container-xl {
+.watch__inner .container-xl, .watch__inner .woocommerce {
   padding-inline: 0;
 }
 .watch__title {
@@ -24044,7 +24046,7 @@ main {
   left: calc(-1 * (100vw - 100%) / 2);
 }
 
-.container-xl .container-xl {
+.container-xl .container-xl, .woocommerce .container-xl, .container-xl .woocommerce, .woocommerce .woocommerce {
   padding-inline: 0;
 }
 

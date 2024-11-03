@@ -213,3 +213,8 @@ button[name="add-to-cart"] {
 .woocommerce-message {
     margin-bottom: 0;
 }
+
+.woocommerce {
+    @extend .container-xl;
+    @extend .mx-auto;
+}
