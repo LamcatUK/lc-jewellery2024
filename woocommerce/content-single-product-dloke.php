@@ -194,17 +194,6 @@ $img = get_the_post_thumbnail_url(get_the_ID(), 'full');
     ?>
 </main>
 <?php
-add_action('wp_footer', function () {
-?>
-    <link rel="stylesheet"
-        href="<?= get_stylesheet_directory_uri() ?>/css/glightbox.css" />
-    <script src="<?= get_stylesheet_directory_uri() ?>/js/glightbox.min.js">
-    </script>
-    <script type="text/javascript">
-        const lightbox = GLightbox();
-    </script>
-<?php
-}, 9999);
 
 get_footer();
 ?>
