@@ -56,7 +56,8 @@
 
 }
 
-.watch {
+.watch,
+.stone {
 
     &__image {
         max-width: calc(1320px / 2);
@@ -128,6 +129,16 @@
         text-transform: uppercase;
     }
 
+}
+
+.stone {
+    h3, dt {
+        font-family: var(--ff-headings);
+        font-weight: var(--fw-400);
+        font-size: var(--fs-500);
+        margin-bottom: 0.5em;
+    }
+    
 }
 
 .glightbox {
@@ -217,4 +228,34 @@ button[name="add-to-cart"] {
 .woocommerce-order {
     @extend .container-xl;
     @extend .mx-auto;
+}
+
+/* Diamond details */
+.diamond_details {
+    &__grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 1em;
+        row-gap: 2em;
+        svg {
+            align-self: center;
+        }
+    }
+    table {
+        font-family: var(--ff-body);
+        font-size: var(--fs-200);
+        th {
+            font-family: var(--ff-headings);
+            font-weight: var(--fw-600);
+        }
+    }
+}
+
+.stone {
+    .carousel-item {
+        video {
+            aspect-ratio: 1;
+            object-fit: cover;
+        }
+    }
 }
