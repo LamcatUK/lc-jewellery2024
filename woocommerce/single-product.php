@@ -42,6 +42,8 @@ if (! defined('ABSPATH')) {
                 wc_get_template_part('content', 'single-product-artur');
             } elseif (has_term('exceptional-stones', 'product_tag')) {
                 wc_get_template_part('content', 'single-product-stones');
+            } elseif (has_term('jewellery-box', 'product_tag')) {
+                wc_get_template_part('content', 'single-product-jewellery');
             } else {
                 do_action('woocommerce_before_main_content');
                 get_header('shop');

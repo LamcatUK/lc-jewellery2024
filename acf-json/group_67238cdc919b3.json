@@ -68,7 +68,7 @@
         {
             "key": "field_67238cdcb67db",
             "label": "Product Attributes",
-            "name": "product_attributes",
+            "name": "gs_product_attributes",
             "aria-label": "",
             "type": "repeater",
             "instructions": "",
@@ -157,5 +157,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1730654346
+    "modified": 1731175259
 }

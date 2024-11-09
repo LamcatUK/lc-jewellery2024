@@ -1,29 +1,11 @@
 {
     "key": "group_6727b048cf868",
-    "title": "Artur Akmaev Product Attributes",
+    "title": "LC Product Attributes",
     "fields": [
-        {
-            "key": "field_6727b049fa169",
-            "label": "Artur Akmaev Product Attributes",
-            "name": "",
-            "aria-label": "",
-            "type": "message",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "message": "",
-            "new_lines": "wpautop",
-            "esc_html": 0
-        },
         {
             "key": "field_6727b0816ff71",
             "label": "Product Attributes",
-            "name": "product_attributes",
+            "name": "gs_product_attributes",
             "aria-label": "",
             "type": "repeater",
             "instructions": "",
@@ -101,6 +83,30 @@
                 "operator": "==",
                 "value": "product_tag:artur-akmaev"
             }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "product"
+            },
+            {
+                "param": "post_taxonomy",
+                "operator": "==",
+                "value": "product_tag:jewellery-box"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "product"
+            },
+            {
+                "param": "post_taxonomy",
+                "operator": "==",
+                "value": "product_tag:exceptional-stones"
+            }
         ]
     ],
     "menu_order": 0,
@@ -112,5 +118,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1730654356
+    "modified": 1731176320
 }

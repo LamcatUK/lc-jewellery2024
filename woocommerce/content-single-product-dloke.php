@@ -119,7 +119,7 @@ $img = get_the_post_thumbnail_url(get_the_ID(), 'full');
                 <h2>Specification</h2>
                 <dl>
                     <?php
-                    while (have_rows('product_attributes')) {
+                    while (have_rows('gs_product_attributes')) {
                         the_row();
                     ?>
                         <dt>

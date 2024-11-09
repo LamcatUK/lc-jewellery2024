@@ -18,4 +18,8 @@
         background-color: var(--col-green-400);
         color: var(--col-dark);
     }
+
+    &.disabled {
+        opacity: 0.3;
+    }
 }

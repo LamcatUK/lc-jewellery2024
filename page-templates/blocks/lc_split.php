@@ -15,9 +15,8 @@ $img = wp_get_attachment_image_url(get_field('image'), 'full') ?: get_stylesheet
             <?= get_field('title') ?>
         </div>
         <div class="row">
-            <div class="col-md-6 split__image <?= $image_order ?>"
-                style="background-image:url(<?= $img ?>)"
-                data-aos="fade">
+            <div class="col-md-6 split__image <?= $image_order ?>" data-aos="fade">
+                <?= wp_get_attachment_image(get_field('image'), 'full') ?: get_stylesheet_directory_uri() . '/img/placeholder-800x450.png'; ?>
             </div>
             <div class="col-md-6 <?= $text_order ?>" data-aos="fade">
                 <div class="ps-xl-3 py-5 <?= $text_alignment ?>">
