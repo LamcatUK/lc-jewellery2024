@@ -23854,10 +23854,27 @@ form.cart select {
 }
 
 .hero__bg {
-  height: 450px;
+  height: 250px;
   width: 100%;
   -o-object-fit: cover;
   object-fit: cover;
+}
+@media (min-width: 768px) {
+  .hero__bg {
+    height: 450px;
+  }
+}
+.hero__bg--left {
+  -o-object-position: left;
+  object-position: left;
+}
+.hero__bg--center {
+  -o-object-position: center;
+  object-position: center;
+}
+.hero__bg--right {
+  -o-object-position: right;
+  object-position: right;
 }
 .hero__inner {
   max-width: 90vw;

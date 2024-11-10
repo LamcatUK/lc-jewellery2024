@@ -1,29 +1,23 @@
 .hero {
-    // .container-xl {
-        
-
-    //     background-size: cover;
-    //     background-position: center;
-    //     background-repeat: no-repeat;
-
-    //     display: grid;
-    //     place-content: center;
-    //     padding-block: 4rem;
-    // }
-
     &__bg {
-        height: 450px;
+
+        height: 250px;
+        @media (min-width:768px) {
+            height: 450px;
+        }
         width: 100%;
         object-fit: cover;
-    }
 
-    // &::before {
-    //     content: "";
-    //     position: absolute;
-    //     inset: 0;
-    //     background-image: linear-gradient(90deg, var(--body-bg), transparent, var(--body-bg));
-    //     z-index: -1;
-    // }
+        &--left {
+            object-position: left;
+        }
+        &--center {
+            object-position: center;
+        }
+        &--right {
+            object-position: right;
+        }
+    }
 
     &__inner {
         max-width: 90vw;
