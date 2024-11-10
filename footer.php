@@ -21,18 +21,18 @@ defined('ABSPATH') || exit;
 </section>
 <footer class="footer">
     <div class="container-xl pt-5 pb-4">
-        <div class="row pb-2 pb-lg-4 mx-0 g-4">
-            <div class="col-12 col-lg-3 mb-2 text-center text-lg-start">
+        <div class="row pb-2 pb-lg-4 mx-0 gx-5">
+            <div class="col-12 col-lg-3 mb-4 text-center text-lg-start">
                 <a href="/"><img src="<?= get_stylesheet_directory_uri() ?>/img/logo-full.svg"
                         alt="Griffin & Sloane" width=310 height=102></a>
             </div>
             <div class="col-md-4 col-lg-3 mb-2 text-center text-md-start">
                 <?php wp_nav_menu(array('theme_location' => 'footer_menu1')); ?>
             </div>
-            <div class="col-md-4 col-lg-3 text-center text-md-start">
+            <div class="col-md-4 col-lg-3 mb-2 text-center text-md-start">
                 <?php wp_nav_menu(array('theme_location' => 'footer_menu2')); ?>
             </div>
-            <div class="col-md-4 col-lg-3 text-center text-md-start">
+            <div class="col-md-4 col-lg-3 mb-2 text-center text-md-start">
                 <?php wp_nav_menu(array('theme_location' => 'footer_menu3')); ?>
             </div>
             <div class="col-12 text-center text-lg-start">
