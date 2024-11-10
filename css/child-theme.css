@@ -23184,6 +23184,21 @@ sup {
   font-size: var(--fs-100);
   text-transform: uppercase;
 }
+.navbar .dropdown-menu a.nav-link {
+  padding-block: 0.25rem;
+  display: inline-block;
+  width: 100%;
+  transition: background-color var(--transition);
+}
+.navbar .dropdown-menu a.nav-link[aria-current=page] {
+  font-weight: var(--fw-900);
+}
+.navbar .dropdown-menu a.nav-link:hover {
+  background-color: var(--col-grey-200);
+}
+.navbar .dropdown-menu a.nav-link::after {
+  display: none;
+}
 
 #offcanvasNavbar .nav-link {
   font-family: var(--ff-headings);

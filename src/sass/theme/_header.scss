@@ -151,6 +151,21 @@
             font-size: var(--fs-100);
             text-transform: uppercase;
         }
+        a.nav-link {
+            padding-block: 0.25rem;
+            display: inline-block;
+            width: 100%;
+            transition: background-color var(--transition);
+            &[aria-current="page"] {
+                font-weight: var(--fw-900);
+            }
+            &:hover {
+                background-color: var(--col-grey-200);
+            }
+            &::after {
+                display: none;
+            }
+        }
     }
 
     
