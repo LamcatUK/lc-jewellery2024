@@ -23108,6 +23108,9 @@ sup {
 .pre_nav__link:hover {
   color: var(--col-grey-800);
 }
+.pre_nav .navbar-toggler {
+  opacity: 0.5;
+}
 
 .navbar {
   background-color: white;
@@ -23242,6 +23245,9 @@ sup {
   max-width: 75%;
   display: block;
   margin-inline: auto;
+}
+#offcanvasNavbar .btn-close {
+  margin-top: -5px;
 }
 
 .navholder {

@@ -77,6 +77,11 @@
             color: var(--col-grey-800);
         }
     }
+
+    .navbar-toggler {
+        opacity: 0.5;
+    }
+
 }
 .navbar {
     background-color: white;
@@ -219,6 +224,10 @@
                 margin-inline: auto;
             }
         }
+    }
+
+    .btn-close {
+        margin-top: -5px;
     }
 }
 
