@@ -36,7 +36,7 @@ defined('ABSPATH') || exit;
                 <?php wp_nav_menu(array('theme_location' => 'footer_menu3')); ?>
             </div>
             <div class="col-12 text-center text-lg-start">
-                <div class="social-icons">
+                <div class="social-icons d-flex justify-content-center">
                     <?= do_shortcode('[social_icons]') ?>
                 </div>
             </div>
