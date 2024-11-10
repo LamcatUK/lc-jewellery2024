@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The template for displaying the footer
  *
@@ -22,21 +23,21 @@ defined('ABSPATH') || exit;
     <div class="container-xl pt-5 pb-4">
         <div class="row pb-2 pb-lg-4 mx-0 g-4">
             <div class="col-12 col-lg-3 mb-2 text-center text-lg-start">
-                <a href="/"><img src="<?=get_stylesheet_directory_uri()?>/img/logo.svg"
-                    alt="Griffin & Sloane" width=310 height=50></a>
+                <a href="/"><img src="<?= get_stylesheet_directory_uri() ?>/img/logo-full.svg"
+                        alt="Griffin & Sloane" width=310 height=102></a>
             </div>
-            <div class="col-md-4 col-lg-2 mb-2 text-center text-md-start">
+            <div class="col-md-4 col-lg-3 mb-2 text-center text-md-start">
                 <?php wp_nav_menu(array('theme_location' => 'footer_menu1')); ?>
             </div>
-            <div class="col-md-4 col-lg-2 text-center text-md-start">
+            <div class="col-md-4 col-lg-3 text-center text-md-start">
                 <?php wp_nav_menu(array('theme_location' => 'footer_menu2')); ?>
             </div>
             <div class="col-md-4 col-lg-3 text-center text-md-start">
                 <?php wp_nav_menu(array('theme_location' => 'footer_menu3')); ?>
             </div>
-            <div class="col-12 col-lg-2 text-center text-lg-start">
+            <div class="col-12 text-center text-lg-start">
                 <div class="social-icons">
-                    <?=do_shortcode('[social_icons]')?>
+                    <?= do_shortcode('[social_icons]') ?>
                 </div>
             </div>
         </div>
@@ -48,7 +49,7 @@ defined('ABSPATH') || exit;
                 <a href="/privacy-policy/">Privacy Policy</a>
                 <a href="/cookie-policy/">Cookies Policy</a>
                 <a href="/modern-slavery/">Modern Slavery Statement</a>
-                <div>&copy; <?=date('Y')?>
+                <div>&copy; <?= date('Y') ?>
                     Griffin &amp; Sloane</div>
             </div>
         </div>
@@ -62,7 +63,7 @@ defined('ABSPATH') || exit;
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <?=do_shortcode('[contact-form-7 id="' . get_field('appointment_form_id', 'options') . '"]')?>
+                <?= do_shortcode('[contact-form-7 id="' . get_field('appointment_form_id', 'options') . '"]') ?>
             </div>
         </div>
     </div>
@@ -72,12 +73,12 @@ defined('ABSPATH') || exit;
 
 <?php wp_footer();
 if (get_field('gtm_property', 'options')) {
-    ?>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe
-        src="https://www.googletagmanager.com/ns.html?id=<?=get_field('gtm_property', 'options')?>"
-        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+?>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe
+            src="https://www.googletagmanager.com/ns.html?id=<?= get_field('gtm_property', 'options') ?>"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
 <?php
 }
 ?>
