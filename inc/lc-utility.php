@@ -67,7 +67,7 @@ function social_icons()
     if (get_field('twitter_url', 'options') ?? null) {
     ?>
         <a href="<?= get_field('twitter_url', 'options') ?>"
-            target="_blank"><i class="fa-brands fa-twitter"></i></a>
+            target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
     <?php
     }
     if (get_field('youtube_url', 'options') ?? null) {
