@@ -23622,7 +23622,7 @@ button.disabled[name=add-to-cart] {
   max-width: 660px;
   margin-inline: auto;
   aspect-ratio: 1;
-  padding: 1rem;
+  padding: 0;
   text-align: center;
 }
 @media (min-width: 992px) {
