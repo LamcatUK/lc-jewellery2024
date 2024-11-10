@@ -153,6 +153,58 @@
         }
     }
 
+    
+}
+
+#offcanvasNavbar {
+    .nav-link {
+        font-family: var(--ff-headings);
+        font-weight: var(--fw-400);
+        font-size: var(--fs-300);
+        color: var(--col-grey-400);
+        letter-spacing: var(--ls-400);
+        text-transform: uppercase;
+        padding-block: 0 0.5rem;
+    }
+
+    .dropdown-menu {
+        border: none;
+        padding: 0;
+        box-shadow: none;
+        opacity: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease, opacity 0.3s ease;
+        visibility: hidden;  // Ensure it's completely hidden when closed
+    
+        &.show {
+            // border: 1px solid hsl(0, 0%, 85%);
+            border: none;
+            padding: 0;
+            padding-block-end: 1rem;
+            padding-inline-start: 1rem;
+            opacity: 1;
+            max-height: 500px; // Adjust to fit content
+            visibility: visible;  // Only visible when opened
+        }
+    
+        li a {
+            font-family: var(--ff-headings);
+            font-size: var(--fs-200);
+            text-transform: uppercase;
+        }
+    }
+
+    .offcanvas-header {
+        align-items: start;
+        .logo-container {
+            img {
+                max-width: 75%;
+                display: block;
+                margin-inline: auto;
+            }
+        }
+    }
 }
 
 .navholder {

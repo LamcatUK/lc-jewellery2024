@@ -93,26 +93,26 @@ defined('ABSPATH') || exit;
                 <div class="pre_nav__container">
                     <a href="/request-appointment/" class="d-none d-lg-grid pre_nav__link">Request an appointment</a>
                     <a href="/" class="logo-container" aria-label="Home">
-                        <img src="<?= get_stylesheet_directory_uri() ?>/img/logo.svg"
-                            alt="" width=310 height=50>
+                        <img src="<?= get_stylesheet_directory_uri() ?>/img/logo.svg" alt="" width="310" height="50">
                     </a>
                     <a class="d-none d-lg-grid pre_nav__link" href="mailto:enquiries@griffinandsloane.com">Email us</a>
-                    <button class="d-lg-none navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false"
-                        aria-label="Toggle navigation">
+
+                    <!-- Offcanvas Toggle Button -->
+                    <button class="d-lg-none navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-expanded="false" aria-label="Toggle navigation">
                         <i class="fas fa-bars"></i>
                     </button>
                 </div>
             </div>
         </div>
-        <nav id="main-nav" class="navbar navbar-expand-lg">
-            <div class="container-xl px-0">
 
+        <!-- Desktop Nav -->
+        <nav id="main-nav" class="navbar navbar-expand-lg d-none d-lg-flex">
+            <div class="container-xl px-0">
                 <?php
                 wp_nav_menu(
                     array(
                         'theme_location'  => 'primary_nav',
-                        'container_class' => 'collapse navbar-collapse',
+                        'container_class' => 'navbar-collapse',
                         'container_id' => 'navbar',
                         'menu_class'      => 'navbar-nav mx-auto w-100 d-flex justify-content-around',
                         'fallback_cb'     => '',
@@ -124,7 +124,35 @@ defined('ABSPATH') || exit;
                 ?>
             </div>
         </nav>
+
+        <!-- Mobile Offcanvas Nav -->
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+                <a href="/" class="logo-container" aria-label="Home">
+                    <img src="<?= get_stylesheet_directory_uri() ?>/img/logo-full.svg" alt="" width="1020" height="334">
+                </a>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <?php
+                wp_nav_menu(
+                    array(
+                        'theme_location'  => 'primary_nav',
+                        'container_id'    => 'mobilenav',
+                        'menu_class'      => 'navbar-nav w-100 d-flex justify-content-around',
+                        'fallback_cb'     => '',
+                        'menu_id'         => 'offcanvas-menu',
+                        'depth'           => 2,
+                        'walker'          => new Understrap_WP_Bootstrap_Navwalker()
+                    )
+                );
+                ?>
+                <a href="/request-appointment/" class="nav-link">Request an appointment</a>
+            </div>
+
+        </div>
     </header>
+
     <?php
     if (function_exists('WC')) {
 

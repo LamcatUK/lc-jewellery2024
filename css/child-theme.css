@@ -23185,6 +23185,50 @@ sup {
   text-transform: uppercase;
 }
 
+#offcanvasNavbar .nav-link {
+  font-family: var(--ff-headings);
+  font-weight: var(--fw-400);
+  font-size: var(--fs-300);
+  color: var(--col-grey-400);
+  letter-spacing: var(--ls-400);
+  text-transform: uppercase;
+  padding-block: 0 0.5rem;
+}
+#offcanvasNavbar .dropdown-menu {
+  border: none;
+  padding: 0;
+  box-shadow: none;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+  visibility: hidden;
+}
+#offcanvasNavbar .dropdown-menu.show {
+  border: none;
+  padding: 0;
+  -webkit-padding-after: 1rem;
+  padding-block-end: 1rem;
+  -webkit-padding-start: 1rem;
+  padding-inline-start: 1rem;
+  opacity: 1;
+  max-height: 500px;
+  visibility: visible;
+}
+#offcanvasNavbar .dropdown-menu li a {
+  font-family: var(--ff-headings);
+  font-size: var(--fs-200);
+  text-transform: uppercase;
+}
+#offcanvasNavbar .offcanvas-header {
+  align-items: start;
+}
+#offcanvasNavbar .offcanvas-header .logo-container img {
+  max-width: 75%;
+  display: block;
+  margin-inline: auto;
+}
+
 .navholder {
   position: sticky;
   top: 0;
