@@ -20,10 +20,10 @@ switch (get_field('split')) {
         $colImage = 'col-md-6';
 }
 
-$class = $block['className'] ?? 'py-5';
+$classes = $block['className'] ?? 'py-5';
 
 ?>
-<section class="feature <?= $class ?>">
+<section class="feature <?= $classes ?>">
     <div class="container-xl">
         <?php
         if (get_field('title') ?? null) {
