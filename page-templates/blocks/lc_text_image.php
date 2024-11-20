@@ -8,25 +8,37 @@ $imganim = get_field('order') == 'Text/Image' ? 'fade-left' : 'fade-right';
 $txtanim = 'fade';
 $imganim = 'fade';
 
+$title_align = (get_field('title_alignment') === 'left') ? 'text-start' : 'text-center';
+
+switch (get_field('split')) {
+    case 6040:
+        $colText = 'col-md-7';
+        $colImage = 'col-md-5';
+        break;
+    default:
+        $colText = 'col-md-6';
+        $colImage = 'col-md-6';
+}
+
 ?>
 <section class="feature py-5">
     <div class="container-xl">
         <?php
         if (get_field('title') ?? null) {
         ?>
-            <div class="h2 text-center d-md-none" data-aos="fade">
+            <div class="h2 <?= $title_align ?> d-md-none" data-aos="fade">
                 <?= get_field('title') ?>
             </div>
         <?php
         }
         ?>
         <div class="row g-4">
-            <div class="col-md-6 <?= $txtcol ?> d-flex flex-column justify-content-center"
+            <div class="<?= $colText ?> <?= $txtcol ?> d-flex flex-column justify-content-center"
                 data-aos="<?= $txtanim ?>">
                 <?php
                 if (get_field('title') ?? null) {
                 ?>
-                    <h2 class="d-none d-md-block text-center h2">
+                    <h2 class="d-none d-md-block <?= $title_align ?> h2">
                         <?= get_field('title') ?>
                     </h2>
                 <?php
@@ -45,7 +57,7 @@ $imganim = 'fade';
                 }
                 ?>
             </div>
-            <div class="col-md-6 <?= $imgcol ?> d-flex align-items-center"
+            <div class="<?= $colImage ?> <?= $imgcol ?> d-flex align-items-center"
                 data-aos="<?= $imganim ?>">
                 <img src="<?= wp_get_attachment_image_url(get_field('image'), 'large') ?>"
                     alt="<?= get_field('title') ?>"
