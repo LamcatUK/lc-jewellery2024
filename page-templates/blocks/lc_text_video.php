@@ -20,46 +20,10 @@ switch (get_field('split')) {
         $colImage = 'col-md-6';
 }
 
+$class = $block['className'] ?? 'py-5';
+
 ?>
-<style>
-    .video-thumbnail-wrapper {
-        position: relative;
-        display: grid;
-    }
-
-    .video-thumbnail-overlay {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        display: grid;
-        place-content: center;
-    }
-
-    .play-button {
-        position: relative;
-        cursor: pointer;
-    }
-
-    .play-button:hover::after {
-        background-color: color-mix(in srgb, var(--col-green-400), white 50%);
-    }
-
-    .play-button::after {
-        content: "";
-        display: block;
-        width: 3.5rem;
-        height: 2.5rem;
-        background-color: var(--col-green-400);
-        border-radius: 0.25rem;
-        color: white;
-        background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg id='Layer_1' data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 89.38 104.27'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: %230b0c0c; stroke-width: 0px; %7D %3C/style%3E%3C/defs%3E%3Cpath class='cls-1' d='m0,104.27V0l89.38,52.14L0,104.27Z'/%3E%3C/svg%3E");
-        background-size: 1rem;
-        background-repeat: no-repeat;
-        background-position: center;
-        transition: background-color var(--transition);
-    }
-</style>
-<section class="feature py-5">
+<section class="feature <?= $class ?>">
     <div class="container-xl">
         <?php
         if (get_field('title') ?? null) {
