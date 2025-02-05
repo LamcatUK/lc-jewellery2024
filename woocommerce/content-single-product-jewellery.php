@@ -18,7 +18,7 @@ $img = get_the_post_thumbnail_url(get_the_ID(), 'full');
                         <a href="/">Home</a>
                     </span> »
                     <span>
-                        <a href="/jewellery-box/">The Secret Jewellery Box</a>
+                        <a href="/exceptional-stones/">Exceptional Stones</a>
                     </span> »
                     <span class="breadcrumb_last" aria-current="page"><?= $product->get_sku() ?></span>
                 </span>
