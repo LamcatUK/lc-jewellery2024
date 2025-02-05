@@ -15,7 +15,7 @@ $classes = $block['classList'] ?? 'py-5';
                     array(
                         'taxonomy' => 'product_tag',
                         'field' => 'term_id',
-                        'terms' => array($tax)
+                        'terms' => $tax
                     )
                 )
             ));
