@@ -12,12 +12,11 @@ $classes = $block['classList'] ?? 'py-5';
                 'orderby'        => 'title',
                 'order'          => 'ASC',
                 'tax_query' => array(
-                    'relation' => 'AND', // Ensures all conditions must be met
                     array(
                         'taxonomy' => 'product_tag',
                         'field'    => 'term_id',
                         'terms'    => (array) $tax, // Ensures it's always an array
-                        'operator' => 'AND' // Requires posts to have ALL specified terms
+                        'operator' => 'IN' // Requires posts to have ALL specified terms
                     )
                 )
             ));
