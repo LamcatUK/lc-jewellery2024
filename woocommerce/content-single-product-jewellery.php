@@ -183,13 +183,13 @@ $img = get_the_post_thumbnail_url(get_the_ID(), 'full');
     ?>
         <section class="related py-5">
             <div class="container-xl">
-                <h2 class="text-center">Explore The Secret Jewellery Box</h2>
+                <!-- <h2 class="text-center">Explore The Secret Jewellery Box</h2> -->
                 <div class="row g-2 justify-content-center">
                     <?php
                     $args = array(
                         'post_type'      => 'product',
                         'posts_per_page' => 4,
-                        // 'post__in'       => $related_ids,
+                        'post__not_in'   => array(get_the_ID()),
                         'orderby'        => 'title',
                         'order'          => 'ASC',
                         'tax_query'      => array(
