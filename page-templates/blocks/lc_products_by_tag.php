@@ -6,7 +6,6 @@ $classes = $block['classList'] ?? 'py-5';
         <div class="row gx-2 gy-4 justify-content-center">
             <?php
             $tax = get_field('tag') ?? null;
-            var_dump($tax);
             $q = new WP_Query(array(
                 'post_type' => 'product',
                 'posts_per_page' => -1,
