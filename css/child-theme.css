@@ -24257,6 +24257,29 @@ form.cart select {
   margin-left: 2rem;
 }
 
+.cards .row {
+  row-gap: 1.5rem;
+}
+.cards__card {
+  display: grid;
+  grid-template-rows: auto auto 1fr auto; /* Image, title, content (flexible), CTA */
+  gap: 0.5rem;
+}
+.cards__image {
+  aspect-ratio: 16/9;
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  margin-bottom: 0.5rem;
+}
+.cards div > p {
+  margin-bottom: 0;
+}
+.cards__cta {
+  align-self: end; /* Push to bottom */
+  justify-self: end;
+}
+
 a,
 a.noline {
   text-decoration: none;
