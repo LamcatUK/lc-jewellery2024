@@ -8,16 +8,16 @@ get_header();
 ?>
 <main id="main">
     <?php
-$img = get_the_post_thumbnail_url($page_for_posts, 'full') ?? null;
-?>
+    $img = get_the_post_thumbnail_url($page_for_posts, 'full') ?? null;
+    ?>
     <section class="hero">
         <div class="container-xl"
-            style="background-image: url(<?=$img?>)">
+            style="background-image: url(<?= $img ?>)">
         </div>
     </section>
 
     <section class="full_text">
-        <div class="container-xl text-center py-5" data-aos="fade">
+        <div class="container-xl text-center pt-5" data-aos="fade">
             <div class="full_text__pre_title">
                 From the jeweller's bench
             </div>
@@ -25,7 +25,7 @@ $img = get_the_post_thumbnail_url($page_for_posts, 'full') ?? null;
                 Insights
             </h1>
             <div class="max-ch text-center mx-auto">
-                <?=get_the_content(null, false, $page_for_posts)?>
+                <?= get_the_content(null, false, $page_for_posts) ?>
             </div>
         </div>
     </section>
@@ -34,36 +34,36 @@ $img = get_the_post_thumbnail_url($page_for_posts, 'full') ?? null;
             <div class="navbuttons">
                 <a href="/insights/" class="active">All</a>
                 <?php
-            $allcats = get_categories();
-foreach ($allcats as $cat) {
-    if ($cat->slug == 'uncategorized') {
-        continue;
-    }
-    ?>
-                <a href="<?=get_category_link($cat->term_id)?>"
-                    class=""><?=$cat->name?></a>
+                $allcats = get_categories();
+                foreach ($allcats as $cat) {
+                    if ($cat->slug == 'uncategorized') {
+                        continue;
+                    }
+                ?>
+                    <a href="<?= get_category_link($cat->term_id) ?>"
+                        class=""><?= $cat->name ?></a>
                 <?php
-}
-?>
+                }
+                ?>
             </div>
             <div class="news_index__grid">
                 <?php
-    $style = 'news_index__card--first';
-while (have_posts()) {
-    the_post();
-    $categories = get_the_category();
-    $cats = wp_list_pluck($categories, 'slug');
-    $cats = implode(' ', $cats);
-    ?>
-                <a href="<?=get_the_permalink()?>"
-                    class="news_index__card <?=$style?> <?=$cats?>">
-                    <div class="news_index__image">
-                        <img src="<?=get_the_post_thumbnail_url(get_the_ID(), 'large')?>"
-                            alt="">
-                    </div>
-                    <div class="news_index__inner">
-                        <h2><?=get_the_title()?></h2>
-                        <?php
+                $style = 'news_index__card--first';
+                while (have_posts()) {
+                    the_post();
+                    $categories = get_the_category();
+                    $cats = wp_list_pluck($categories, 'slug');
+                    $cats = implode(' ', $cats);
+                ?>
+                    <a href="<?= get_the_permalink() ?>"
+                        class="news_index__card <?= $style ?> <?= $cats ?>">
+                        <div class="news_index__image">
+                            <img src="<?= get_the_post_thumbnail_url(get_the_ID(), 'large') ?>"
+                                alt="">
+                        </div>
+                        <div class="news_index__inner">
+                            <h2><?= get_the_title() ?></h2>
+                            <?php
                             /*
                             <div class="news_index__meta">
     if ($categories) {
@@ -76,14 +76,14 @@ while (have_posts()) {
     }
                             </div>
     */
-    ?>
+                            ?>
 
-                    </div>
-                </a>
+                        </div>
+                    </a>
                 <?php
-    $style = '';
-}
-?>
+                    $style = '';
+                }
+                ?>
             </div>
         </div>
     </section>
