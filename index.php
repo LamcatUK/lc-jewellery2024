@@ -19,10 +19,10 @@ get_header();
     <section class="full_text">
         <div class="container-xl text-center pt-5" data-aos="fade">
             <div class="full_text__pre_title">
-                From the jeweller's bench
+                The Art & Science of Fine Craftsmanship
             </div>
             <h1 class="full_text__title">
-                Insights
+                From the jeweller's bench
             </h1>
             <div class="max-ch text-center mx-auto">
                 <?= get_the_content(null, false, $page_for_posts) ?>
