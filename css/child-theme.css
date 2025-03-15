@@ -23413,22 +23413,22 @@ button.disabled[name=add-to-cart] {
 .news_index__card:nth-child(3n-1) {
   border-right: 1px solid #e6e6e6;
 }
-.news_index__card:nth-of-type(-n+1) {
+.news_index__card:nth-of-type(-n + 1) {
   border-top: 1px solid #e6e6e6;
 }
 @media (min-width: 768px) {
-  .news_index__card:nth-of-type(-n+2) {
+  .news_index__card:nth-of-type(-n + 2) {
     border-top: 1px solid #e6e6e6;
   }
 }
 @media (min-width: 992px) {
-  .news_index__card:nth-of-type(-n+1), .news_index__card:nth-of-type(-n+2) {
+  .news_index__card:nth-of-type(-n + 1), .news_index__card:nth-of-type(-n + 2) {
     border-top: none;
   }
-  .news_index__card:nth-of-type(3n+1) {
+  .news_index__card:nth-of-type(3n + 1) {
     border-left: 1px solid #e6e6e6;
   }
-  .news_index__card:nth-of-type(-n+3) {
+  .news_index__card:nth-of-type(-n + 3) {
     border-top: 1px solid #e6e6e6;
     border-right: 1px solid #e6e6e6;
   }
@@ -23552,10 +23552,10 @@ button.disabled[name=add-to-cart] {
   .related_news .news_index__grid {
     grid-template-columns: repeat(3, 1fr);
   }
-  .related_news .news_index__grid .news_index__card:nth-of-type(-n+3) {
+  .related_news .news_index__grid .news_index__card:nth-of-type(-n + 3) {
     border-top: 1px solid #e6e6e6;
   }
-  .related_news .news_index__grid .news_index__card:nth-of-type(3n+1) {
+  .related_news .news_index__grid .news_index__card:nth-of-type(3n + 1) {
     border-left: 1px solid #e6e6e6;
   }
 }
@@ -23582,9 +23582,11 @@ button.disabled[name=add-to-cart] {
   text-transform: uppercase;
   font-family: var(--ff-headings);
   font-weight: normal;
+  color: var(--col-grey-400);
 }
 .navbuttons a.active {
   font-weight: var(--fw-900);
+  color: var(--col-dark);
 }
 
 .product__image {
