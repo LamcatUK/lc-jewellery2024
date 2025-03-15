@@ -3,9 +3,9 @@
   --hsl-primary: 0 0% 0%;
   --hsl-green-400: 96 15% 87%;
   --hsl-green-900: 96 45% 9%;
-  --col-primary: hsl( var(--hsl-primary) );
-  --col-green-400: hsl( var(--hsl-green-400) );
-  --col-green-900: hsl( var(--hsl-green-900) );
+  --col-primary: hsl(var(--hsl-primary));
+  --col-green-400: hsl(var(--hsl-green-400));
+  --col-green-900: hsl(var(--hsl-green-900));
   --col-grey-200: #f9f7f8;
   --col-grey-300: #c9c7c8;
   --col-grey-400: #767676;
@@ -14,8 +14,8 @@
   --col-dark: rgb(12, 12, 12);
   --fs-100: 0.64rem;
   --fs-200: 0.8rem;
-  --fs-300: 0.90rem;
-  --fs-400: 1.00rem;
+  --fs-300: 0.9rem;
+  --fs-400: 1rem;
   --fs-500: clamp(1.1rem, 0.975rem + 0.4vw, 1.2rem);
   --fs-600: 1.56rem;
   --fs-700: 1.95rem;
@@ -25,12 +25,16 @@
   --fw-900: 700;
   --ls-400: 0.025rem;
   --ls-900: 0.2rem;
-  --ff-headings: "URWClassico Regular", "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  --ff-body: "Cormorant Garamond", Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  --ff-headings: "URWClassico Regular", "Lucida Sans", "Lucida Sans Regular",
+    "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  --ff-body: "Cormorant Garamond", Cambria, Cochin, Georgia, Times,
+    "Times New Roman", serif;
+  --ff-fa: "Font Awesome 6 Free";
   --transition: 300ms ease-in-out;
   --grid-gap: 1.5rem;
-  --shadow-1: rgba(0,0,0,.12) 0 1px 3px, rgba(0,0,0,.24) 0 1px 2px;
-  --filter-shadow-1: drop-shadow(0 1px 3px rgba(0,0,0,.12)) drop-shadow(0 1px 2px rgba(0,0,0,.24));
+  --shadow-1: rgba(0, 0, 0, 0.12) 0 1px 3px, rgba(0, 0, 0, 0.24) 0 1px 2px;
+  --filter-shadow-1: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.12))
+    drop-shadow(0 1px 2px rgba(0, 0, 0, 0.24));
 }
 
 *,

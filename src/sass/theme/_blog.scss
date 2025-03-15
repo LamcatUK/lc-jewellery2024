@@ -14,6 +14,10 @@
       padding: 2rem;
     }
 
+    display: grid;
+    grid-template-rows: auto 1fr;
+    row-gap: 0.3rem;
+
     img {
       width: 100%;
       aspect-ratio: 16 / 9;
@@ -59,17 +63,38 @@
       .news_index__image img {
         transform: scale(1.1);
       }
+      .read_more::after {
+        transform: translateX(4px);
+      }
+    }
+
+    .read_more {
+      text-align: end;
+      position: relative;
+      font-family: var(--ff-headings);
+      font-size: var(--fs-100);
+      text-transform: uppercase;
+      &::after {
+        content: "\f178";
+        font-family: var(--ff-fa);
+        font-weight: 600;
+        transition: transform var(--transition);
+        position: absolute;
+        margin-left: 4px;
+      }
     }
   }
 
   &__image {
     overflow: hidden;
     aspect-ratio: 16 / 9;
-    margin-bottom: 0.5rem;
+    // margin-bottom: 0.5rem;
     width: 100%;
   }
   &__inner {
     color: var(--col-primary-900);
+    display: grid;
+    grid-template-rows: auto 1fr auto;
     h2 {
       font-size: var(--fs-500) !important;
       font-family: var(--ff-headings);

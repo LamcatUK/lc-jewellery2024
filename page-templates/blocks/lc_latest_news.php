@@ -24,8 +24,9 @@ if ($q->have_posts()) {
                                 alt="<?= get_the_title() ?>">
                         </div>
                         <div class="news_index__inner">
-                            <h3 class="h2 mb-3"><?= get_the_title() ?></h3>
+                            <h3 class="h2 mb-2"><?= get_the_title() ?></h3>
                             <p><?= get_field('excerpt', get_the_ID()) ?></p>
+                            <div class="read_more">Read more </div>
                         </div>
                     </a>
                 <?php

@@ -3,9 +3,9 @@
   --hsl-primary: 0 0% 0%;
   --hsl-green-400: 96 15% 87%;
   --hsl-green-900: 96 45% 9%;
-  --col-primary: hsl( var(--hsl-primary) );
-  --col-green-400: hsl( var(--hsl-green-400) );
-  --col-green-900: hsl( var(--hsl-green-900) );
+  --col-primary: hsl(var(--hsl-primary));
+  --col-green-400: hsl(var(--hsl-green-400));
+  --col-green-900: hsl(var(--hsl-green-900));
   --col-grey-200: #f9f7f8;
   --col-grey-300: #c9c7c8;
   --col-grey-400: #767676;
@@ -14,8 +14,8 @@
   --col-dark: rgb(12, 12, 12);
   --fs-100: 0.64rem;
   --fs-200: 0.8rem;
-  --fs-300: 0.90rem;
-  --fs-400: 1.00rem;
+  --fs-300: 0.9rem;
+  --fs-400: 1rem;
   --fs-500: clamp(1.1rem, 0.975rem + 0.4vw, 1.2rem);
   --fs-600: 1.56rem;
   --fs-700: 1.95rem;
@@ -25,12 +25,16 @@
   --fw-900: 700;
   --ls-400: 0.025rem;
   --ls-900: 0.2rem;
-  --ff-headings: "URWClassico Regular", "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  --ff-body: "Cormorant Garamond", Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  --ff-headings: "URWClassico Regular", "Lucida Sans", "Lucida Sans Regular",
+    "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  --ff-body: "Cormorant Garamond", Cambria, Cochin, Georgia, Times,
+    "Times New Roman", serif;
+  --ff-fa: "Font Awesome 6 Free";
   --transition: 300ms ease-in-out;
   --grid-gap: 1.5rem;
-  --shadow-1: rgba(0,0,0,.12) 0 1px 3px, rgba(0,0,0,.24) 0 1px 2px;
-  --filter-shadow-1: drop-shadow(0 1px 3px rgba(0,0,0,.12)) drop-shadow(0 1px 2px rgba(0,0,0,.24));
+  --shadow-1: rgba(0, 0, 0, 0.12) 0 1px 3px, rgba(0, 0, 0, 0.24) 0 1px 2px;
+  --filter-shadow-1: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.12))
+    drop-shadow(0 1px 2px rgba(0, 0, 0, 0.24));
 }
 
 /*!
@@ -23388,6 +23392,9 @@ button.disabled[name=add-to-cart] {
 }
 .news_index__card {
   padding: 1rem;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  row-gap: 0.3rem;
   border-bottom: 1px solid #e6e6e6;
 }
 @media (min-width: 992px) {
@@ -23436,14 +23443,33 @@ button.disabled[name=add-to-cart] {
 .news_index__card:hover .news_index__image img {
   transform: scale(1.1);
 }
+.news_index__card:hover .read_more::after {
+  transform: translateX(4px);
+}
+.news_index__card .read_more {
+  text-align: end;
+  position: relative;
+  font-family: var(--ff-headings);
+  font-size: var(--fs-100);
+  text-transform: uppercase;
+}
+.news_index__card .read_more::after {
+  content: "\f178";
+  font-family: var(--ff-fa);
+  font-weight: 600;
+  transition: transform var(--transition);
+  position: absolute;
+  margin-left: 4px;
+}
 .news_index__image {
   overflow: hidden;
   aspect-ratio: 16/9;
-  margin-bottom: 0.5rem;
   width: 100%;
 }
 .news_index__inner {
   color: var(--col-primary-900);
+  display: grid;
+  grid-template-rows: auto 1fr auto;
 }
 .news_index__inner h2, .news_index__inner .h2 {
   font-size: var(--fs-500) !important;

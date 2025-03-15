@@ -62,22 +62,9 @@ get_header();
                                 alt="">
                         </div>
                         <div class="news_index__inner">
-                            <h2><?= get_the_title() ?></h2>
-                            <?php
-                            /*
-                            <div class="news_index__meta">
-    if ($categories) {
-        foreach ($categories as $category) {
-            ?>
-                            <span
-                                class="news_index__category"><?=esc_html($category->name)?></span>
-                            <?php
-        }
-    }
-                            </div>
-    */
-                            ?>
-
+                            <h3 class="h2 mb-2"><?= get_the_title() ?></h3>
+                            <p><?= get_field('excerpt', get_the_ID()) ?></p>
+                            <div class="read_more">Read more </div>
                         </div>
                     </a>
                 <?php
