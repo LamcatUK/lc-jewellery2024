@@ -25,7 +25,7 @@ if ($q->have_posts()) {
                         </div>
                         <div class="news_index__inner">
                             <h3 class="h2 mb-3"><?= get_the_title() ?></h3>
-                            <?= get_field('excerpt') ?? null ?>
+                            <?= get_field('post_excerpt') ?? null ?>
                         </div>
                     </a>
                 <?php
