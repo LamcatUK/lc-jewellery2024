@@ -24047,6 +24047,39 @@ form.cart select {
   transition: background-color var(--transition);
 }
 
+.ratio-9x16 {
+  position: relative;
+  width: 100%;
+  padding-top: 177.78%; /* 16 / 9 * 100 */
+}
+
+.ratio-9x16 > * {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Ensures ratio-9x16 does not exceed the viewport height */
+.modal .ratio-9x16 {
+  max-height: 80vh; /* Limits max height to 90% of viewport */
+  padding-top: 0; /* Reset padding */
+  aspect-ratio: 9/16; /* Maintains the aspect ratio */
+}
+
+/* Make sure inner elements (iframe, img, etc.) fill the space correctly */
+.modal .ratio-9x16 > * {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+  object-fit: contain; /* Ensures images/videos don't get cut off */
+}
+
+#videoModal .modal-lg {
+  --bs-modal-width: unset;
+}
+
 .text--right {
   display: flex;
   flex-direction: column;

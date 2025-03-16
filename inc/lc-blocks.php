@@ -4,11 +4,22 @@ function acf_blocks()
     if (function_exists('acf_register_block_type')) {
 
         acf_register_block_type(array(
-            'name'                => 'lc_testimonial_slider', 
-            'title'               => __('LC Testimonial Slider'), 
+            'name'                => 'lc_quote',
+            'title'               => __('LC Quote'),
             'category'            => 'layout',
-            'icon'                => 'cover-image', 
-            'render_template'    => 'page-templates/blocks/lc_testimonial_slider.php', 
+            'icon'                => 'cover-image',
+            'render_template'    => 'page-templates/blocks/lc_quote.php',
+            'mode'                => 'edit',
+            'supports'            => array('mode' => false),
+        ));
+
+
+        acf_register_block_type(array(
+            'name'                => 'lc_testimonial_slider',
+            'title'               => __('LC Testimonial Slider'),
+            'category'            => 'layout',
+            'icon'                => 'cover-image',
+            'render_template'    => 'page-templates/blocks/lc_testimonial_slider.php',
             'mode'                => 'edit',
             'supports'            => array('mode' => false),
         ));

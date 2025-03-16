@@ -81,9 +81,10 @@ $classes = $block['className'] ?? 'py-5';
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <div class="ratio ratio-16x9">
+                <div class="ratio ratio-9x16">
                     <video id="modalVideo" controls>
-                        <source src="<?= get_field('video') ?>" type="video/mp4">
+                        <source src="<?= get_field('video_webm') ?>" type="video/webm">
+                        <source src="<?= get_field('video_mp4') ?>" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
                 </div>

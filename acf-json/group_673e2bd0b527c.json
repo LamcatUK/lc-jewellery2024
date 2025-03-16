@@ -142,15 +142,15 @@
         },
         {
             "key": "field_673e2bd0d05c0",
-            "label": "Video",
-            "name": "video",
+            "label": "Video (MP4)",
+            "name": "video_mp4",
             "aria-label": "",
             "type": "file",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "50",
+                "width": "33",
                 "class": "",
                 "id": ""
             },
@@ -158,7 +158,28 @@
             "library": "all",
             "min_size": "",
             "max_size": "",
-            "mime_types": "",
+            "mime_types": "mp4",
+            "allow_in_bindings": 1
+        },
+        {
+            "key": "field_67d703ce83822",
+            "label": "Video (Webm)",
+            "name": "video_webm",
+            "aria-label": "",
+            "type": "file",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "library": "all",
+            "min_size": "",
+            "max_size": "",
+            "mime_types": "webm",
             "allow_in_bindings": 1
         },
         {
@@ -171,7 +192,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "50",
+                "width": "33",
                 "class": "",
                 "id": ""
             },
@@ -222,5 +243,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1732130302
+    "modified": 1742145213
 }
