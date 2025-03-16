@@ -134,6 +134,13 @@
                 "operator": "==",
                 "value": "acf\/lc-faqs"
             }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "product"
+            }
         ]
     ],
     "menu_order": 0,
@@ -145,5 +152,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1706459323
+    "modified": 1742138228
 }

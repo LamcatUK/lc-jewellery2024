@@ -1,303 +1,304 @@
 .product {
-
-    &__image {
-        max-width: calc(1320px / 2);
-        margin-inline: auto;
-        @media (min-width:992px) {
-            margin-right: 0;
-            margin-left: auto;
-        }
-        padding: 1rem;
-        text-align: center;
+  &__image {
+    max-width: calc(1320px / 2);
+    margin-inline: auto;
+    @media (min-width: 992px) {
+      margin-right: 0;
+      margin-left: auto;
     }
+    padding: 1rem;
+    text-align: center;
+  }
 
-    &__inner {
-        max-width: calc(1320px / 2);
-        margin-right: auto;
-        padding: 1rem;
+  &__inner {
+    max-width: calc(1320px / 2);
+    margin-right: auto;
+    padding: 1rem;
 
-        .container-xl {
-            padding-inline: 0;
-        }
+    .container-xl {
+      padding-inline: 0;
     }
+  }
 
-    &__title {
-        font-size: var(--fs-700);
-        text-transform: uppercase;
-        letter-spacing: var(--ls-400);
-        margin-bottom: 0.25rem;
-    }
-    &__materials {
-        margin-bottom: 0.25rem;
-    }
-    &__price,
-    &__reference {
-        font-size: var(--fs-100);
-        font-family: var(--ff-headings);
-        letter-spacing: var(--ls-800);
-        color: var(--col-grey-800);
-        text-transform: uppercase;
-        margin-bottom: 1rem;
-    }
+  &__title {
+    font-size: var(--fs-700);
+    text-transform: uppercase;
+    letter-spacing: var(--ls-400);
+    margin-bottom: 0.25rem;
+  }
+  &__materials {
+    margin-bottom: 0.25rem;
+  }
+  &__price,
+  &__reference {
+    font-size: var(--fs-100);
+    font-family: var(--ff-headings);
+    letter-spacing: var(--ls-800);
+    color: var(--col-grey-800);
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
 
-    h2 {
-        border-bottom: 1px solid hsl(0 0% 0% / 0.1);
-        text-transform: uppercase;
-        font-size: var(--fs-600);
-        font-family: var(--ff-headings);
-        letter-spacing: var(--ls-800);
-
-    }
-    h3 {
-        margin-bottom: 0rem;
-        font-size: var(--fs-200);
-        text-transform: uppercase;
-    }
-
+  h2 {
+    border-bottom: 1px solid hsl(0 0% 0% / 0.1);
+    text-transform: uppercase;
+    font-size: var(--fs-600);
+    font-family: var(--ff-headings);
+    letter-spacing: var(--ls-800);
+  }
+  h3 {
+    margin-bottom: 0rem;
+    font-size: var(--fs-200);
+    text-transform: uppercase;
+  }
 }
 
 .watch,
 .stone,
 .jewellery {
-
-    &__image {
-        max-width: calc(1320px / 2);
-        margin-inline: auto;
-        aspect-ratio: 1;
-        @media (min-width:992px) {
-            margin-right: 0;
-            margin-left: auto;
-        }
-        padding: 0;
-        text-align: center;
-
-        .glightbox img {
-            aspect-ratio: 1;
-            width: 100%;
-            object-fit: cover;
-        }
+  &__image {
+    max-width: calc(1320px / 2);
+    margin-inline: auto;
+    aspect-ratio: 1;
+    @media (min-width: 992px) {
+      margin-right: 0;
+      margin-left: auto;
     }
+    padding: 0;
+    text-align: center;
 
-    &__inner {
-        max-width: calc(1320px / 2);
-        margin-right: auto;
-        padding: 1rem;
+    .glightbox img {
+      aspect-ratio: 1;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
 
-        .container-xl {
-            padding-inline: 0;
-        }
-    }
+  &__inner {
+    max-width: calc(1320px / 2);
+    margin-right: auto;
+    padding: 1rem;
 
-    &__title {
-        font-size: var(--fs-700);
-        text-transform: uppercase;
-        letter-spacing: var(--ls-400);
-        margin-bottom: 0.25rem;
+    .container-xl {
+      padding-inline: 0;
     }
-    &__materials {
-        margin-bottom: 0.25rem;
-    }
-    &__price {
-        font-size: var(--fs-500);
-        font-family: var(--ff-headings);
-    }
-    &__reference {
-        font-size: var(--fs-100);
-        font-family: var(--ff-headings);
-        letter-spacing: var(--ls-800);
-        color: var(--col-grey-800);
-        text-transform: uppercase;
-        margin-bottom: 1rem;
-    }
+  }
 
-    h2 {
-        border-bottom: 1px solid hsl(0 0% 0% / 0.1);
-        text-transform: uppercase;
-        font-size: var(--fs-600);
-        font-family: var(--ff-headings);
-        letter-spacing: var(--ls-800);
+  &__title {
+    font-size: var(--fs-700);
+    text-transform: uppercase;
+    letter-spacing: var(--ls-400);
+    margin-bottom: 0.25rem;
+  }
+  &__materials {
+    margin-bottom: 0.25rem;
+  }
+  &__price {
+    font-size: var(--fs-500);
+    font-family: var(--ff-headings);
+  }
+  &__reference {
+    font-size: var(--fs-100);
+    font-family: var(--ff-headings);
+    letter-spacing: var(--ls-800);
+    color: var(--col-grey-800);
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
 
-    }
-    h3 {
-        margin-bottom: 0rem;
-        font-size: var(--fs-200);
-        text-transform: uppercase;
-    }
+  h2 {
+    border-bottom: 1px solid hsl(0 0% 0% / 0.1);
+    text-transform: uppercase;
+    font-size: var(--fs-600);
+    font-family: var(--ff-headings);
+    letter-spacing: var(--ls-800);
+  }
+  h3 {
+    margin-bottom: 0rem;
+    font-size: var(--fs-200);
+    text-transform: uppercase;
+  }
 
-    dt {
-        font-family: var(--ff-headings);
-        font-weight: var(--fw-400);
-        text-transform: uppercase;
-    }
+  dt {
+    font-family: var(--ff-headings);
+    font-weight: var(--fw-400);
+    text-transform: uppercase;
+  }
 
+  .accordion-header > button.accordion-button {
+    padding-inline: 0;
+  }
+
+  .accordion-item:last-of-type {
+    border-bottom: none;
+  }
 }
 
 .stone {
-    h3, dt {
-        font-family: var(--ff-headings);
-        font-weight: var(--fw-400);
-        font-size: var(--fs-500);
-        margin-bottom: 0.5em;
-    }
-    
+  h3,
+  dt {
+    font-family: var(--ff-headings);
+    font-weight: var(--fw-400);
+    font-size: var(--fs-500);
+    margin-bottom: 0.5em;
+  }
 }
 
 .glightbox {
-    cursor: zoom-in;
-    position: relative;
-    display: block;
-    height: 100%;
-    &::after {
-        transition: opacity var(--transition);
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        content: "";
-        width: 20px;
-        height: 20px;
-        background-color: rgb(90 90 90 / 0.8);
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' viewBox='0 0 12 12'%3E%3Cpath fill='%23fff' d='M2 0a2 2 0 0 0-2 2v2h1.5V2a.5.5 0 0 1 .5-.5h2V0H2Zm2 10.5H2a.5.5 0 0 1-.5-.5V8H0v2a2 2 0 0 0 2 2h2v-1.5ZM8 12v-1.5h2a.5.5 0 0 0 .5-.5V8H12v2a2 2 0 0 1-2 2H8Zm2-12a2 2 0 0 1 2 2v2h-1.5V2a.5.5 0 0 0-.5-.5H8V0h2Z'%3E%3C/path%3E%3C/svg%3E");
-        background-size: 12px;
-        background-position: center;
-        background-repeat: no-repeat;
-        opacity: 0;
-    }
-    &:hover::after {
-        opacity: 1;
-    }
+  cursor: zoom-in;
+  position: relative;
+  display: block;
+  height: 100%;
+  &::after {
+    transition: opacity var(--transition);
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-color: rgb(90 90 90 / 0.8);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' viewBox='0 0 12 12'%3E%3Cpath fill='%23fff' d='M2 0a2 2 0 0 0-2 2v2h1.5V2a.5.5 0 0 1 .5-.5h2V0H2Zm2 10.5H2a.5.5 0 0 1-.5-.5V8H0v2a2 2 0 0 0 2 2h2v-1.5ZM8 12v-1.5h2a.5.5 0 0 0 .5-.5V8H12v2a2 2 0 0 1-2 2H8Zm2-12a2 2 0 0 1 2 2v2h-1.5V2a.5.5 0 0 0-.5-.5H8V0h2Z'%3E%3C/path%3E%3C/svg%3E");
+    background-size: 12px;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0;
+  }
+  &:hover::after {
+    opacity: 1;
+  }
 }
-
 
 .watch,
 .stone {
-    form.cart {
-        display: flex;
-        gap: 0.5rem;
-    }
+  form.cart {
+    display: flex;
+    gap: 0.5rem;
+  }
 }
 
 form.cart {
-    .variations_button {
-        display: flex;
-        gap: 0.5rem;
-    }
-    .quantity {
-        display: inline-block;
-    }
-    .input-text,
-    select {
-        border-radius: 0;
-    }
+  .variations_button {
+    display: flex;
+    gap: 0.5rem;
+  }
+  .quantity {
+    display: inline-block;
+  }
+  .input-text,
+  select {
+    border-radius: 0;
+  }
 }
 
 .wc-block-cart__submit-button,
 button[name="add-to-cart"] {
-    @extend .btn;
-    @extend .btn-primary;
+  @extend .btn;
+  @extend .btn-primary;
 }
 
 .wc-block-cart-items__header,
 .wc-block-cart__totals-title {
-    font-family: var(--ff-headings) !important;
-    font-size: var(--fs-400) !important;
+  font-family: var(--ff-headings) !important;
+  font-size: var(--fs-400) !important;
 }
 
 .cart-popout {
-    position: fixed;
-    top: 25vh;
-    right: 0;
-    background-color: var(--col-green-400);
-    padding: 0.5rem 1rem;
-    z-index: 9999;
+  position: fixed;
+  top: 25vh;
+  right: 0;
+  background-color: var(--col-green-400);
+  padding: 0.5rem 1rem;
+  z-index: 9999;
 
-    .cart-link {
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
+  .cart-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .cart-icon {
+    position: relative;
+    width: 25px;
+    height: 25px;
+    &::after {
+      content: "";
+      background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg id='Layer_1' data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 23.82 27.22'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: %23444; stroke-width: 0px; %7D %3C/style%3E%3C/defs%3E%3Cpath class='cls-1' d='m6.8,6.8v-1.7c0-2.82,2.29-5.1,5.1-5.1s5.1,2.29,5.1,5.1v1.7h6.8v20.41H0V6.8h6.8Zm0,1.7H1.7v17.01h20.41V8.51h-5.1v5.1h-1.7v-5.1h-6.8v5.1h-1.7v-5.1Zm1.7-3.4v1.7h6.8v-1.7c0-1.88-1.53-3.4-3.4-3.4s-3.4,1.53-3.4,3.4Z'/%3E%3C/svg%3E");
+      width: 25px;
+      height: 25px;
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: absolute;
     }
-    .cart-icon {
-        position: relative;
-        width: 25px;
-        height: 25px;
-        &::after {
-            content:"";
-            background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg id='Layer_1' data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 23.82 27.22'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: %23444; stroke-width: 0px; %7D %3C/style%3E%3C/defs%3E%3Cpath class='cls-1' d='m6.8,6.8v-1.7c0-2.82,2.29-5.1,5.1-5.1s5.1,2.29,5.1,5.1v1.7h6.8v20.41H0V6.8h6.8Zm0,1.7H1.7v17.01h20.41V8.51h-5.1v5.1h-1.7v-5.1h-6.8v5.1h-1.7v-5.1Zm1.7-3.4v1.7h6.8v-1.7c0-1.88-1.53-3.4-3.4-3.4s-3.4,1.53-3.4,3.4Z'/%3E%3C/svg%3E");;
-            width: 25px;
-            height: 25px;
-            background-size: contain;
-            background-position: center;
-            background-repeat: no-repeat;
-            position: absolute;
-        }
-    }
-    .cart-count {
-        font-family: var(--ff-headings);
-    }
+  }
+  .cart-count {
+    font-family: var(--ff-headings);
+  }
 }
 
 .woocommerce-message {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 .woocommerce-order {
-    @extend .container-xl;
-    @extend .mx-auto;
+  @extend .container-xl;
+  @extend .mx-auto;
 }
 
 /* Diamond details */
 .diamond_details {
-    &__grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        column-gap: 1em;
-        row-gap: 2em;
-        svg {
-            align-self: center;
-        }
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1em;
+    row-gap: 2em;
+    svg {
+      align-self: center;
     }
-    table {
-        font-family: var(--ff-body);
-        font-size: var(--fs-200);
-        th {
-            font-family: var(--ff-headings);
-            font-weight: var(--fw-600);
-        }
+  }
+  table {
+    font-family: var(--ff-body);
+    font-size: var(--fs-200);
+    th {
+      font-family: var(--ff-headings);
+      font-weight: var(--fw-600);
     }
+  }
 }
 
 .stone,
 .jewellery {
-    .carousel-item {
-        video {
-            aspect-ratio: 1;
-            object-fit: cover;
-        }
+  .carousel-item {
+    video {
+      aspect-ratio: 1;
+      object-fit: cover;
     }
+  }
 }
 
 .jewellery {
-    .variations {
-        width: 100%;
-        select {
-            @extend .form-select;
-            border-radius: 0;
-        }
-        th {
-            vertical-align: top;
-            padding-top: 0.5rem;
-        }
+  .variations {
+    width: 100%;
+    select {
+      @extend .form-select;
+      border-radius: 0;
     }
+    th {
+      vertical-align: top;
+      padding-top: 0.5rem;
+    }
+  }
 
-    .single_variation {
-        margin-bottom: 1rem;
-    }
+  .single_variation {
+    margin-bottom: 1rem;
+  }
 
-    table {
-        font-family: var(--ff-body);
-        font-size: var(--fs-200);
-        th {
-            font-family: var(--ff-headings);
-            font-weight: var(--fw-600);
-        }
+  table {
+    font-family: var(--ff-body);
+    font-size: var(--fs-200);
+    th {
+      font-family: var(--ff-headings);
+      font-weight: var(--fw-600);
     }
+  }
 }

@@ -188,6 +188,7 @@ $img = get_the_post_thumbnail_url(get_the_ID(), 'full');
                             $d += 50;
                         }
                     }
+                    wp_reset_postdata()
                     ?>
                 </div>
             </div>
@@ -195,6 +196,48 @@ $img = get_the_post_thumbnail_url(get_the_ID(), 'full');
     <?php
     }
     ?>
+    <section class="faq_block">
+        <div class="container-xl" data-aos="fade">
+            <?php if (get_field('faq_title')) : ?>
+                <h2 class="h2 text-center text-md-start mb-4">
+                    <?= esc_html(get_field('faq_title')) ?>
+                </h2>
+            <?php endif; ?>
+
+            <?php if (get_field('faq_intro')) : ?>
+                <div class="mb-4 faq_intro">
+                    <?= wp_kses_post(get_field('faq_intro')) ?>
+                </div>
+            <?php endif; ?>
+
+            <?php if (have_rows('faqs')) : ?>
+                <div class="accordion" id="faqAccordion" itemscope itemtype="https://schema.org/FAQPage">
+                    <?php $c = 0;
+                    while (have_rows('faqs')) : the_row(); ?>
+                        <div class="accordion-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                            <h3 class="accordion-header" id="heading<?= $c ?>">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapse<?= $c ?>" aria-expanded="false" aria-controls="collapse<?= $c ?>"
+                                    itemprop="name">
+                                    <?= esc_html(get_sub_field('question')) ?>
+                                </button>
+                            </h3>
+                            <div id="collapse<?= $c ?>" class="accordion-collapse collapse" aria-labelledby="heading<?= $c ?>"
+                                data-bs-parent="#faqAccordion" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                                <div class="accordion-body" itemprop="text">
+                                    <?= wp_kses_post(get_sub_field('answer')) ?>
+                                </div>
+                            </div>
+                        </div>
+                    <?php $c++;
+                    endwhile; ?>
+                </div>
+            <?php endif; ?>
+        </div>
+    </section>
+    <div class="container-xl text-center py-5">
+        <a href="/contact-us/" class="btn btn-primary">Enquire</a>
+    </div>
 </main>
 <?php
 

@@ -23779,8 +23779,19 @@ button.disabled[name=add-to-cart] {
   font-weight: var(--fw-400);
   text-transform: uppercase;
 }
+.watch .accordion-header > button.accordion-button,
+.stone .accordion-header > button.accordion-button,
+.jewellery .accordion-header > button.accordion-button {
+  padding-inline: 0;
+}
+.watch .accordion-item:last-of-type,
+.stone .accordion-item:last-of-type,
+.jewellery .accordion-item:last-of-type {
+  border-bottom: none;
+}
 
-.stone h3, .stone .h3, .stone dt {
+.stone h3, .stone .h3,
+.stone dt {
   font-family: var(--ff-headings);
   font-weight: var(--fw-400);
   font-size: var(--fs-500);
@@ -23965,6 +23976,7 @@ form.cart select {
   margin-bottom: 1rem;
   border-bottom: 1px solid hsla(0deg, 0%, 0%, 0.1);
 }
+.faq_block .accordion-item:last-child .faq__answer,
 .faq_block .faq_item:last-child .faq__answer {
   border-bottom: none;
 }
