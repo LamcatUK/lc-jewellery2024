@@ -104,6 +104,9 @@ $img = get_the_post_thumbnail_url(get_the_ID(), 'full');
                         £<?= number_format($product->get_price()) ?>
                     </div>
                     <div class="fs-200 mb-5">*Prices may be subject to alteration at any time and do not constitute a contract.</div>
+                    <div class="mb-4">
+                        <a href="/contact-us/" class="btn btn-primary">Enquire</a>
+                    </div>
                     <?php
                     remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40);
                     woocommerce_template_single_add_to_cart();
