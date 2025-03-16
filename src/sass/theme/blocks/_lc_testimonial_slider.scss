@@ -1,0 +1,45 @@
+.testimonial {
+  background-color: var(--col-grey-200);
+
+  .testimonial-slider {
+    overflow: hidden; /* Prevents content from overflowing */
+    display: flex;
+    align-items: center;
+  }
+  .swiper-slide {
+    height: auto !important; /* Allows content to dictate height */
+  }
+
+  &__item {
+    isolation: isolate;
+    padding-inline-start: 3em;
+    position: relative;
+    &::before {
+      content: "";
+      background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg id='Layer_1' data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 315.71 224.85'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: %230000001a; %7D %3C/style%3E%3C/defs%3E%3Cpath class='cls-1' d='M308.69,0c.72.55,1.74.35,2.65.68,2.58.92,3.45,2.87,4.36,5.29v2.81c-1.1,2.22-2.34,3.24-4.3,4.64-4.56,3.24-10.35,5.72-15.22,8.63-18.14,10.82-39.16,25.46-49.98,44.01-.66,1.14-4.32,7.51-2.87,8.32,7.67,1.04,15.07,1.91,22.4,4.54,49.53,17.72,66.16,81.32,30.69,120.84-42.77,47.64-121.29,23.66-130.07-39.7-4-28.89,5.46-65.88,20.35-90.71C211.61,27.82,258.18,5.14,305.39.37l.85-.37h2.45Z'/%3E%3Cpath class='cls-1' d='M144.56,0c4.93.66,7.51,7.83,4.36,11.55-2.53,2.98-14.07,8.21-18.14,10.62-18.42,10.88-42.95,28.56-52.34,48.31-.43.9-1.59,2.87-.71,3.54,1.12.85,10.82,1.72,13.24,2.2,30.87,6.13,57.32,35.8,58.87,67.39.67,13.71-.5,24.46-6.27,36.9-30.35,65.53-124.21,55.8-141.23-13.21L.06,153.26c.15-3.84-.2-7.74,0-11.57,1.32-25.3,9.72-53.97,23.35-75.37C48.81,26.44,93.78,5.56,139.79.32l.56-.32h4.21Z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: top left;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4em;
+      height: 3em;
+      z-index: -1;
+    }
+
+    &__content {
+      font-family: var(--ff-body);
+      font-size: var(--fs-600);
+      line-height: 1.4;
+      font-style: italic;
+    }
+
+    &__author {
+      font-size: var(--fs-200);
+      font-weight: var(--fw-600);
+      font-family: var(--ff-headings);
+      text-transform: uppercase;
+      margin-top: 1em;
+    }
+  }
+}
