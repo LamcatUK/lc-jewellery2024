@@ -22891,14 +22891,30 @@ body {
   font-style: normal;
 }
 
-h1, .h1, h2, .h2, h3, .h3, h4, .h4, .h99 {
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+.h99 {
   font-family: var(--ff-headings);
   font-weight: var(--fw-400);
   font-style: normal;
   margin-bottom: 1rem;
   font-size: var(--fs-400);
 }
-h1 span, .h1 span, h2 span, .h2 span, h3 span, .h3 span, h4 span, .h4 span, .h99 span {
+h1 span,
+.h1 span,
+h2 span,
+.h2 span,
+h3 span,
+.h3 span,
+h4 span,
+.h4 span,
+.h99 span {
   color: var(--col-primary);
 }
 
@@ -22937,7 +22953,7 @@ h1 span, .h1 span, h2 span, .h2 span, h3 span, .h3 span, h4 span, .h4 span, .h99
 }
 
 .fs-500 {
-  font-size: var(--fs-500);
+  font-size: var(--fs-500) !important;
 }
 
 .fw-600 {
