@@ -23452,6 +23452,7 @@ button.disabled[name=add-to-cart] {
   font-family: var(--ff-headings);
   font-size: var(--fs-100);
   text-transform: uppercase;
+  margin-right: 1rem;
 }
 .news_index__card .read_more::after {
   content: "\f178";
@@ -23601,8 +23602,10 @@ button.disabled[name=add-to-cart] {
 }
 .navbuttons {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  gap: 3rem;
+  -moz-column-gap: 3rem;
+  column-gap: 3rem;
 }
 .navbuttons a {
   text-transform: uppercase;

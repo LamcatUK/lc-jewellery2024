@@ -74,6 +74,7 @@
       font-family: var(--ff-headings);
       font-size: var(--fs-100);
       text-transform: uppercase;
+      margin-right: 1rem;
       &::after {
         content: "\f178";
         font-family: var(--ff-fa);
@@ -247,8 +248,9 @@
 
 .navbuttons {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  gap: 3rem;
+  column-gap: 3rem;
   a {
     text-transform: uppercase;
     font-family: var(--ff-headings);
