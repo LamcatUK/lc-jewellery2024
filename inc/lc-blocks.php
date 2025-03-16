@@ -4,6 +4,17 @@ function acf_blocks()
     if (function_exists('acf_register_block_type')) {
 
         acf_register_block_type(array(
+            'name'                => 'lc_featured', 
+            'title'               => __('LC Featured'), 
+            'category'            => 'layout',
+            'icon'                => 'cover-image', 
+            'render_template'    => 'page-templates/blocks/lc_featured.php', 
+            'mode'                => 'edit',
+            'supports'            => array('mode' => false),
+        ));
+
+
+        acf_register_block_type(array(
             'name'                => 'lc_quote',
             'title'               => __('LC Quote'),
             'category'            => 'layout',

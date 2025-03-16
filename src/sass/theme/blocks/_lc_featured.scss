@@ -1,0 +1,17 @@
+.featured {
+  .articles-slider {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .articles-slider .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .articles-slider img {
+    max-width: 100%;
+    height: auto;
+  }
+}

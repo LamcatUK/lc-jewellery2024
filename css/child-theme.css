@@ -24415,6 +24415,20 @@ form.cart select {
   margin-top: 1em;
 }
 
+.featured .articles-slider {
+  width: 100%;
+  overflow: hidden;
+}
+.featured .articles-slider .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.featured .articles-slider img {
+  max-width: 100%;
+  height: auto;
+}
+
 a,
 a.noline {
   text-decoration: none;
