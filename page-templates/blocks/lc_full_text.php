@@ -1,7 +1,8 @@
 <?php
 $classes = $block['className'] ?? 'py-5';
+$anchor = !empty($block['anchor']) ? 'id="' . esc_attr($block['anchor']) . '"' : '';
 ?>
-<section class="full_text">
+<section class="full_text" <?= $anchor ?>>
     <div class="container-xl text-center <?= $classes ?>"
         data-aos="fade">
         <?php
