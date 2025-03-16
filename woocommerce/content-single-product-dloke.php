@@ -122,10 +122,10 @@ $img = get_the_post_thumbnail_url(get_the_ID(), 'full');
                     while (have_rows('gs_product_attributes')) {
                         the_row();
                     ?>
-                        <dt>
+                        <dt class="mb-2 fs-500">
                             <?= get_sub_field('title') ?>
                         </dt>
-                        <dd>
+                        <dd class="pb-4">
                             <?= get_sub_field('detail') ?>
                         </dd>
                     <?php
