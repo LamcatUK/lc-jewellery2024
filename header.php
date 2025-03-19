@@ -77,7 +77,19 @@ defined('ABSPATH') || exit;
     if (get_field('bing_site_verification', 'options')) {
         echo '<meta name="msvalidate.01" content="' . get_field('bing_site_verification', 'options') . '" />';
     }
+    ?>
 
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Griffin & Sloane",
+  "url": "https://www.griffinandsloane.com",
+  "logo": "https://www.griffinandsloane.com/wp-content/themes/lc-jewellery2024/img/gs-logo.png",
+  "description": "Griffin & Sloane is a high-luxury jeweller offering bespoke and exquisite fine jewellery pieces."
+}
+</script>
+<?php
     wp_head();
     ?>
 </head>
