@@ -375,4 +375,32 @@ function add_current_nav_class($classes, $item)
     return $classes;
 }
 
+add_action( 'wp_ajax_load_dearpdf', 'load_dearpdf_viewer' );
+add_action( 'wp_ajax_nopriv_load_dearpdf', 'load_dearpdf_viewer' );
+
+function load_dearpdf_viewer() {
+	$id = isset( $_GET['id'] ) ? intval( $_GET['id'] ) : 0;
+
+	if ( $id > 0 ) {
+		$html = do_shortcode( '[dearpdf id="' . $id . '"]' );
+
+		// Extract the config JSON from the script tag before removing it
+		if ( preg_match( '#window\.df_option_\d+\s*=\s*(\{.*?\});#is', $html, $matches ) ) {
+			$config_json = $matches[1];
+		} else {
+			$config_json = '{}';
+		}
+
+		// Remove the <script> block
+		$html = preg_replace( '#<script[^>]*>.*?</script>#is', '', $html );
+
+		wp_send_json_success([
+			'html'   => $html,
+			'config' => $config_json,
+		]);
+	} else {
+		wp_send_json_error( 'Invalid viewer ID.' );
+	}
+}
+
 ?>
