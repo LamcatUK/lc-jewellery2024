@@ -12,9 +12,7 @@ $desktop_viewer_id = get_field( 'desktop_viewer_id' );
 $mobile_viewer_id  = get_field( 'mobile_viewer_id' );
 ?>
 <main id="main">
-	<div id="dearpdf-wrapper">
-		<p>Loading viewer&hellip;</p>
-	</div>
+	<div id="dearpdf-wrapper"></div>
 </main>
 <script>
 document.addEventListener("DOMContentLoaded", function () {
