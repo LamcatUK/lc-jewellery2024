@@ -23739,7 +23739,7 @@ button.disabled[name=add-to-cart] {
 .watch__price,
 .stone__price,
 .jewellery__price {
-  font-size: var(--fs-500);
+  font-size: var(--fs-400);
   font-family: var(--ff-headings);
 }
 .watch__reference,

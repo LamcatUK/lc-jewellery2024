@@ -1,27 +1,33 @@
 <?php
-// Exit if accessed directly.
-defined('ABSPATH') || exit;
+/**
+ * Template for displaying single product pages.
+ *
+ * @package LC_Jewellery2024
+ */
+
+defined( 'ABSPATH' ) || exit;
 get_header();
-$img = get_the_post_thumbnail_url(get_the_ID(), 'full');
+$img = get_the_post_thumbnail_url( get_the_ID(), 'full' );
 ?>
 <main id="main" class="product">
     <?php
     $content = get_the_content();
-$blocks = parse_blocks($content);
-$after;
+    $blocks  = parse_blocks( $content );
+    $after;
 
-/*
-?>
-    <section class="breadcrumbs container-xl">
-        <?php
-if (function_exists('yoast_breadcrumb')) {
-    yoast_breadcrumb('<div id="breadcrumbs" class="mb-2">', '</div>');
-}
-?>
-</section>
-<?php
-*/
-?>
+    /*
+    ?>
+        <section class="breadcrumbs container-xl">
+            <?php
+    if (function_exists('yoast_breadcrumb')) {
+        yoast_breadcrumb('<div id="breadcrumbs" class="mb-2">', '</div>');
+        }
+    }
+    ?>
+    </section>
+    <?php
+    */
+    ?>
     <div class="container-fluid mb-4 px-0">
         <div class="row g-2">
             <div class="col-lg-6 product__image">
@@ -30,65 +36,69 @@ if (function_exists('yoast_breadcrumb')) {
                         <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active"
                             aria-current="true" aria-label="Slide 1"></button>
                         <?php
-                        $c = 1;
-foreach (get_field('images') as $i) {
-    ?>
+                        $images = get_field( 'images' );
+                        if ( ! empty( $images ) ) {
+                            foreach ( $images as $i ) {
+                        foreach ( get_field( 'images' ) as $i ) {
+                            ?>
                         <button type="button" data-bs-target="#carousel"
-                            data-bs-slide-to="<?=$c?>"
-                            aria-label="Slide <?=$c?>"></button>
-                        <?php
-    $c++;
-}
-
-?>
+                            data-bs-slide-to="<?= esc_attr( $c ); ?>"
+                            aria-label="Slide <?= esc_attr( $c ); ?>"></button>
+                            <?php
+                            ++$c;
+                        }
+                        ?>
                     </div>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <a href="<?=$img?>" class="glightbox"
+                            <a href="<?= esc_url( $img ); ?>" class="glightbox"
                                 data-gallery="gallery1">
-                                <img src="<?=$img?>" alt="image"
+                                <img src="<?= esc_url( $img ); ?>" alt="image"
                                     class="d-block w-100" />
                             </a>
                         </div>
                         <?php
-                            foreach (get_field('images') as $i) {
-                                ?>
+                        foreach ( get_field( 'images' ) as $i ) {
+                            ?>
                         <div class="carousel-item">
-                            <a href="<?=wp_get_attachment_image_url($i, 'full')?>"
+                            <a href="<?= esc_url( wp_get_attachment_image_url( $i, 'full' ) ); ?>"
                                 class="glightbox" data-gallery="gallery1">
-                                <img src="<?=wp_get_attachment_image_url($i, 'full')?>"
+                                <img src="<?= esc_url( wp_get_attachment_image_url( $i, 'full' ) ); ?>"
                                     alt="image" class="d-block w-100" />
                             </a>
                         </div>
-                        <?php
-                            }
-?>
+                            <?php
+                        }
+                        ?>
                     </div>
                 </div>
             </div>
             <div class="col-lg-6 product__content d-flex align-items-center bg--grey-200">
                 <div class="product__inner">
                     <h1 class="product__title">
-                        <?=get_the_title()?>
+                        <?= esc_html( get_the_title() ); ?>
                     </h1>
                     <div class="product__materials">
-                        <?=get_field('materials')?>
+                        <?= esc_html( get_field( 'materials' ) );?>
                     </div>
                     <div class="product__price">
-                        <?=get_field('price')?>
+                        Price on Application
+                        <?php
+                        // get_field('price');
+                        ?>
                     </div>
                     <?php
-$first = 0;
-foreach ($blocks as $block) {
-    if ($first == 1) {
-        continue;
-    }
-    if ($block['blockName'] == 'core/paragraph') {
-        $first = 1;
-    }
-    echo render_block($block);
-}
-?>
+                    $first = 0;
+                    foreach ( $blocks as $block ) {
+                        if ( 1 === $first ) {
+                            continue;
+                        }
+                        if ( 'core/paragraph' === $block['blockName']) {
+                            $first = 1;
+                        }
+                        echo render_block( $block );
+                    }
+                    ?>
                     <a href="/contact-us/" class="btn btn-primary">Enquire</a>
                 </div>
             </div>
@@ -99,12 +109,12 @@ foreach ($blocks as $block) {
             <div class="col-md-6">
                 <h2>Description</h2>
                 <?php
-foreach ($blocks as $block) {
-    echo render_block($block);
-}
-?>
+                foreach ( $blocks as $block ) {
+                    echo render_block( $block );
+                }
+                ?>
                 <div class="product__reference">Reference:
-                    <?=get_field('reference')?>
+                    <?= get_field( 'reference' ); ?>
                 </div>
             </div>
             <div class="col-md-6">
@@ -161,7 +171,10 @@ foreach ($blocks as $block) {
                             <?=get_field('materials', $p->ID)?>
                         </div>
                         <div class=" four_cols__price">
-                            <?=get_field('price', $p->ID)?>
+                            Price on Application
+                            <?php
+                            /* get_field('price', $p->ID) */
+                            ?>
                         </div>
                     </div>
                 </a>
