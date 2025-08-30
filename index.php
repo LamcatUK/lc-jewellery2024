@@ -5,14 +5,12 @@ defined('ABSPATH') || exit;
 $page_for_posts = get_option('page_for_posts');
 
 get_header();
+$thumbnail_id = get_post_thumbnail_id( $page_for_posts ); // Get the thumbnail ID.
 ?>
 <main id="main">
-    <?php
-    $img = get_the_post_thumbnail_url($page_for_posts, 'full') ?? null;
-    ?>
     <section class="hero">
-        <div class="container-xl"
-            style="background-image: url(<?= $img ?>)">
+        <div class="container-xl px-0">
+            <?= wp_get_attachment_image( $thumbnail_id, 'full', false, array( 'class' => 'hero__bg' ) ); ?>
         </div>
     </section>
 
