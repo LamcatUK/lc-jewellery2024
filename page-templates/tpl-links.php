@@ -11,6 +11,12 @@ get_header( 'nonav' );
 
 ?>
 <style>
+.grecaptcha-badge {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
 .links-page {
   min-height: 100svh;
   display: flex;
