@@ -9,90 +9,89 @@
 
 a,
 a.noline {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 a.anchor {
-    display: block;
-    position: relative;
-    visibility: hidden;
-    top: -135px;
+  display: block;
+  position: relative;
+  visibility: hidden;
+  top: -135px;
 }
 
-@media (min-width:992px) {
-    .cols-lg-2 {
-        columns: 2;
-    }
-    .cols-lg-3 {
-        columns: 3;
-    }
+@media (min-width: 992px) {
+  .cols-lg-2 {
+    columns: 2;
+  }
+  .cols-lg-3 {
+    columns: 3;
+  }
 }
 
 main a:not([class]) {
-    color: var(--col-green-600);
-    font-weight: var(--fw-900);
-    transition: color var(--transition);
-    &:hover {
-        color: var(--col-green-400);
-    }
+  color: var(--col-green-600);
+  font-weight: var(--fw-900);
+  transition: color var(--transition);
+  &:hover {
+    color: var(--col-green-400);
+  }
 }
 
 .todo {
-    background-color: gold;
-    color: black;
-    font-family: 'Courier New', Courier, monospace;
-    padding: 1rem;
-    margin-block: 1rem;
-    font-size: 0.8rem;
-    border: 3px dashed black;
-    outline: 4px solid gold;
+  background-color: gold;
+  color: black;
+  font-family: "Courier New", Courier, monospace;
+  padding: 1rem;
+  margin-block: 1rem;
+  font-size: 0.8rem;
+  border: 3px dashed black;
+  outline: 4px solid gold;
 }
 
 nav {
-    position: sticky;
-    top: 0;
-    background-color: var(--col-primary-400);
+  position: sticky;
+  top: 0;
+  background-color: var(--col-primary-400);
 }
 
 main {
-    position: relative;
-    // overflow-x: hidden;
-    // padding-inline: 2rem;
+  position: relative;
+  // overflow-x: hidden;
+  // padding-inline: 2rem;
 }
 
 .breakout {
-    width: 100vw;
-    position: relative;
-    left: calc(-1 * (100vw - 100%) / 2);
+  width: 100vw;
+  position: relative;
+  left: calc(-1 * (100vw - 100%) / 2);
 }
 
 .container-xl .container-xl {
-    padding-inline: 0;
+  padding-inline: 0;
 }
 
 .breadcrumbs {
-    font-size: var(--fs-100);
-    text-transform: uppercase;
-    font-family: var(--ff-headings);
-    color: var(--col-grey-400);
-    letter-spacing: 1.4px;
-    text-align: center;
-    // border-top: 1px solid hsl(0 0% 0% / 0.1);
+  font-size: var(--fs-100);
+  text-transform: uppercase;
+  font-family: var(--ff-headings);
+  color: var(--col-grey-400);
+  letter-spacing: 1.4px;
+  text-align: center;
+  // border-top: 1px solid hsl(0 0% 0% / 0.1);
 }
 
 .form-label {
-    font-family: var(--ff-headings);
+  font-family: var(--ff-headings);
 }
 
 .flag {
-    aspect-ratio: 4 / 3;
-    width: 40px;
+  aspect-ratio: 4 / 3;
+  width: 40px;
 }
 
-
 .carousel-indicators [data-bs-target] {
-    background-color: white; //var(--col-green-900);
-    // filter: contrast(0.5);
+  background-color: white; //var(--col-green-900);
+  // filter: contrast(0.5);
 }
 
 // show stuff that overflows horizontally

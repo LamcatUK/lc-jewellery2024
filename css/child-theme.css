@@ -202,8 +202,10 @@ p {
 }
 
 abbr[title] {
+  -webkit-text-decoration: underline dotted;
   text-decoration: underline dotted;
   cursor: help;
+  -webkit-text-decoration-skip-ink: none;
   text-decoration-skip-ink: none;
 }
 
@@ -2053,6 +2055,8 @@ progress {
   background-color: #fff;
   background-clip: padding-box;
   border: 1px solid #ced4da;
+  -webkit-appearance: none;
+  -moz-appearance: none;
   appearance: none;
   border-radius: 0.375rem;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
@@ -2135,6 +2139,10 @@ progress {
 .wpcf7 textarea::-webkit-date-and-time-value {
   height: 1.5em;
 }
+.form-control::-moz-placeholder, .wpcf7 .wpcf7-validation-errors::-moz-placeholder, .wpcf7 input[type=text]::-moz-placeholder, .wpcf7 input[type=search]::-moz-placeholder, .wpcf7 input[type=url]::-moz-placeholder, .wpcf7 input[type=tel]::-moz-placeholder, .wpcf7 input[type=number]::-moz-placeholder, .wpcf7 input[type=range]::-moz-placeholder, .wpcf7 input[type=date]::-moz-placeholder, .wpcf7 input[type=month]::-moz-placeholder, .wpcf7 input[type=week]::-moz-placeholder, .wpcf7 input[type=time]::-moz-placeholder, .wpcf7 input[type=datetime]::-moz-placeholder, .wpcf7 input[type=datetime-local]::-moz-placeholder, .wpcf7 input[type=color]::-moz-placeholder, .wpcf7 input[type=email]::-moz-placeholder, .wpcf7 input[type=file]::-moz-placeholder, .wpcf7 input[type=submit]::-moz-placeholder, .wpcf7 select::-moz-placeholder, .wpcf7 textarea::-moz-placeholder {
+  color: #6c757d;
+  opacity: 1;
+}
 .form-control::placeholder, .wpcf7 .wpcf7-validation-errors::placeholder, .wpcf7 input[type=text]::placeholder,
 .wpcf7 input[type=search]::placeholder,
 .wpcf7 input[type=url]::placeholder,
@@ -2197,6 +2205,7 @@ progress {
 .wpcf7 textarea::file-selector-button {
   padding: 0.375rem 0.75rem;
   margin: -0.375rem -0.75rem;
+  -webkit-margin-end: 0.75rem;
   margin-inline-end: 0.75rem;
   color: #212529;
   background-color: #e9ecef;
@@ -2279,6 +2288,7 @@ progress {
 .form-control-sm::file-selector-button {
   padding: 0.25rem 0.5rem;
   margin: -0.25rem -0.5rem;
+  -webkit-margin-end: 0.5rem;
   margin-inline-end: 0.5rem;
 }
 
@@ -2291,6 +2301,7 @@ progress {
 .form-control-lg::file-selector-button {
   padding: 0.5rem 1rem;
   margin: -0.5rem -1rem;
+  -webkit-margin-end: 1rem;
   margin-inline-end: 1rem;
 }
 
@@ -2344,6 +2355,8 @@ textarea.form-control-lg {
   border: 1px solid #ced4da;
   border-radius: 0.375rem;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  -webkit-appearance: none;
+  -moz-appearance: none;
   appearance: none;
 }
 @media (prefers-reduced-motion: reduce) {
@@ -2416,7 +2429,10 @@ textarea.form-control-lg {
   background-position: center;
   background-size: contain;
   border: 1px solid rgba(0, 0, 0, 0.25);
+  -webkit-appearance: none;
+  -moz-appearance: none;
   appearance: none;
+  -webkit-print-color-adjust: exact;
   print-color-adjust: exact;
 }
 .form-check-input[type=checkbox] {
@@ -2513,6 +2529,8 @@ textarea.form-control-lg {
   height: 1.5rem;
   padding: 0;
   background-color: transparent;
+  -webkit-appearance: none;
+  -moz-appearance: none;
   appearance: none;
 }
 .form-range:focus {
@@ -2534,11 +2552,14 @@ textarea.form-control-lg {
   background-color: #000000;
   border: 0;
   border-radius: 1rem;
+  -webkit-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  -webkit-appearance: none;
   appearance: none;
 }
 @media (prefers-reduced-motion: reduce) {
   .form-range::-webkit-slider-thumb {
+    -webkit-transition: none;
     transition: none;
   }
 }
@@ -2560,11 +2581,14 @@ textarea.form-control-lg {
   background-color: #000000;
   border: 0;
   border-radius: 1rem;
+  -moz-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  -moz-appearance: none;
   appearance: none;
 }
 @media (prefers-reduced-motion: reduce) {
   .form-range::-moz-range-thumb {
+    -moz-transition: none;
     transition: none;
   }
 }
@@ -2659,6 +2683,9 @@ textarea.form-control-lg {
 .form-floating > .form-control-plaintext {
   padding: 1rem 0.75rem;
 }
+.form-floating > .form-control::-moz-placeholder, .wpcf7 .form-floating > .wpcf7-validation-errors::-moz-placeholder, .wpcf7 .form-floating > input[type=text]::-moz-placeholder, .wpcf7 .form-floating > input[type=search]::-moz-placeholder, .wpcf7 .form-floating > input[type=url]::-moz-placeholder, .wpcf7 .form-floating > input[type=tel]::-moz-placeholder, .wpcf7 .form-floating > input[type=number]::-moz-placeholder, .wpcf7 .form-floating > input[type=range]::-moz-placeholder, .wpcf7 .form-floating > input[type=date]::-moz-placeholder, .wpcf7 .form-floating > input[type=month]::-moz-placeholder, .wpcf7 .form-floating > input[type=week]::-moz-placeholder, .wpcf7 .form-floating > input[type=time]::-moz-placeholder, .wpcf7 .form-floating > input[type=datetime]::-moz-placeholder, .wpcf7 .form-floating > input[type=datetime-local]::-moz-placeholder, .wpcf7 .form-floating > input[type=color]::-moz-placeholder, .wpcf7 .form-floating > input[type=email]::-moz-placeholder, .wpcf7 .form-floating > input[type=file]::-moz-placeholder, .wpcf7 .form-floating > input[type=submit]::-moz-placeholder, .wpcf7 .form-floating > select::-moz-placeholder, .wpcf7 .form-floating > textarea::-moz-placeholder, .form-floating > .form-control-plaintext::-moz-placeholder {
+  color: transparent;
+}
 .form-floating > .form-control::placeholder, .wpcf7 .form-floating > .wpcf7-validation-errors::placeholder, .wpcf7 .form-floating > input[type=text]::placeholder,
 .wpcf7 .form-floating > input[type=search]::placeholder,
 .wpcf7 .form-floating > input[type=url]::placeholder,
@@ -2679,6 +2706,10 @@ textarea.form-control-lg {
 .wpcf7 .form-floating > textarea::placeholder,
 .form-floating > .form-control-plaintext::placeholder {
   color: transparent;
+}
+.form-floating > .form-control:not(:-moz-placeholder-shown), .wpcf7 .form-floating > .wpcf7-validation-errors:not(:-moz-placeholder-shown), .wpcf7 .form-floating > input[type=text]:not(:-moz-placeholder-shown), .wpcf7 .form-floating > input[type=search]:not(:-moz-placeholder-shown), .wpcf7 .form-floating > input[type=url]:not(:-moz-placeholder-shown), .wpcf7 .form-floating > input[type=tel]:not(:-moz-placeholder-shown), .wpcf7 .form-floating > input[type=number]:not(:-moz-placeholder-shown), .wpcf7 .form-floating > input[type=range]:not(:-moz-placeholder-shown), .wpcf7 .form-floating > input[type=date]:not(:-moz-placeholder-shown), .wpcf7 .form-floating > input[type=month]:not(:-moz-placeholder-shown), .wpcf7 .form-floating > input[type=week]:not(:-moz-placeholder-shown), .wpcf7 .form-floating > input[type=time]:not(:-moz-placeholder-shown), .wpcf7 .form-floating > input[type=datetime]:not(:-moz-placeholder-shown), .wpcf7 .form-floating > input[type=datetime-local]:not(:-moz-placeholder-shown), .wpcf7 .form-floating > input[type=color]:not(:-moz-placeholder-shown), .wpcf7 .form-floating > input[type=email]:not(:-moz-placeholder-shown), .wpcf7 .form-floating > input[type=file]:not(:-moz-placeholder-shown), .wpcf7 .form-floating > input[type=submit]:not(:-moz-placeholder-shown), .wpcf7 .form-floating > select:not(:-moz-placeholder-shown), .wpcf7 .form-floating > textarea:not(:-moz-placeholder-shown), .form-floating > .form-control-plaintext:not(:-moz-placeholder-shown) {
+  padding-top: 1.625rem;
+  padding-bottom: 0.625rem;
 }
 .form-floating > .form-control:focus, .wpcf7 .form-floating > .wpcf7-validation-errors:focus, .wpcf7 .form-floating > input[type=text]:focus,
 .wpcf7 .form-floating > input[type=search]:focus,
@@ -2745,6 +2776,10 @@ textarea.form-control-lg {
 .form-floating > .form-select, .jewellery .variations .form-floating > select {
   padding-top: 1.625rem;
   padding-bottom: 0.625rem;
+}
+.form-floating > .form-control:not(:-moz-placeholder-shown) ~ label, .wpcf7 .form-floating > .wpcf7-validation-errors:not(:-moz-placeholder-shown) ~ label, .wpcf7 .form-floating > input[type=text]:not(:-moz-placeholder-shown) ~ label, .wpcf7 .form-floating > input[type=search]:not(:-moz-placeholder-shown) ~ label, .wpcf7 .form-floating > input[type=url]:not(:-moz-placeholder-shown) ~ label, .wpcf7 .form-floating > input[type=tel]:not(:-moz-placeholder-shown) ~ label, .wpcf7 .form-floating > input[type=number]:not(:-moz-placeholder-shown) ~ label, .wpcf7 .form-floating > input[type=range]:not(:-moz-placeholder-shown) ~ label, .wpcf7 .form-floating > input[type=date]:not(:-moz-placeholder-shown) ~ label, .wpcf7 .form-floating > input[type=month]:not(:-moz-placeholder-shown) ~ label, .wpcf7 .form-floating > input[type=week]:not(:-moz-placeholder-shown) ~ label, .wpcf7 .form-floating > input[type=time]:not(:-moz-placeholder-shown) ~ label, .wpcf7 .form-floating > input[type=datetime]:not(:-moz-placeholder-shown) ~ label, .wpcf7 .form-floating > input[type=datetime-local]:not(:-moz-placeholder-shown) ~ label, .wpcf7 .form-floating > input[type=color]:not(:-moz-placeholder-shown) ~ label, .wpcf7 .form-floating > input[type=email]:not(:-moz-placeholder-shown) ~ label, .wpcf7 .form-floating > input[type=file]:not(:-moz-placeholder-shown) ~ label, .wpcf7 .form-floating > input[type=submit]:not(:-moz-placeholder-shown) ~ label, .wpcf7 .form-floating > select:not(:-moz-placeholder-shown) ~ label, .wpcf7 .form-floating > textarea:not(:-moz-placeholder-shown) ~ label {
+  opacity: 0.65;
+  transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem);
 }
 .form-floating > .form-control:focus ~ label, .wpcf7 .form-floating > .wpcf7-validation-errors:focus ~ label, .wpcf7 .form-floating > input[type=text]:focus ~ label,
 .wpcf7 .form-floating > input[type=search]:focus ~ label,
@@ -3569,6 +3604,8 @@ button[name=add-to-cart], .wpcf7 input[type=submit] {
   text-decoration: none;
   vertical-align: middle;
   cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
   user-select: none;
   border: var(--bs-btn-border-width) solid var(--bs-btn-border-color);
   border-radius: var(--bs-btn-border-radius);
@@ -6023,6 +6060,8 @@ button[name=add-to-cart] .badge, .wpcf7 input[type=submit] .badge {
 }
 .btn-close:disabled, .btn-close.disabled {
   pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
   user-select: none;
   opacity: 0.25;
 }
@@ -6069,6 +6108,7 @@ button[name=add-to-cart] .badge, .wpcf7 input[type=submit] .badge {
   --bs-toast-zindex: 1090;
   position: absolute;
   z-index: var(--bs-toast-zindex);
+  width: -moz-max-content;
   width: max-content;
   max-width: 100%;
   pointer-events: none;
@@ -6674,6 +6714,7 @@ button[name=add-to-cart] .badge, .wpcf7 input[type=submit] .badge {
   float: left;
   width: 100%;
   margin-right: -100%;
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   transition: transform 0.6s ease-in-out;
 }
@@ -7501,13 +7542,16 @@ button.placeholder[name=add-to-cart]::before, .wpcf7 input.placeholder[type=subm
   }
 }
 .placeholder-wave {
+  -webkit-mask-image: linear-gradient(130deg, #000 55%, rgba(0, 0, 0, 0.8) 75%, #000 95%);
   mask-image: linear-gradient(130deg, #000 55%, rgba(0, 0, 0, 0.8) 75%, #000 95%);
+  -webkit-mask-size: 200% 100%;
   mask-size: 200% 100%;
   animation: placeholder-wave 2s linear infinite;
 }
 
 @keyframes placeholder-wave {
   100% {
+    -webkit-mask-position: -200% 0%;
     mask-position: -200% 0%;
   }
 }
@@ -9072,14 +9116,20 @@ button.placeholder[name=add-to-cart]::before, .wpcf7 input.placeholder[type=subm
 }
 
 .user-select-all {
+  -webkit-user-select: all !important;
+  -moz-user-select: all !important;
   user-select: all !important;
 }
 
 .user-select-auto {
+  -webkit-user-select: auto !important;
+  -moz-user-select: auto !important;
   user-select: auto !important;
 }
 
 .user-select-none {
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
   user-select: none !important;
 }
 
@@ -11830,6 +11880,8 @@ body {
   border: 1px solid #ced4da;
   border-radius: 0.375rem;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  -webkit-appearance: none;
+  -moz-appearance: none;
   appearance: none;
 }
 @media (prefers-reduced-motion: reduce) {
@@ -22945,6 +22997,11 @@ sup {
   margin-bottom: 0.5rem;
 }
 
+::-moz-selection {
+  background-color: var(--col-green-400);
+  color: var(--col-dark);
+}
+
 ::selection {
   background-color: var(--col-green-400);
   color: var(--col-dark);
@@ -23110,6 +23167,7 @@ sup {
   padding-block: 0 0.25rem;
   transition: color var(--transition);
   position: relative;
+  width: -moz-max-content;
   width: max-content;
   margin-inline: auto;
   display: inline-block;
@@ -23187,7 +23245,9 @@ sup {
 #offcanvasNavbar .dropdown-menu.show {
   border: none;
   padding: 0;
+  -webkit-padding-after: 1rem;
   padding-block-end: 1rem;
+  -webkit-padding-start: 1rem;
   padding-inline-start: 1rem;
   opacity: 1;
   max-height: 500px;
@@ -23246,6 +23306,7 @@ footer .menu-title {
 }
 footer ul.menu {
   font-family: var(--ff-headings);
+  -webkit-padding-start: 0;
   padding-inline-start: 0;
   margin-bottom: 0;
 }
@@ -23360,7 +23421,9 @@ button.disabled[name=add-to-cart] {
 .news_index__card img {
   width: 100%;
   aspect-ratio: 16/9;
+  -o-object-fit: cover;
   object-fit: cover;
+  -o-object-position: center;
   object-position: center;
   transition: transform var(--transition);
 }
@@ -23442,7 +23505,9 @@ button.disabled[name=add-to-cart] {
 .blog__image {
   width: 100%;
   aspect-ratio: 16/9;
+  -o-object-fit: cover;
   object-fit: cover;
+  -o-object-position: center;
   object-position: center;
   margin-bottom: 0;
   position: relative;
@@ -23502,6 +23567,7 @@ button.disabled[name=add-to-cart] {
 }
 .sidebar ul {
   list-style: none;
+  -webkit-padding-start: 0;
   padding-inline-start: 0;
 }
 .sidebar ul li {
@@ -23554,6 +23620,7 @@ button.disabled[name=add-to-cart] {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  -moz-column-gap: 3rem;
   column-gap: 3rem;
 }
 .navbuttons a {
@@ -23639,6 +23706,7 @@ button.disabled[name=add-to-cart] {
 .jewellery__image .glightbox img {
   aspect-ratio: 1;
   width: 100%;
+  -o-object-fit: cover;
   object-fit: cover;
 }
 .watch__inner,
@@ -23819,6 +23887,7 @@ form.cart select {
 .diamond_details__grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  -moz-column-gap: 1em;
   column-gap: 1em;
   row-gap: 2em;
 }
@@ -23837,6 +23906,7 @@ form.cart select {
 .stone .carousel-item video,
 .jewellery .carousel-item video {
   aspect-ratio: 1;
+  -o-object-fit: cover;
   object-fit: cover;
 }
 
@@ -23865,6 +23935,7 @@ form.cart select {
 .hero__bg {
   height: 350px;
   width: 100%;
+  -o-object-fit: cover;
   object-fit: cover;
 }
 @media (min-width: 768px) {
@@ -23873,12 +23944,15 @@ form.cart select {
   }
 }
 .hero__bg--left {
+  -o-object-position: left;
   object-position: left;
 }
 .hero__bg--center {
+  -o-object-position: center;
   object-position: center;
 }
 .hero__bg--right {
+  -o-object-position: right;
   object-position: right;
 }
 .hero__inner {
@@ -23998,6 +24072,7 @@ form.cart select {
 .modal .ratio-9x16 > * {
   width: 100%;
   height: 100%;
+  -o-object-fit: contain;
   object-fit: contain; /* Ensures images/videos don't get cut off */
 }
 
@@ -24028,6 +24103,7 @@ form.cart select {
   justify-content: center;
   margin-left: auto;
   height: 100%;
+  -webkit-padding-end: 1rem;
   padding-inline-end: 1rem;
 }
 @media (min-width: 1200px) {
@@ -24050,6 +24126,7 @@ form.cart select {
 .split__image img {
   width: 100%;
   height: 100%;
+  -o-object-fit: cover;
   object-fit: cover;
 }
 
@@ -24083,6 +24160,7 @@ form.cart select {
 .four_cols__image--secondary {
   position: absolute;
   inset: 0;
+  -o-object-fit: cover;
   object-fit: cover;
   aspect-ratio: 1;
   width: 100%;
@@ -24136,6 +24214,7 @@ form.cart select {
   grid-template-rows: 40px 1fr auto !important;
 }
 .latest_grid .card__category {
+  width: -moz-max-content !important;
   width: max-content !important;
   min-width: 60px !important;
 }
@@ -24165,7 +24244,9 @@ form.cart select {
 .four_images img {
   width: 100%;
   aspect-ratio: 1;
+  -o-object-fit: cover;
   object-fit: cover;
+  -o-object-position: center;
   object-position: center;
 }
 
@@ -24189,6 +24270,7 @@ form.cart select {
 .banner__bg {
   position: absolute;
   inset: 0;
+  -o-object-fit: cover;
   object-fit: cover;
   margin-inline: auto;
   width: auto;
@@ -24216,6 +24298,7 @@ form.cart select {
   position: absolute;
   grid-area: stack;
   aspect-ratio: 1;
+  -o-object-fit: cover;
   object-fit: cover;
   width: 100%;
   transition: opacity 500ms ease-in-out;
@@ -24234,7 +24317,9 @@ form.cart select {
 .showcase__image {
   aspect-ratio: 3/4;
   width: 100%;
+  -o-object-fit: cover;
   object-fit: cover;
+  -o-object-position: center;
   object-position: center;
 }
 
@@ -24275,6 +24360,7 @@ form.cart select {
 .cards__image {
   aspect-ratio: 16/9;
   width: 100%;
+  -o-object-fit: cover;
   object-fit: cover;
   margin-bottom: 0.5rem;
 }
@@ -24299,6 +24385,7 @@ form.cart select {
 }
 .testimonial__item {
   isolation: isolate;
+  -webkit-padding-start: 3em;
   padding-inline-start: 3em;
   position: relative;
 }
@@ -24356,9 +24443,11 @@ a.anchor {
 
 @media (min-width: 992px) {
   .cols-lg-2 {
+    -moz-columns: 2;
     columns: 2;
   }
   .cols-lg-3 {
+    -moz-columns: 3;
     columns: 3;
   }
 }
