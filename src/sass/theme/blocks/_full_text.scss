@@ -1,17 +1,22 @@
 .full_text {
-    &__pre_title {
-        font-family: var(--ff-headings);
-        font-size: var(--fs-200);
-        letter-spacing: var(--ls-900);
-        text-align: center;
-        text-transform: uppercase;
-        margin-bottom: 0.5rem;
-    }
-    &__title {
-        font-size: var(--fs-900);
-        text-transform: uppercase;
-        text-align: center;
-        font-weight: var(--fw-400);
-        text-wrap: balance;
-    }
+  &__pre_title {
+    font-family: var(--ff-headings);
+    font-size: var(--fs-200);
+    letter-spacing: var(--ls-900);
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+  }
+  &__title {
+    text-align: center;
+    font-weight: var(--fw-400);
+    text-wrap: balance;
+  }
+  h1.full_text__title {
+    font-size: var(--fs-900);
+    text-transform: uppercase;
+  }
+  h2.full_text__title {
+    font-size: var(--fs-700);
+  }
 }

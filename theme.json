@@ -1,0 +1,136 @@
+{
+  "version": 2,
+  "settings": {
+    "appearanceTools": true,
+    "color": {
+      "defaultPalette": false,
+      "palette": [
+        {
+          "name": "primary",
+          "slug": "primary",
+          "color": "hsl(var(--hsl-primary))",
+          "origin": "theme"
+        },
+        {
+          "name": "green-400",
+          "slug": "green-400",
+          "color": "hsl(var(--hsl-green-400))",
+          "origin": "theme"
+        },
+        {
+          "name": "green-900",
+          "slug": "green-900",
+          "color": "hsl(var(--hsl-green-900))",
+          "origin": "theme"
+        },
+        {
+          "name": "grey-200",
+          "slug": "grey-200",
+          "color": "#f9f7f8",
+          "origin": "theme"
+        },
+        {
+          "name": "grey-300",
+          "slug": "grey-300",
+          "color": "#c9c7c8",
+          "origin": "theme"
+        },
+        {
+          "name": "grey-400",
+          "slug": "grey-400",
+          "color": "#767676",
+          "origin": "theme"
+        },
+        {
+          "name": "grey-800",
+          "slug": "grey-800",
+          "color": "#444444",
+          "origin": "theme"
+        },
+        {
+          "name": "light",
+          "slug": "light",
+          "color": "rgb(255 255 255)",
+          "origin": "theme"
+        },
+        {
+          "name": "dark",
+          "slug": "dark",
+          "color": "rgb(12, 12, 12)",
+          "origin": "theme"
+        }
+      ]
+    },
+    "typography": {
+      "fontFamilies": [
+        {
+          "slug": "heading",
+          "name": "Heading (URW Classico)",
+          "fontFamily": "URWClassico Regular, Lucida Sans, Lucida Sans Regular, Lucida Grande, Lucida Sans Unicode, Geneva, Verdana, sans-serif"
+        },
+        {
+          "slug": "body",
+          "name": "Body (Cormorant Garamond)",
+          "fontFamily": "Cormorant Garamond, Cambria, Cochin, Georgia, Times, Times New Roman, serif"
+        }
+      ],
+      "fontSizes": [
+        {
+          "name": "100",
+          "slug": "100",
+          "size": "0.64rem"
+        },
+        {
+          "name": "200",
+          "slug": "200",
+          "size": "0.8rem"
+        },
+        {
+          "name": "300",
+          "slug": "300",
+          "size": "0.9rem"
+        },
+        {
+          "name": "400",
+          "slug": "400",
+          "size": "1rem"
+        },
+        {
+          "name": "500",
+          "slug": "500",
+          "size": "clamp(1.1rem, 0.975rem + 0.4vw, 1.2rem)"
+        },
+        {
+          "name": "600",
+          "slug": "600",
+          "size": "1.56rem"
+        },
+        {
+          "name": "700",
+          "slug": "700",
+          "size": "1.95rem"
+        },
+        {
+          "name": "900",
+          "slug": "900",
+          "size": "48px"
+        }
+      ]
+    }
+  },
+  "styles": {
+    "typography": {
+      "fontFamily": "var(--ff-body)",
+      "lineHeight": "1.5"
+    },
+    "elements": {
+      "heading": {
+        "typography": {
+          "fontFamily": "var(--ff-headings)",
+          "fontWeight": "700",
+          "lineHeight": "1.2"
+        }
+      }
+    }
+  }
+}
