@@ -48,16 +48,6 @@ function acf_blocks() {
 		));
 
 		acf_register_block_type(array(
-			'name'            => 'lc_quote',
-			'title'           => __('LC Quote'),
-			'category'        => 'layout',
-			'icon'            => 'cover-image',
-			'render_template' => 'blocks/lc-quote.php',
-			'mode'            => 'edit',
-			'supports'        => array( 'mode' => false ),
-		));
-
-		acf_register_block_type(array(
 			'name'            => 'lc_testimonial_slider',
 			'title'           => __('LC Testimonial Slider'),
 			'category'        => 'layout',
@@ -134,24 +124,6 @@ function acf_blocks() {
 			'supports'        => array( 'mode' => false ),
 		));
 		acf_register_block_type(array(
-			'name'            => 'lc_products_by_cat',
-			'title'           => __('LC Products by Category'),
-			'category'        => 'layout',
-			'icon'            => 'cover-image',
-			'render_template' => 'blocks/lc-products-by-cat.php',
-			'mode'            => 'edit',
-			'supports'        => array( 'mode' => false ),
-		));
-		acf_register_block_type(array(
-			'name'            => 'lc_products_by_tag',
-			'title'           => __('LC Products by Tag'),
-			'category'        => 'layout',
-			'icon'            => 'cover-image',
-			'render_template' => 'blocks/lc-products-by-tag.php',
-			'mode'            => 'edit',
-			'supports'        => array( 'mode' => false ),
-		));
-		acf_register_block_type(array(
 			'name'            => 'lc_faqs',
 			'title'           => __('LC FAQs'),
 			'category'        => 'layout',
@@ -170,15 +142,6 @@ function acf_blocks() {
 			'supports'        => array( 'mode' => false ),
 		));
 		acf_register_block_type(array(
-			'name'            => 'lc_latest_news',
-			'title'           => __('LC Latest Insights'),
-			'category'        => 'layout',
-			'icon'            => 'cover-image',
-			'render_template' => 'blocks/lc-latest-news.php',
-			'mode'            => 'edit',
-			'supports'        => array( 'mode' => false ),
-		));
-		acf_register_block_type(array(
 			'name'            => 'lc_four_images',
 			'title'           => __('LC Four Images'),
 			'category'        => 'layout',
@@ -193,15 +156,6 @@ function acf_blocks() {
 			'category'        => 'layout',
 			'icon'            => 'cover-image',
 			'render_template' => 'blocks/lc-banner.php',
-			'mode'            => 'edit',
-			'supports'        => array( 'mode' => false ),
-		));
-		acf_register_block_type(array(
-			'name'            => 'lc_related',
-			'title'           => __('LC Related'),
-			'category'        => 'layout',
-			'icon'            => 'cover-image',
-			'render_template' => 'blocks/lc-related.php',
 			'mode'            => 'edit',
 			'supports'        => array( 'mode' => false ),
 		));
