@@ -42,7 +42,7 @@ function acf_blocks() {
 			'title'           => __('LC Featured'),
 			'category'        => 'layout',
 			'icon'            => 'cover-image',
-			'render_template' => 'blocks/lc_featured.php',
+			'render_template' => 'blocks/lc-featured.php',
 			'mode'            => 'edit',
 			'supports'        => array( 'mode' => false ),
 		));
@@ -52,7 +52,7 @@ function acf_blocks() {
 			'title'           => __('LC Quote'),
 			'category'        => 'layout',
 			'icon'            => 'cover-image',
-			'render_template' => 'blocks/lc_quote.php',
+			'render_template' => 'blocks/lc-quote.php',
 			'mode'            => 'edit',
 			'supports'        => array( 'mode' => false ),
 		));
@@ -62,7 +62,7 @@ function acf_blocks() {
 			'title'           => __('LC Testimonial Slider'),
 			'category'        => 'layout',
 			'icon'            => 'cover-image',
-			'render_template' => 'blocks/lc_testimonial_slider.php',
+			'render_template' => 'blocks/lc-testimonial-slider.php',
 			'mode'            => 'edit',
 			'supports'        => array( 'mode' => false ),
 		));
@@ -81,7 +81,7 @@ function acf_blocks() {
 			'title'           => __('LC Text/Image'),
 			'category'        => 'layout',
 			'icon'            => 'cover-image',
-			'render_template' => 'blocks/lc_text_image.php',
+			'render_template' => 'blocks/lc-text-image.php',
 			'mode'            => 'edit',
 			'supports'        => array( 'mode' => false ),
 		));
@@ -90,7 +90,7 @@ function acf_blocks() {
 			'title'           => __('LC Text/Video'),
 			'category'        => 'layout',
 			'icon'            => 'cover-image',
-			'render_template' => 'blocks/lc_text_video.php',
+			'render_template' => 'blocks/lc-text-video.php',
 			'mode'            => 'edit',
 			'supports'        => array( 'mode' => false ),
 		));
@@ -99,7 +99,7 @@ function acf_blocks() {
 			'title'           => __('LC Full Width'),
 			'category'        => 'layout',
 			'icon'            => 'cover-image',
-			'render_template' => 'blocks/lc-full-text.php',
+			'render_template' => 'blocks/lc-full-width.php',
 			'mode'            => 'edit',
 			'supports'        => array(
 				'mode'   => false,
@@ -111,7 +111,7 @@ function acf_blocks() {
 			'title'           => __('LC Split'),
 			'category'        => 'layout',
 			'icon'            => 'cover-image',
-			'render_template' => 'blocks/lc_split.php',
+			'render_template' => 'blocks/lc-split.php',
 			'mode'            => 'edit',
 			'supports'        => array( 'mode' => false ),
 		));
@@ -120,7 +120,7 @@ function acf_blocks() {
 			'title'           => __('LC Three Cards'),
 			'category'        => 'layout',
 			'icon'            => 'cover-image',
-			'render_template' => 'blocks/lc_three_cards.php',
+			'render_template' => 'blocks/lc-three-cards.php',
 			'mode'            => 'edit',
 			'supports'        => array( 'mode' => false ),
 		));
@@ -129,7 +129,7 @@ function acf_blocks() {
 			'title'           => __('LC Three Cols'),
 			'category'        => 'layout',
 			'icon'            => 'cover-image',
-			'render_template' => 'blocks/lc_three_cols.php',
+			'render_template' => 'blocks/lc-three-cols.php',
 			'mode'            => 'edit',
 			'supports'        => array( 'mode' => false ),
 		));
@@ -138,7 +138,7 @@ function acf_blocks() {
 			'title'           => __('LC Products by Category'),
 			'category'        => 'layout',
 			'icon'            => 'cover-image',
-			'render_template' => 'blocks/lc_products_by_cat.php',
+			'render_template' => 'blocks/lc-products-by-cat.php',
 			'mode'            => 'edit',
 			'supports'        => array( 'mode' => false ),
 		));
@@ -147,7 +147,7 @@ function acf_blocks() {
 			'title'           => __('LC Products by Tag'),
 			'category'        => 'layout',
 			'icon'            => 'cover-image',
-			'render_template' => 'blocks/lc_products_by_tag.php',
+			'render_template' => 'blocks/lc-products-by-tag.php',
 			'mode'            => 'edit',
 			'supports'        => array( 'mode' => false ),
 		));
@@ -156,7 +156,7 @@ function acf_blocks() {
 			'title'           => __('LC FAQs'),
 			'category'        => 'layout',
 			'icon'            => 'cover-image',
-			'render_template' => 'blocks/lc_faqs.php',
+			'render_template' => 'blocks/lc-faqs.php',
 			'mode'            => 'edit',
 			'supports'        => array( 'mode' => false ),
 		));
@@ -165,7 +165,7 @@ function acf_blocks() {
 			'title'           => __('LC Accordion'),
 			'category'        => 'layout',
 			'icon'            => 'cover-image',
-			'render_template' => 'blocks/lc_accordion.php',
+			'render_template' => 'blocks/lc-accordion.php',
 			'mode'            => 'edit',
 			'supports'        => array( 'mode' => false ),
 		));
@@ -174,7 +174,7 @@ function acf_blocks() {
 			'title'           => __('LC Latest Insights'),
 			'category'        => 'layout',
 			'icon'            => 'cover-image',
-			'render_template' => 'blocks/lc_latest_news.php',
+			'render_template' => 'blocks/lc-latest-news.php',
 			'mode'            => 'edit',
 			'supports'        => array( 'mode' => false ),
 		));
@@ -183,7 +183,7 @@ function acf_blocks() {
 			'title'           => __('LC Four Images'),
 			'category'        => 'layout',
 			'icon'            => 'cover-image',
-			'render_template' => 'blocks/lc_four_images.php',
+			'render_template' => 'blocks/lc-four-images.php',
 			'mode'            => 'edit',
 			'supports'        => array( 'mode' => false ),
 		));
@@ -192,7 +192,7 @@ function acf_blocks() {
 			'title'           => __('LC Banner'),
 			'category'        => 'layout',
 			'icon'            => 'cover-image',
-			'render_template' => 'blocks/lc_banner.php',
+			'render_template' => 'blocks/lc-banner.php',
 			'mode'            => 'edit',
 			'supports'        => array( 'mode' => false ),
 		));
@@ -201,7 +201,7 @@ function acf_blocks() {
 			'title'           => __('LC Related'),
 			'category'        => 'layout',
 			'icon'            => 'cover-image',
-			'render_template' => 'blocks/lc_related.php',
+			'render_template' => 'blocks/lc-related.php',
 			'mode'            => 'edit',
 			'supports'        => array( 'mode' => false ),
 		));
@@ -210,7 +210,7 @@ function acf_blocks() {
 			'title'           => __('LC Breadcrumbs'),
 			'category'        => 'layout',
 			'icon'            => 'cover-image',
-			'render_template' => 'blocks/lc_breadcrumbs.php',
+			'render_template' => 'blocks/lc-breadcrumbs.php',
 			'mode'            => 'edit',
 			'supports'        => array( 'mode' => false ),
 		));
@@ -219,7 +219,7 @@ function acf_blocks() {
 			'title'           => __('LC Showcase'),
 			'category'        => 'layout',
 			'icon'            => 'cover-image',
-			'render_template' => 'blocks/lc_showcase.php',
+			'render_template' => 'blocks/lc-showcase.php',
 			'mode'            => 'edit',
 			'supports'        => array( 'mode' => false ),
 		));
@@ -228,7 +228,7 @@ function acf_blocks() {
 			'title'           => __('LC Divider'),
 			'category'        => 'layout',
 			'icon'            => 'cover-image',
-			'render_template' => 'blocks/lc_divider.php',
+			'render_template' => 'blocks/lc-divider.php',
 			'mode'            => 'edit',
 			'supports'        => array( 'mode' => false ),
 		));

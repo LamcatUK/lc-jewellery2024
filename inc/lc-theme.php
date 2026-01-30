@@ -10,6 +10,7 @@ defined('ABSPATH') || exit;
 require_once LC_THEME_DIR . '/inc/lc-utility.php';
 require_once LC_THEME_DIR . '/inc/lc-posttypes.php';
 require_once LC_THEME_DIR . '/inc/lc-blocks.php';
+require_once LC_THEME_DIR . '/inc/lc-block-usage.php';
 require_once LC_THEME_DIR . '/inc/lc-news.php';
 
 // Remove unwanted SVG filter injection WP.
