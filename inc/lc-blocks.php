@@ -133,15 +133,6 @@ function acf_blocks() {
 			'supports'        => array( 'mode' => false ),
 		));
 		acf_register_block_type(array(
-			'name'            => 'lc_accordion',
-			'title'           => __('LC Accordion'),
-			'category'        => 'layout',
-			'icon'            => 'cover-image',
-			'render_template' => 'blocks/lc-accordion.php',
-			'mode'            => 'edit',
-			'supports'        => array( 'mode' => false ),
-		));
-		acf_register_block_type(array(
 			'name'            => 'lc_four_images',
 			'title'           => __('LC Four Images'),
 			'category'        => 'layout',

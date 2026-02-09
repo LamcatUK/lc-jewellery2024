@@ -19,7 +19,7 @@ $class = $block['className'] ?? 'py-5';
 				the_row();
 				$l = get_sub_field('cta');
 				?>
-			<div class="col-lg-6 cards__card">
+			<div class="col-lg-6 cards__card" data-aos="fade">
 				<?= wp_get_attachment_image( get_sub_field( 'image' ), 'full', false, array( 'class' => 'cards__image' ) ); ?>
 				<h2 class="h3"><?= esc_html( get_sub_field( 'title' ) ); ?></h2>
 				<div><?= wp_kses_post( get_sub_field( 'content' ) ); ?></div>
