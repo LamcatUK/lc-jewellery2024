@@ -9,11 +9,11 @@
 
 defined( 'ABSPATH' ) || exit;
 
-$img = 4 === get_field('columns')[0] ? '' : 'six_images';
+$img = '4' === get_field('columns') ? '' : 'six_images';
 
 $delay = 0;
 
-$images_per_row = 4 === get_field('columns')[0] ? 4 : 6;
+$images_per_row = '4' === get_field('columns') ? 4 : 6;
 ?>
 <section class="four_images <?= $img; ?>">
 	<?php
