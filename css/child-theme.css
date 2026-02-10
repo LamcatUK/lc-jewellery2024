@@ -17,18 +17,21 @@
   --fs-300: 0.9rem;
   --fs-400: 1rem;
   --fs-500: clamp(1.1rem, 0.975rem + 0.4vw, 1.2rem);
-  --fs-600: 1.56rem;
-  --fs-700: 1.95rem;
-  --fs-900: 48px;
+  --fs-600: clamp(1.35rem, 1.2rem + 0.5vw, 1.6rem);
+  --fs-700: clamp(1.7rem, 1.45rem + 0.8vw, 2.1rem);
+  --fs-800: clamp(2.1rem, 1.75rem + 1.2vw, 2.6rem);
+  --fs-900: clamp(40px, 28px + 3vw, 48px);
   --fw-400: 300;
   --fw-600: 400;
   --fw-900: 700;
   --ls-400: 0.025rem;
   --ls-900: 0.2rem;
-  --ff-headings: "URWClassico Regular", "Lucida Sans", "Lucida Sans Regular",
+  --ff-headings:
+    "URWClassico Regular", "Lucida Sans", "Lucida Sans Regular",
     "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  --ff-body: "Cormorant Garamond", Cambria, Cochin, Georgia, Times,
-    "Times New Roman", serif;
+  --ff-body:
+    "Cormorant Garamond", Cambria, Cochin, Georgia, Times, "Times New Roman",
+    serif;
   --ff-fa: "Font Awesome 6 Free";
   --transition: 300ms ease-in-out;
   --grid-gap: 1.5rem;
