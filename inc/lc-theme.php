@@ -228,13 +228,19 @@ function load_dearpdf_viewer() {
 	$id = isset( $_GET['id'] ) ? intval( $_GET['id'] ) : 0;
 
 	if ( $id > 0 ) {
-		$html = do_shortcode( '[dearpdf id="' . $id . '"]' );
+		$shortcode_tag = shortcode_exists( 'dflip' ) ? 'dflip' : 'dearpdf';
+		$html          = do_shortcode( sprintf( '[%1$s id="%2$d"]', $shortcode_tag, $id ) );
 
 		// Extract the config JSON from the script tag before removing it.
 		if ( preg_match( '#window\.df_option_\d+\s*=\s*(\{.*?\});#is', $html, $matches ) ) {
 			$config_json = $matches[1];
+			$config_var  = 'df_option_' . $id;
+		} elseif ( preg_match( '#window\.option_df_' . preg_quote( (string) $id, '#' ) . '\s*=\s*(\{.*?\});#is', $html, $matches ) ) {
+			$config_json = $matches[1];
+			$config_var  = 'option_df_' . $id;
 		} else {
 			$config_json = '{}';
+			$config_var  = '';
 		}
 
 		// Remove the <script> block.
@@ -243,6 +249,7 @@ function load_dearpdf_viewer() {
 		wp_send_json_success(array(
 			'html'   => $html,
 			'config' => $config_json,
+			'configVar' => $config_var,
 		));
 	} else {
 		wp_send_json_error( 'Invalid viewer ID.' );
@@ -251,4 +258,3 @@ function load_dearpdf_viewer() {
 
 add_action( 'wp_ajax_load_dearpdf', 'load_dearpdf_viewer' );
 add_action( 'wp_ajax_nopriv_load_dearpdf', 'load_dearpdf_viewer' );
-

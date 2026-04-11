@@ -21,8 +21,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	if (!container) return;
 
-	var viewerId = isMobile ? <?= esc_js( $mobile_viewer_id ); ?> : <?= esc_js( $desktop_viewer_id ); ?>;
+	var viewerId = isMobile ? <?= wp_json_encode( $mobile_viewer_id ); ?> : <?= wp_json_encode( $desktop_viewer_id ); ?>;
 	var ajaxurl = "<?= esc_url( admin_url( 'admin-ajax.php' ) ); ?>";
+
+	if (!viewerId) {
+		console.warn('Brochure viewer ID is missing.');
+		container.innerHTML = '<p style="color:red;">Viewer failed to load.</p>';
+		return;
+	}
 
 	fetch(ajaxurl + '?action=load_dearpdf&id=' + viewerId)
 		.then(function (response) {
@@ -32,6 +38,8 @@ document.addEventListener("DOMContentLoaded", function () {
 			return response.json();
 		})
 		.then(function (data) {
+			var viewerRuntime = window.DEARFLIP || window.DFLIP || window.DEARPDF;
+
 			if (!data.success || !data.data || !data.data.html) {
 				console.warn('DearPDF response invalid or empty.');
 				container.innerHTML = '<p style="color:red;">Viewer failed to load.</p>';
@@ -44,17 +52,22 @@ document.addEventListener("DOMContentLoaded", function () {
 			// Inject the config
 			try {
 				var config = JSON.parse(data.data.config);
-				var configVar = 'df_option_' + config.id;
-				window[configVar] = config;
+				var configVar = data.data.configVar;
+
+				if (configVar && config && Object.keys(config).length) {
+					window[configVar] = config;
+				}
 			} catch (e) {
 				console.error('Failed to parse DearPDF config:', e);
 			}
 
-			// Initialise DearPDF
-			if (window.DEARPDF && typeof window.DEARPDF.parseElements === 'function') {
-				window.DEARPDF.parseElements();
+			// Initialise viewer runtime
+			if (viewerRuntime && typeof viewerRuntime.parseBooks === 'function') {
+				viewerRuntime.parseBooks();
+			} else if (viewerRuntime && typeof viewerRuntime.parseElements === 'function') {
+				viewerRuntime.parseElements();
 			} else {
-				console.error('DearPDF not available or parseElements missing.');
+				console.error('DearFlip/DearPDF runtime not available or parseElements missing.');
 			}
 		})
 		.catch(function (error) {
