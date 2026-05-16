@@ -121,7 +121,7 @@ if ( $text_class ) {
 				}
 				?>
 			</div>
-			<div class="col-md-6"
+			<div class="col-md-6 faq_block"
 				data-aos="<?= $text_anim; ?>">
 				<?php
 				while ( have_rows( 'faqs' ) ) {
