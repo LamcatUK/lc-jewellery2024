@@ -130,6 +130,13 @@ sup {
   text-transform: uppercase;
   margin-bottom: 0.5rem;
 }
+.pretitle--sm {
+  font-family: var(--ff-headings);
+  font-size: var(--fs-100);
+  letter-spacing: var(--ls-900);
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
 
 ::selection {
   background-color: var(--col-green-400);

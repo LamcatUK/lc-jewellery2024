@@ -8,10 +8,8 @@
 defined('ABSPATH') || exit;
 
 require_once LC_THEME_DIR . '/inc/lc-utility.php';
-// require_once LC_THEME_DIR . '/inc/lc-posttypes.php';
 require_once LC_THEME_DIR . '/inc/lc-blocks.php';
 require_once LC_THEME_DIR . '/inc/lc-block-usage.php';
-// require_once LC_THEME_DIR . '/inc/lc-news.php';
 
 // Remove unwanted SVG filter injection WP.
 remove_action('wp_enqueue_scripts', 'wp_enqueue_global_styles');
@@ -191,6 +189,9 @@ function lc_theme_enqueue() {
 	wp_enqueue_script('child-understrap-scripts', get_stylesheet_directory_uri() . $theme_scripts, array(), $css_version, true);
 	wp_enqueue_style('child-understrap-styles', get_stylesheet_directory_uri() . $theme_styles, array(), $css_version);
 
+	wp_enqueue_script( 'lenis', 'https://unpkg.com/lenis@1.3.11/dist/lenis.min.js', array(), null, true ); // phpcs:ignore WordPress.WP.EnqueuedResourceParameters.MissingVersion
+	wp_enqueue_style( 'lenis-style', 'https://unpkg.com/lenis@1.3.11/dist/lenis.css', array() ); // phpcs:ignore WordPress.WP.EnqueuedResourceParameters.MissingVersion
+
 	$js_version = $theme_version . '.' . filemtime(get_stylesheet_directory() . $theme_scripts);
 
 	if ( is_singular() && comments_open() && get_option('thread_comments') ) {
@@ -198,6 +199,28 @@ function lc_theme_enqueue() {
 	}
 }
 add_action('wp_enqueue_scripts', 'lc_theme_enqueue');
+
+add_action(
+	'wp_footer',
+	function () {
+		?>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+	if (typeof Lenis === 'undefined') return;
+	const lenis = new Lenis({
+		smooth: true,
+		lerp: 0.1
+	});
+	function raf(time) {
+		lenis.raf(time);
+		requestAnimationFrame(raf);
+	}
+	requestAnimationFrame(raf);
+});
+</script>
+		<?php
+	}
+);
 
 /**
  * Get image id from first slide in lc-hero.
@@ -247,8 +270,8 @@ function load_dearpdf_viewer() {
 		$html = preg_replace( '#<script[^>]*>.*?</script>#is', '', $html );
 
 		wp_send_json_success(array(
-			'html'   => $html,
-			'config' => $config_json,
+			'html'      => $html,
+			'config'    => $config_json,
 			'configVar' => $config_var,
 		));
 	} else {

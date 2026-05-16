@@ -17,6 +17,44 @@ function acf_blocks() {
 
 		// INSERT NEW BLOCKS HERE.
 
+        acf_register_block_type(
+            array(
+                'name'            => 'lc_title_qa',
+                'title'           => __( 'LC Title QA' ),
+                'category'        => 'layout',
+                'icon'            => 'cover-image',
+                'render_template' => 'blocks/lc-title-qa.php',
+                'mode'            => 'edit',
+                'supports'        => array(
+                    'mode'      => false,
+                    'anchor'    => true,
+                    'className' => true,
+                    'align'     => true,
+                ),
+            )
+        );
+
+		acf_register_block_type(
+			array(
+				'name'            => 'lc_feature_title_text',
+				'title'           => __( 'LC Feature Title Text' ),
+				'category'        => 'layout',
+				'icon'            => 'cover-image',
+				'render_template' => 'blocks/lc-feature-title-text.php',
+				'mode'            => 'edit',
+				'supports'        => array(
+					'mode'      => false,
+					'anchor'    => true,
+					'className' => true,
+					'align'     => true,
+					'color'     => array(
+						'background' => true,
+						'text'       => true,
+					),
+				),
+			)
+		);
+
 		acf_register_block_type(array(
 			'name'            => 'lc_nav_cards',
 			'title'           => __('LC Nav Cards'),
@@ -73,7 +111,13 @@ function acf_blocks() {
 			'icon'            => 'cover-image',
 			'render_template' => 'blocks/lc-text-image.php',
 			'mode'            => 'edit',
-			'supports'        => array( 'mode' => false ),
+			'supports'        => array(
+				'mode'  => false,
+				'color' => array(
+					'background' => true,
+					'text'       => true,
+				),
+			),
 		));
 		acf_register_block_type(array(
 			'name'            => 'lc_text_video',
