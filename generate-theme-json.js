@@ -40,7 +40,7 @@ function parseCssVariables(scssContent) {
 function buildThemeJson(tokens) {
   // Helper to resolve hsl(var(--col-*-hsl)) to actual hsl value
   function resolveColorValue(value, key) {
-    const hslVarMatch = value.match(/^hsl\(var\(--([\w-]+-hsl)\)\)$/);
+    const hslVarMatch = value.match(/^hsl\(var\(--([\w-]+)\)\)$/);
     if (hslVarMatch) {
       const hslKey = hslVarMatch[1];
       if (tokens[hslKey]) {

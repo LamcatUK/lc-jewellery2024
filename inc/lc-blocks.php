@@ -19,11 +19,11 @@ function acf_blocks() {
 
         acf_register_block_type(
             array(
-                'name'            => 'lc_image_cta',
-                'title'           => __( 'LC Image CTA' ),
+                'name'            => 'lc_four_cards',
+                'title'           => __( 'LC Four Cards' ),
                 'category'        => 'layout',
                 'icon'            => 'cover-image',
-                'render_template' => 'blocks/lc-image-cta.php',
+                'render_template' => 'blocks/lc-four-cards.php',
                 'mode'            => 'edit',
                 'supports'        => array(
                     'mode'      => false,
@@ -36,11 +36,11 @@ function acf_blocks() {
 
         acf_register_block_type(
             array(
-                'name'            => 'lc_title_qa',
-                'title'           => __( 'LC Title QA' ),
+                'name'            => 'lc_image_text_feature',
+                'title'           => __( 'LC Image Text Feature' ),
                 'category'        => 'layout',
                 'icon'            => 'cover-image',
-                'render_template' => 'blocks/lc-title-qa.php',
+                'render_template' => 'blocks/lc-image-text-feature.php',
                 'mode'            => 'edit',
                 'supports'        => array(
                     'mode'      => false,
@@ -50,6 +50,81 @@ function acf_blocks() {
                 ),
             )
         );
+
+		acf_register_block_type(
+			array(
+				'name'            => 'lc_three_images',
+				'title'           => __( 'LC Three Images' ),
+				'category'        => 'layout',
+				'icon'            => 'cover-image',
+				'render_template' => 'blocks/lc-three-images.php',
+				'mode'            => 'edit',
+				'supports'        => array(
+					'mode'      => false,
+					'anchor'    => true,
+					'className' => true,
+					'align'     => true,
+					'color'     => array(
+						'background' => true,
+					),
+				),
+			)
+		);
+
+		acf_register_block_type(
+			array(
+				'name'            => 'lc_three_images_1-1_16-9_4-3',
+				'title'           => __( 'LC Three Images 1-1 16-9 4-3' ),
+				'category'        => 'layout',
+				'icon'            => 'cover-image',
+				'render_template' => 'blocks/lc-three-images-1-1-16-9-4-3.php',
+				'mode'            => 'edit',
+				'supports'        => array(
+					'mode'      => false,
+					'anchor'    => true,
+					'className' => true,
+					'align'     => true,
+				),
+			)
+		);
+
+		acf_register_block_type(
+			array(
+				'name'            => 'lc_image_cta',
+				'title'           => __( 'LC Image CTA' ),
+				'category'        => 'layout',
+				'icon'            => 'cover-image',
+				'render_template' => 'blocks/lc-image-cta.php',
+				'mode'            => 'edit',
+				'supports'        => array(
+					'mode'      => false,
+					'anchor'    => true,
+					'className' => true,
+					'align'     => true,
+				),
+			)
+		);
+
+		acf_register_block_type(
+			array(
+				'name'            => 'lc_title_qa',
+				'title'           => __( 'LC Title QA' ),
+				'category'        => 'layout',
+				'icon'            => 'cover-image',
+				'render_template' => 'blocks/lc-title-qa.php',
+				'mode'            => 'edit',
+				'supports'        => array(
+					'mode'      => false,
+					'anchor'    => true,
+					'className' => true,
+					'align'     => true,
+					'color'     => array(
+						'background' => true,
+						'text'       => true,
+					),
+				),
+			)
+		);
 
 		acf_register_block_type(
 			array(

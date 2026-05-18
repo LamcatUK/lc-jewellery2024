@@ -8,19 +8,19 @@
         {
           "name": "primary",
           "slug": "primary",
-          "color": "hsl(var(--hsl-primary))",
+          "color": "hsl(0 0% 0%)",
           "origin": "theme"
         },
         {
           "name": "green-400",
           "slug": "green-400",
-          "color": "hsl(var(--hsl-green-400))",
+          "color": "hsl(96 15% 87%)",
           "origin": "theme"
         },
         {
           "name": "green-900",
           "slug": "green-900",
-          "color": "hsl(var(--hsl-green-900))",
+          "color": "hsl(96 45% 9%)",
           "origin": "theme"
         },
         {
@@ -58,22 +58,22 @@
           "slug": "dark",
           "color": "rgb(12, 12, 12)",
           "origin": "theme"
+        },
+        {
+          "name": "ivory-300",
+          "slug": "ivory-300",
+          "color": "#f3f1ed",
+          "origin": "theme"
+        },
+        {
+          "name": "dark-800",
+          "slug": "dark-800",
+          "color": "#1f1d18",
+          "origin": "theme"
         }
       ]
     },
     "typography": {
-      "fontFamilies": [
-        {
-          "slug": "heading",
-          "name": "Heading (URW Classico)",
-          "fontFamily": "URWClassico Regular, Lucida Sans, Lucida Sans Regular, Lucida Grande, Lucida Sans Unicode, Geneva, Verdana, sans-serif"
-        },
-        {
-          "slug": "body",
-          "name": "Body (Cormorant Garamond)",
-          "fontFamily": "Cormorant Garamond, Cambria, Cochin, Georgia, Times, Times New Roman, serif"
-        }
-      ],
       "fontSizes": [
         {
           "name": "100",
@@ -103,34 +103,29 @@
         {
           "name": "600",
           "slug": "600",
-          "size": "1.56rem"
+          "size": "clamp(1.35rem, 1.2rem + 0.5vw, 1.6rem)"
         },
         {
           "name": "700",
           "slug": "700",
-          "size": "1.95rem"
+          "size": "clamp(1.7rem, 1.45rem + 0.8vw, 2.1rem)"
+        },
+        {
+          "name": "800",
+          "slug": "800",
+          "size": "clamp(2.1rem, 1.75rem + 1.2vw, 2.6rem)"
         },
         {
           "name": "900",
           "slug": "900",
-          "size": "48px"
+          "size": "clamp(40px, 28px + 3vw, 48px)"
+        },
+        {
+          "name": "1000",
+          "slug": "1000",
+          "size": "clamp(48px, 36px + 3.5vw, 64px)"
         }
       ]
-    }
-  },
-  "styles": {
-    "typography": {
-      "fontFamily": "var(--ff-body)",
-      "lineHeight": "1.5"
-    },
-    "elements": {
-      "heading": {
-        "typography": {
-          "fontFamily": "var(--ff-headings)",
-          "fontWeight": "700",
-          "lineHeight": "1.2"
-        }
-      }
     }
   }
 }

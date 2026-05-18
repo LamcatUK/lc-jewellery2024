@@ -1,0 +1,191 @@
+{
+  "key": "group_lc_three_images",
+  "title": "LC Three Images",
+  "fields": [
+    {
+      "key": "field_lc_three_images",
+      "label": "LC Three Images",
+      "name": "",
+      "type": "message",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "",
+      "placeholder": "",
+      "prepend": "",
+      "append": "",
+      "maxlength": ""
+    },
+    {
+      "key": "field_lc_three_images_image_1",
+      "label": "Image 1",
+      "name": "image_1",
+      "type": "image",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "return_format": "id",
+      "library": "all",
+      "min_width": "",
+      "min_height": "",
+      "min_size": "",
+      "max_width": "",
+      "max_height": "",
+      "max_size": "",
+      "mime_types": "",
+      "preview_size": "medium"
+    },
+    {
+      "key": "field_lc_three_images_aspect_1",
+      "label": "Aspect 1",
+      "name": "aspect_1",
+      "type": "radio",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "choices": {
+        "ratio-1x1": "1x1",
+        "ratio-16x9": "16x9",
+        "ratio-4x3": "4x3"
+      },
+      "default_value": "ratio-1x1",
+      "return_format": "value",
+      "allow_null": 0,
+      "layout": "horizontal",
+      "save_other_choice": 0,
+      "other_choice": 0
+    },
+    {
+      "key": "field_lc_three_images_image_2",
+      "label": "Image 2",
+      "name": "image_2",
+      "type": "image",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "return_format": "id",
+      "library": "all",
+      "min_width": "",
+      "min_height": "",
+      "min_size": "",
+      "max_width": "",
+      "max_height": "",
+      "max_size": "",
+      "mime_types": "",
+      "preview_size": "medium"
+    },
+    {
+      "key": "field_lc_three_images_aspect_2",
+      "label": "Aspect 2",
+      "name": "aspect_2",
+      "type": "radio",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "choices": {
+        "ratio-1x1": "1x1",
+        "ratio-16x9": "16x9",
+        "ratio-4x3": "4x3"
+      },
+      "default_value": "ratio-16x9",
+      "return_format": "value",
+      "allow_null": 0,
+      "layout": "horizontal",
+      "save_other_choice": 0,
+      "other_choice": 0
+    },
+    {
+      "key": "field_lc_three_images_image_3",
+      "label": "Image 3",
+      "name": "image_3",
+      "type": "image",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "return_format": "id",
+      "library": "all",
+      "min_width": "",
+      "min_height": "",
+      "min_size": "",
+      "max_width": "",
+      "max_height": "",
+      "max_size": "",
+      "mime_types": "",
+      "preview_size": "medium"
+    },
+    {
+      "key": "field_lc_three_images_aspect_3",
+      "label": "Aspect 3",
+      "name": "aspect_3",
+      "type": "radio",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "choices": {
+        "ratio-1x1": "1x1",
+        "ratio-16x9": "16x9",
+        "ratio-4x3": "4x3"
+      },
+      "default_value": "ratio-4x3",
+      "return_format": "value",
+      "allow_null": 0,
+      "layout": "horizontal",
+      "save_other_choice": 0,
+      "other_choice": 0
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "block",
+        "operator": "==",
+        "value": "acf/lc-three-images"
+      }
+    ]
+  ],
+  "menu_order": 0,
+  "position": "normal",
+  "style": "default",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": "",
+  "active": true,
+  "description": "",
+  "show_in_rest": 0,
+  "modified": 1779028646
+}

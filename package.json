@@ -27,7 +27,7 @@
     "lint:php": "phpcs .",
     "fix:php": "phpcbf .",
     "watch-run-js": "nodemon --watch src/js/ --ext js --exec \"npm run js\"",
-    "watch-run-css": "nodemon --watch src/sass/ --ext scss --exec \"npm run css\"",
+    "watch-run-css": "nodemon --watch src/sass/ --ext scss --exec \"npm run css && npm run generate-theme-json\"",
     "generate-theme-json": "node generate-theme-json.js"
   },
   "engines": {
