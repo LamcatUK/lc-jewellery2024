@@ -17,7 +17,7 @@ $eyebrow = get_field( 'eyebrow' );
 $title   = get_field( 'title' );
 $content = get_field( 'content' );
 
-$cards = get_field( 'cards' ) ?: array();
+$cards = get_field( 'cards' ) ? get_field( 'cards' ) : array();
 $card1 = $cards[0] ?? null;
 $card2 = $cards[1] ?? null;
 $card3 = $cards[2] ?? null;
