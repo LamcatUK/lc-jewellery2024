@@ -158,6 +158,24 @@
           "placeholder": "",
           "rows": 4,
           "new_lines": "br"
+        },
+        {
+          "key": "field_lc_four_cards_cards_image_offset_7a2b8c9d",
+          "label": "Image Offset",
+          "name": "image_offset",
+          "type": "text",
+          "instructions": "CSS object-position value (e.g. '50% 85%', 'center left'). Leave empty to use default.",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": ""
         }
       ]
     }

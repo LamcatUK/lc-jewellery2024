@@ -3,79 +3,133 @@
 
   &__grid {
     display: grid;
-    grid-template-columns: 3fr 3.5fr;
-    grid-template-rows: auto auto auto;
-    column-gap: 4px;
+    grid-template-columns: 1fr;
+    column-gap: 0;
     row-gap: 0;
-  }
 
-  // ── Left column cells ─────────────────────────────────────────────────────
-
-  // Card 1 image: col 1, rows 1–2
-  &__cell--featured-img {
-    grid-column: 1;
-    grid-row: 1 / span 2;
-    overflow: hidden;
-    border-right: 1px solid var(--col-grey-300);
-    padding-right: 4px;
-
-    .lc-four-cards__img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-      &--first {
-        height: calc(100% - 4px);
-      }
+    @media (min-width: 992px) {
+      grid-template-columns: 3fr 3.5fr;
+      grid-template-rows: auto auto auto;
+      column-gap: 4px;
     }
   }
 
-  // Card 1 text: col 1, row 3
-  &__cell--featured-text {
-    grid-column: 1;
-    grid-row: 3;
-    border-right: 1px solid var(--col-grey-300);
-    padding-right: 4px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 2rem 4px 2rem 0;
-  }
+  // ── Cards and images ──────────────────────────────────────────────────────
 
-  // ── Right cards ───────────────────────────────────────────────────────────
-
-  &__cell--card {
-    display: grid;
-    grid-template-columns: 1.5fr 2fr;
-    padding-block: 4px;
-  }
-
-  // Bottom border on first two right cards (cards 2 and 3 = grid children 2 and 3)
-  &__grid > &__cell--card:nth-of-type(2),
-  &__grid > &__cell--card:nth-of-type(3) {
-    border-bottom: 1px solid var(--col-grey-300);
-  }
-
-  // Image within a right card
+  // Image within cards
   &__card-img {
     overflow: hidden;
-    aspect-ratio: 1 / 1;
-    align-self: start;
+    aspect-ratio: 4 / 3;
+    align-self: auto;
+    border-bottom: 1px solid var(--col-grey-300);
+
+    @media (min-width: 992px) {
+      border-bottom: none;
+    }
 
     .lc-four-cards__img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+      object-position: center;
       display: block;
+    }
+
+    // Featured card (Card 1 image)
+    &--featured {
+      order: 1;
+      grid-column: auto;
+      grid-row: auto;
+      overflow: hidden;
+      aspect-ratio: 4 / 3;
+      border-right: none;
+      padding-right: 0;
+      border-bottom: 1px solid var(--col-grey-300);
+
+      @media (min-width: 992px) {
+        grid-column: 1;
+        grid-row: 1 / span 2;
+        border-right: 1px solid var(--col-grey-300);
+        padding-right: 4px;
+        border-bottom: none;
+        aspect-ratio: auto;
+      }
+
+      .lc-four-cards__img--first {
+        @media (min-width: 992px) {
+          height: calc(100% - 4px);
+        }
+      }
+    }
+
+    // Standard card images (Cards 2-4)
+    @media (min-width: 992px) {
+      aspect-ratio: 1 / 1;
+      align-self: start;
+      border-bottom: 1px solid var(--col-grey-300);
     }
   }
 
-  // Text within a right card
+  // Text within cards
   &__card-text {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 2rem 2.25rem;
+    padding: 1rem 0;
+
+    @media (min-width: 992px) {
+      padding: 2rem 2.25rem;
+    }
+
+    // Featured card text (Card 1 text)
+    &--featured {
+      order: 2;
+      border-bottom: 1px solid var(--col-grey-300);
+      padding: 2rem 0;
+
+      @media (min-width: 992px) {
+        order: auto;
+        grid-column: 1;
+        grid-row: 3;
+        border-right: 1px solid var(--col-grey-300);
+        border-bottom: none;
+        padding-right: 4px;
+        padding: 2rem 4px 2rem 0;
+      }
+    }
+  }
+
+  // ── Card structure (wrapper for standard cards) ───────────────────────────
+
+  &__cell--card {
+    display: grid;
+    grid-template-columns: 1fr;
+    border-bottom: 1px solid var(--col-grey-300);
+
+    @media (min-width: 992px) {
+      grid-template-columns: 1.5fr 2fr;
+      padding-block: 4px;
+      border-bottom: 1px solid var(--col-grey-300);
+    }
+  }
+
+  // Cards 2, 3, 4 in order
+  &__grid > &__cell--card:nth-of-type(2) {
+    order: 3;
+  }
+  &__grid > &__cell--card:nth-of-type(3) {
+    order: 4;
+  }
+  &__grid > &__cell--card:nth-of-type(5) {
+    order: 5;
+  }
+
+  // Bottom border on first two right cards (desktop only)
+  @media (min-width: 992px) {
+    &__grid > &__cell--card:nth-of-type(2),
+    &__grid > &__cell--card:nth-of-type(3) {
+      border-bottom: 1px solid var(--col-grey-300);
+    }
   }
 
   // ── Card typography ───────────────────────────────────────────────────────
@@ -113,61 +167,6 @@
 
     &:hover {
       opacity: 0.6;
-    }
-  }
-
-  // ── Mobile: stack to single column ────────────────────────────────────────
-
-  @media (max-width: 991.98px) {
-    &__grid {
-      grid-template-columns: 1fr;
-      column-gap: 0;
-    }
-
-    // Correct order: card1 img → card1 text → card2 → card3 → card4
-    &__cell--featured-img {
-      order: 1;
-      grid-column: auto;
-      grid-row: auto;
-      border-right: none;
-      padding-right: 0;
-      aspect-ratio: 16 / 9;
-    }
-
-    &__cell--featured-text {
-      order: 2;
-      grid-column: auto;
-      grid-row: auto;
-      border-right: none;
-      padding: 2rem 0;
-      border-bottom: 1px solid var(--col-grey-300);
-    }
-
-    // Cards 2, 3, 4 in order
-    &__grid > &__cell--card:nth-of-type(2) {
-      order: 3;
-    }
-    &__grid > &__cell--card:nth-of-type(3) {
-      order: 4;
-    }
-    &__grid > &__cell--card:nth-of-type(5) {
-      order: 5;
-    }
-
-    &__cell--card {
-      grid-template-columns: 1fr;
-      border-bottom: 1px solid var(--col-grey-300);
-    }
-
-    // Remove desktop border-bottom override (all cards get border on mobile)
-    &__grid > &__cell--card:nth-of-type(2),
-    &__grid > &__cell--card:nth-of-type(3) {
-      border-bottom: 1px solid var(--col-grey-300);
-    }
-
-    &__card-img {
-      aspect-ratio: 16 / 9;
-      align-self: auto;
     }
   }
 }
