@@ -98,7 +98,7 @@ if ( $text_class ) {
 					?>
 					<a href="<?= $l['url']; ?>"
 						target="<?= $l['target']; ?>"
-						class="btn btn-primary mx-auto mt-3"><?= $l['title']; ?></a>
+						class="btn btn-primary mt-3"><?= $l['title']; ?></a>
 					<?php
 				}
 				?>
