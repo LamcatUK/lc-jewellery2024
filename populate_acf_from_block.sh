@@ -23,15 +23,21 @@ import os
 import re
 import sys
 import hashlib
+import copy
 from datetime import datetime
 
-block_template = sys.argv[1]
+block_template = os.path.abspath(sys.argv[1])
 
 if not os.path.isfile(block_template):
     print(f"Block template not found: {block_template}", file=sys.stderr)
     sys.exit(1)
 
-base_dir = os.getcwd()
+block_dir = os.path.dirname(block_template)
+if os.path.basename(block_dir) == "blocks":
+    base_dir = os.path.dirname(block_dir)
+else:
+    base_dir = os.getcwd()
+
 acf_dir = os.path.join(base_dir, "acf-json")
 os.makedirs(acf_dir, exist_ok=True)
 
@@ -51,9 +57,17 @@ def labelize_field_name(name: str) -> str:
     cleaned = re.sub(r"^lc[_\-]+", "", name.strip(), flags=re.IGNORECASE)
     return titleize(cleaned)
 
+def strip_php_comments(source: str) -> str:
+    # Remove comments to avoid picking up field calls inside docs/commented code.
+    return re.sub(r"/\*.*?\*/|//.*?$|#.*?$", "", source, flags=re.DOTALL | re.MULTILINE)
+
 def infer_type(name: str) -> str:
     n = name.lower()
+    if n in {"flourish", "rounded", "full_bleed"}:
+        return "true_false"
     if n.startswith(("is_", "has_", "show_", "enable_", "disable_")):
+        return "true_false"
+    if n.endswith(("_enabled", "_disabled", "_active", "_visible", "_hidden")):
         return "true_false"
     if any(k in n for k in ["image", "icon", "logo", "photo", "thumbnail"]):
         return "image"
@@ -100,7 +114,7 @@ def field_template(prefix: str, name: str, ftype: str):
             "default_value": "",
             "placeholder": "",
             "rows": 4,
-            "new_lines": "br"
+            "new_lines": "wpautop"
         })
     elif ftype == "link":
         field.update({
@@ -108,8 +122,8 @@ def field_template(prefix: str, name: str, ftype: str):
         })
     elif ftype == "image":
         field.update({
-            "return_format": "array",
-            "preview_size": "medium",
+            "return_format": "id",
+            "preview_size": "thumbnail",
             "library": "all"
         })
     elif ftype == "true_false":
@@ -142,7 +156,7 @@ def repeater_template(prefix: str, name: str):
     }
 
 with open(block_template, "r", encoding="utf-8") as f:
-    php = f.read()
+    php = strip_php_comments(f.read())
 
 fn_re = re.compile(
     r"\b(?P<fn>get_field|the_field|have_rows|get_sub_field|the_sub_field)\s*\(\s*['\"](?P<name>[a-zA-Z0-9_\-]+)['\"]",
@@ -174,8 +188,12 @@ if not top_fields and not repeaters and not sub_fields:
     sys.exit(0)
 
 if os.path.isfile(json_path):
-    with open(json_path, "r", encoding="utf-8") as f:
-        data = json.load(f)
+    try:
+        with open(json_path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+    except json.JSONDecodeError as exc:
+        print(f"Invalid JSON in existing file: {json_path}: {exc}", file=sys.stderr)
+        sys.exit(1)
 else:
     data = {
         "key": f"group_{block_slug}",
@@ -192,10 +210,12 @@ else:
         "label_placement": "top",
         "instruction_placement": "label",
         "hide_on_screen": "",
-        "active": 1,
+        "active": True,
         "description": "",
         "show_in_rest": 0
     }
+
+original_data = copy.deepcopy(data)
 
 if "fields" not in data or not isinstance(data["fields"], list):
     data["fields"] = []
@@ -247,6 +267,19 @@ for rep in repeaters:
             fields[existing[rep]].setdefault("sub_fields", [])
 
 warnings = []
+
+# Warn when existing top-level field types differ from what this generator
+# would infer, to avoid silently changing schema choices.
+for name in top_fields:
+    if name not in existing:
+        continue
+    inferred = infer_type(name)
+    current = fields[existing[name]].get("type")
+    if current and current != inferred:
+        warnings.append(
+            f"Field '{name}' exists as type '{current}' but inferred '{inferred}'. Kept existing type."
+        )
+
 if sub_fields:
     if len(repeaters) == 1:
         rep_name = repeaters[0]
@@ -271,6 +304,20 @@ if sub_fields:
         warnings.append("Found get_sub_field()/the_sub_field() without have_rows(); added them as top-level fields.")
     else:
         warnings.append("Multiple have_rows() repeaters found; could not reliably map sub fields. Added repeaters only.")
+
+def without_modified(payload: dict) -> dict:
+    cloned = copy.deepcopy(payload)
+    cloned.pop("modified", None)
+    return cloned
+
+changed = without_modified(data) != without_modified(original_data)
+
+if not changed:
+    print(f"No changes needed: {json_path}")
+    if warnings:
+        for w in warnings:
+            print(f"Warning: {w}")
+    sys.exit(0)
 
 data["modified"] = int(datetime.now().timestamp())
 
