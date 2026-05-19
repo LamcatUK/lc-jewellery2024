@@ -95,10 +95,11 @@ if ( $text_class ) {
 				<?php
 				if ( get_field('link') ?? null ) {
 					$l = get_field('link');
+					$a = get_field('link_alignment') === 'left' ? '' : 'mx-auto';
 					?>
 					<a href="<?= $l['url']; ?>"
 						target="<?= $l['target']; ?>"
-						class="btn btn-primary mt-3"><?= $l['title']; ?></a>
+						class="btn btn-primary mt-3 <?= $a; ?>"><?= $l['title']; ?></a>
 					<?php
 				}
 				?>
