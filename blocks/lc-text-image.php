@@ -95,7 +95,7 @@ if ( $text_class ) {
 				<?php
 				if ( get_field('link') ?? null ) {
 					$l = get_field('link');
-					$a = get_field('link_alignment') === 'left' ? '' : 'mx-auto';
+					$a = get_field('link_alignment') ? 'mx-auto' : '';
 					?>
 					<a href="<?= $l['url']; ?>"
 						target="<?= $l['target']; ?>"
