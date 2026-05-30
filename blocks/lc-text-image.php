@@ -52,8 +52,14 @@ if ( $text_class ) {
 	$section_classes[] = $text_class;
 }
 
+if ( ! empty( $block['className'] ) ) {
+	$section_classes = array_merge( $section_classes, preg_split( '/\s+/', trim( (string) $block['className'] ) ) );
+} else {
+	$section_classes[] = 'py-5';
+}
+
 ?>
-<section class="<?= esc_attr( implode( ' ', $section_classes ) ); ?> py-5">
+<section class="<?= esc_attr( implode( ' ', $section_classes ) ); ?>">
 	<div class="container-xl">
 		<?php
 		if ( get_field('eyebrow') ?? null ) {
