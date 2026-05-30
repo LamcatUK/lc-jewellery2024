@@ -17,6 +17,7 @@ $txtanim = 'fade';
 $imganim = 'fade';
 
 $title_align = ( get_field('title_alignment') === 'left' ) ? 'text-start' : 'text-center';
+$content_align = ( get_field('content_alignment') === 'top' ) ? 'justify-content-start' : 'justify-content-center';
 
 switch ( get_field('split') ) {
 	case 6040:
@@ -78,7 +79,7 @@ if ( ! empty( $block['className'] ) ) {
 		}
 		?>
 		<div class="row g-4">
-			<div class="<?= $col_text; ?> <?= $txtcol; ?> d-flex flex-column justify-content-center"
+			<div class="<?= $col_text; ?> <?= $txtcol; ?> d-flex flex-column <?= $content_align; ?>"
 				data-aos="<?= $txtanim; ?>">
 				<?php
 				if ( get_field('eyebrow') ?? null ) {
