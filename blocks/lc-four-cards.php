@@ -51,7 +51,17 @@ $card4 = $cards[3] ?? null;
 			<?php /* ── Card 1: featured image — col 1, rows 1–2 ── */ ?>
 			<?php if ( $card1 && ! empty( $card1['image'] ) ) : ?>
 			<div class="lc-four-cards__card-img lc-four-cards__card-img--featured">
-				<?= wp_get_attachment_image( $card1['image']['ID'], 'large', false, array( 'class' => 'lc-four-cards__img lc-four-cards__img--first', 'style' => ! empty( $card1['image_offset'] ) ? 'object-position: ' . esc_attr( $card1['image_offset'] ) . ';' : '' ) ); ?>
+				<?=
+				wp_get_attachment_image(
+					$card1['image']['ID'],
+					'large',
+					false,
+					array(
+						'class' => 'lc-four-cards__img lc-four-cards__img--first',
+						'style' => ! empty( $card1['image_offset'] ) ? 'object-position: ' . esc_attr( $card1['image_offset'] ) . ';' : '',
+					)
+				);
+				?>
 			</div>
 			<?php endif; ?>
 
@@ -60,7 +70,17 @@ $card4 = $cards[3] ?? null;
 			<div class="lc-four-cards__cell lc-four-cards__cell--card">
 				<?php if ( ! empty( $card2['image'] ) ) : ?>
 				<div class="lc-four-cards__card-img">
-					<?= wp_get_attachment_image( $card2['image']['ID'], 'medium_large', false, array( 'class' => 'lc-four-cards__img', 'style' => ! empty( $card2['image_offset'] ) ? 'object-position: ' . esc_attr( $card2['image_offset'] ) . ';' : '' ) ); ?>
+					<?=
+					wp_get_attachment_image(
+						$card2['image']['ID'],
+						'medium_large',
+						false,
+						array(
+							'class' => 'lc-four-cards__img',
+							'style' => ! empty( $card2['image_offset'] ) ? 'object-position: ' . esc_attr( $card2['image_offset'] ) . ';' : '',
+						)
+					);
+					?>
 				</div>
 				<?php endif; ?>
 				<div class="lc-four-cards__card-text" data-aos="fade">
@@ -82,7 +102,17 @@ $card4 = $cards[3] ?? null;
 			<div class="lc-four-cards__cell lc-four-cards__cell--card">
 				<?php if ( ! empty( $card3['image'] ) ) : ?>
 				<div class="lc-four-cards__card-img">
-					<?= wp_get_attachment_image( $card3['image']['ID'], 'medium_large', false, array( 'class' => 'lc-four-cards__img', 'style' => ! empty( $card3['image_offset'] ) ? 'object-position: ' . esc_attr( $card3['image_offset'] ) . ';' : '' ) ); ?>
+					<?=
+					wp_get_attachment_image(
+						$card3['image']['ID'],
+						'medium_large',
+						false,
+						array(
+							'class' => 'lc-four-cards__img',
+							'style' => ! empty( $card3['image_offset'] ) ? 'object-position: ' . esc_attr( $card3['image_offset'] ) . ';' : '',
+						)
+					);
+					?>
 				</div>
 				<?php endif; ?>
 				<div class="lc-four-cards__card-text" data-aos="fade">
@@ -121,7 +151,17 @@ $card4 = $cards[3] ?? null;
 			<div class="lc-four-cards__cell lc-four-cards__cell--card">
 				<?php if ( ! empty( $card4['image'] ) ) : ?>
 				<div class="lc-four-cards__card-img">
-					<?= wp_get_attachment_image( $card4['image']['ID'], 'medium_large', false, array( 'class' => 'lc-four-cards__img', 'style' => ! empty( $card4['image_offset'] ) ? 'object-position: ' . esc_attr( $card4['image_offset'] ) . ';' : '' ) ); ?>
+					<?=
+					wp_get_attachment_image(
+						$card4['image']['ID'],
+						'medium_large',
+						false,
+						array(
+							'class' => 'lc-four-cards__img',
+							'style' => ! empty( $card4['image_offset'] ) ? 'object-position: ' . esc_attr( $card4['image_offset'] ) . ';' : '',
+						)
+					);
+					?>
 				</div>
 				<?php endif; ?>
 				<div class="lc-four-cards__card-text" data-aos="fade">
