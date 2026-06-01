@@ -22998,6 +22998,10 @@ sup {
   letter-spacing: -0.02em;
 }
 
+.ff-headings {
+  font-family: var(--ff-headings);
+}
+
 .bg--primary {
   background-color: var(--col-primary);
 }

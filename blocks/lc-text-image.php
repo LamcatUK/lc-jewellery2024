@@ -16,7 +16,7 @@ $imganim = 'Text/Image' === get_field('order') ? 'fade-left' : 'fade-right';
 $txtanim = 'fade';
 $imganim = 'fade';
 
-$title_align = ( get_field('title_alignment') === 'left' ) ? 'text-start' : 'text-center';
+$title_align   = ( get_field('title_alignment') === 'left' ) ? 'text-start' : 'text-center';
 $content_align = ( get_field('content_alignment') === 'top' ) ? 'justify-content-start' : 'justify-content-center';
 
 switch ( get_field('split') ) {
