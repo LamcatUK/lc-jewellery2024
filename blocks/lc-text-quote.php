@@ -68,7 +68,7 @@ if ( ! empty( $block['className'] ) ) {
 				}
 				?>
 			</div>
-			<div class="col-md-6" data-aos="fade">
+			<div class="col-md-6 mb-5 mb-md-0" data-aos="fade">
 				<?php
 				if ( $quote ) {
 					?>
